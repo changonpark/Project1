@@ -1,24 +1,32 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>가상(의사)선택</title>
-<style>
-  p { border: 1px solid #333;}
-  p::before {
-    content: '';
-    border-left: 5px solid crimson;
-  }
-  p:after {
-    content: ' 뒤에 삽입';
-    color: crimson;
-  }
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>가상(의사)선택</title>
+  <style>
+    p {
+      border: 1px solid #333;
+    }
+
+    p::before {
+      content: '';
+      border-left: 5px solid crimson;
+    }
+
+    p:after {
+      content: ' 뒤에 삽입';
+      color: crimson;
+    }
+  </style>
 </head>
+
 <body>
   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur laudantium ea rem!
-    Exercitationem, porro officiis repellat vitae expedita nam praesentium deleniti corporis dicta minima repellendus maxime quidem, modi illo impedit?
+    Exercitationem, porro officiis repellat vitae expedita nam praesentium deleniti corporis dicta minima repellendus
+    maxime quidem, modi illo impedit?
   </p>
 </body>
+
 </html>

@@ -1,34 +1,54 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>속성선택</title>
-<style>
-  a { color: #000; text-decoration: none;}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>속성선택</title>
+  <style>
+    a {
+      color: #000;
+      text-decoration: none;
+    }
 
-  /* 속성은 []로 표현 */
+    /* 속성은 []로 표현 */
 
-  /* a 태그의 title 속성 값이 있으면 */
-  a[title] { background-color: yellowgreen;}
+    /* a 태그의 title 속성 값이 있으면 */
+    a[title] {
+      background-color: yellowgreen;
+    }
 
     /* a 태그의 title 속성 값이 '검색엔진'이면 */
-  a[title='검색엔진'] {border: 1px solid red;}
+    a[title='검색엔진'] {
+      border: 1px solid red;
+    }
 
-  /* a 태그의 title 속성 값이 na로 시작하면 */
-  a[title^='na'] { font-weight: bold;}
+    /* a 태그의 title 속성 값이 na로 시작하면 */
+    a[title^='na'] {
+      font-weight: bold;
+    }
 
-  /* a 태그의 href 속성 값이 et로 끝나면 */
-  a[href$='et']{ color: darkcyan;}
+    /* a 태그의 href 속성 값이 et로 끝나면 */
+    a[href$='et'] {
+      color: darkcyan;
+    }
 
-  /* a 태그의 title 속성 값 중 '연결'이 독립 단어(띄어쓰기)로 존재하면 */
-  a[title~='연결'] {font-size: 2em;}
+    /* a 태그의 title 속성 값 중 '연결'이 독립 단어(띄어쓰기)로 존재하면 */
+    a[title~='연결'] {
+      font-size: 2em;
+    }
 
-  /* a 태그의 title 속성값이 정확하게 일치하거나 하이픈(-)으로 연결되면 */
-  a[title|='nate'] {color: #fff; }
-  a[title|='google'] {color: #fff;}
-</style>
+    /* a 태그의 title 속성값이 정확하게 일치하거나 하이픈(-)으로 연결되면 */
+    a[title|='nate'] {
+      color: #fff;
+    }
+
+    a[title|='google'] {
+      color: #fff;
+    }
+  </style>
 </head>
+
 <body>
   <h2>속성 선택</h2>
   <hr>
@@ -43,4 +63,5 @@
     <li><a href="http://daum.net" title="daum">다음</a></li>
   </ul>
 </body>
+
 </html>
