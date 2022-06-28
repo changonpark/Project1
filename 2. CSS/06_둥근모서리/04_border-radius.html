@@ -1,15 +1,23 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>둥근 모서리</title>
   <style>
-    * { margin: 0; padding: 0;}
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
     body {
-      background-image: url(http://wooreeweb.com/img/grid.gif); }
+      background-image: url(http://wooreeweb.com/img/grid.gif);
+    }
+
     div {
-      width: 200px; height: 100px;
+      width: 200px;
+      height: 100px;
       background-color: rgba(255, 216, 0, 0.3);
       margin: 50px;
       /* border: 10px solid rgba(255, 0, 0, 0.3); */
@@ -20,15 +28,26 @@
       border-radius: 50%/10px;
       background-image: url(http://wooreeweb.com/img/h02.jpg);
       background-size: cover;
-     }
+    }
+
     .box2 {
       border-radius: 100px/50px;
-     }
-    .box3 { border-top-left-radius: 100px 50px; }
-    .box4 { border-top-right-radius: 200px 100px;}
-    .box5 { border-bottom-right-radius: 100% 50%;}
+    }
+
+    .box3 {
+      border-top-left-radius: 100px 50px;
+    }
+
+    .box4 {
+      border-top-right-radius: 200px 100px;
+    }
+
+    .box5 {
+      border-bottom-right-radius: 100% 50%;
+    }
   </style>
 </head>
+
 <body>
   <div class="box1"></div>
   <div class="box2"></div>
@@ -36,4 +55,5 @@
   <div class="box4"></div>
   <div class="box5"></div>
 </body>
+
 </html>
