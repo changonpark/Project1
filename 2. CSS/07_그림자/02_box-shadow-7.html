@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>박스 그림자(box-shadow)</title>
+  <style>
+    .img-box {
+      position: relative;
+      padding: 10px;
+      background-color: #fff;
+      width: 410px;
+      box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    .img-box img {
+      width: 400px;
+      border: 1px solid #942;
+      border-style: inset;
+    }
+
+    /* (1) 그림자가 항상 나오기
+      .img-box:after {
+        content: '';
+        box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+        position: absolute;
+        width: 70%; bottom: 0; left: 15%;
+        height: 100px; z-index: -1;
+      } */
+
+    /* (2) 그림자가 마우스 호버될 때만 나오기 */
+    .img-box:hover:after {
+      content: '';
+      box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+      position: absolute;
+      width: 70%;
+      bottom: 0;
+      left: 15%;
+      height: 100px;
+      z-index: -1;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="img-box"><img src="http://wooreeweb.com/img/v01.jpg" alt=""></div>
+</body>
+
+</html>
