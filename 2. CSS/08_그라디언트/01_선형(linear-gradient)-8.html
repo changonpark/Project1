@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>선형그라디언트(linear-gradient)</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-image: url(http://wooreeweb.com/img/grid.gif);
+    }
+
+    div {
+      width: 100%;
+      height: 500px;
+    }
+  </style>
+  <style>
+    .mask {
+      background-image: linear-gradient(rgb(236, 222, 21), transparent), url('http://wooreeweb.com/img/bg-1.jpg');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="mask"></div>
+</body>
+
+</html>

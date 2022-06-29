@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>선형그라디언트(linear-gradient)</title>
+  <style>
+    div {
+      width: 600px;
+      height: 400px;
+      background-color: orange;
+    }
+  </style>
+  <style>
+    .direction1 {
+      background-image: linear-gradient(0deg, red, gold);
+    }
+
+    .direction2 {
+      background-image: linear-gradient(90deg, red, gold);
+    }
+
+    .direction3 {
+      background-image: linear-gradient(180deg, red, gold);
+    }
+
+    .direction4 {
+      background-image: linear-gradient(270deg, red, gold);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="direction1"></div>
+  <div class="direction2"></div>
+  <div class="direction3"></div>
+  <div class="direction4"></div>
+</body>
+
+</html>
