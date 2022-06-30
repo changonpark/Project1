@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>가변 너비</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-image: url(http://wooreeweb.com/img/grid.gif);
+    }
+
+    div {
+      border: 5px solid crimson;
+      margin: 20px auto;
+      height: 100px;
+      box-sizing: border-box;
+    }
+  </style>
+  <style>
+    .box1 {
+      width: 600px;
+    }
+
+    .box2 {
+      max-width: 600px;
+    }
+
+    .box3 {
+      min-width: 600px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box1">너비 600px</div>
+  <div class="box2">최대너비 600px</div>
+  <div class="box3">최소너비 600px</div>
+</body>
+
+</html>

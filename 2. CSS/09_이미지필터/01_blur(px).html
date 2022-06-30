@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>이미지 필터</title>
+  <style>
+    img {
+      width: 300px;
+    }
+
+    figcaption {
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+  </style>
+  <style>
+    .ft {
+      filter: blur(2px);
+    }
+  </style>
+</head>
+
+<body>
+  <figure>
+    <figcaption>원본</figcaption>
+    <img src="http://wooreeweb.com/img/s14.jpg" alt="">
+  </figure>
+  <figure>
+    <figcaption>blur(2px)</figcaption>
+    <img src="http://wooreeweb.com/img/s14.jpg" alt="" class="ft">
+  </figure>
+</body>
+
+</html>

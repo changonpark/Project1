@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>레이아웃</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    li {
+      list-style: none;
+    }
+
+    /* 헤더와 푸터 영역 기본 스타일 */
+    .header,
+    .footer {
+      background-color: black;
+      color: white;
+      padding: 20px;
+    }
+
+    /* 컨텐츠 영역의 분리 */
+    .container .nav {
+      width: 25%;
+    }
+
+    .container .content {
+      width: 75%;
+    }
+
+    .container .nav ul li {
+      background-color: #3cf;
+      color: white;
+      padding: 10px;
+      border-bottom: 1px solid #eee;
+    }
+
+    .container .nav,
+    .container .content {
+      float: left;
+      padding: 10px;
+    }
+
+    /* 클릭어픽스
+    -float이 적용된 요소의 부모에 적용해야 함! */
+    .clear:after {
+      content: '';
+      display: block;
+      clear: both;
+    }
+
+    .container .nav ul li:hover {
+      background-color: #9af;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 헤더 영역 -->
+  <div class="header">
+    <h1>LOGO</h1>
+  </div>
+
+  <!-- 컨텐츠 영역(사이드 내비게이션 + 컨텐츠) -->
+  <div class="container clear">
+    <!-- 사이드 내비게이션 -->
+    <div class="nav">
+      <ul>
+        <li>메뉴1</li>
+        <li>메뉴2</li>
+        <li>메뉴3</li>
+        <li>메뉴4</li>
+      </ul>
+    </div>
+    <!-- 컨텐츠 -->
+    <div class="content">
+      <h2>제목/슬로건</h2>
+      <!-- (p>lorem)*2 -->
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, doloremque totam eligendi voluptatum explicabo
+        beatae culpa rem illo ut, sequi, asperiores velit! Expedita odit alias fugiat ab, aperiam aut corrupti?</p>
+      <p>Tempora id mollitia harum hic fugit, ratione ducimus, dolor ipsam maxime iste odit debitis! Voluptatum, totam?
+        Voluptates error, facere saepe quasi maxime dignissimos quisquam nisi? Nesciunt veniam ad sequi consequuntur?
+      </p>
+    </div>
+  </div>
+
+  <!-- 푸터 영역 -->
+  <div class="footer">
+    <h3>&copy; myLayout</h3>
+  </div>
+</body>
+
+</html>
