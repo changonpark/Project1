@@ -1,25 +1,41 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>플로팅</title>
   <style>
-    #container { border: 5px solid;}
-    .box1, .box2 {
-      width: 100px; height: 100px;
+    #container {
+      border: 5px solid;
+      overflow: hidden;
+    }
+
+    .box1,
+    .box2 {
+      width: 100px;
+      height: 100px;
       border: 5px solid crimson;
       margin: 10px;
     }
-    .box3 { border: 5px solid #06f;}
+
+    .box3 {
+      border: 5px solid #06f;
+    }
   </style>
   <style>
-    .box1, .box2 { float: none;}
+    .box1,
+    .box2 {
+      float: left;
+    }
   </style>
   <style>
-    .clear {clear: both;}
+    .clear {
+      clear: both;
+    }
   </style>
 </head>
+
 <body>
   <h2>FLOAT 속성이 부모 요소에 영향을 주는 경우</h2>
   <hr>
@@ -29,4 +45,5 @@
   </div>
   <div class="box3 clear">box3</div>
 </body>
+
 </html>
