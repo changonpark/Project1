@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>폼</title>
+  <style>
+    /* 아이폰 기본 스타일 제거 */
+    input {
+      -webkit-appearance: none;
+    }
+  </style>
+  <style>
+    input,
+    label {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    input {
+      margin-bottom: 10px;
+    }
+
+    label {
+      margin-top: 10px;
+    }
+
+    input[type='radio'],
+    input[type='checkbox'] {
+      display: inline-block;
+    }
+  </style>
+</head>
+
+<body>
+  <form action="aaa.php">
+
+    <label for="">텍스트상자 - 기본형</label>
+    <input type="text">
+
+    <label for="">텍스트상자 - size, ~length</label>
+    <input type="text" size="10" maxlength="8" name="uid">
+
+    <label for="">텍스트상자 - autocomplete</label>
+    <input type="text" autocomplete="off">
+
+    <label for="">텍스트상자 - autufocus, placeholder</label>
+    <input type="text" autofocus placeholder="내용">
+    <hr>
+
+    <label for="">비밀번호</label>
+    <input type="password" required>
+    <hr>
+
+    <label for="">글상자</label>
+    <textarea name="" id="" cols="30" rows="10"></textarea>
+
+  </form>
+</body>
+
+</html>

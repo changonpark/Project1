@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>폼</title>
+  <style>
+    input,
+    label {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    input {
+      margin-bottom: 10px;
+    }
+
+    label {
+      margin-top: 10px;
+    }
+
+    input[type='radio'] input[type='checkbox'] {
+      display: inline-block;
+    }
+  </style>
+</head>
+
+<body>
+  <label for="">전송버튼 - 기본형</label>
+  <input type="submit">
+
+  <label for="">전송버튼 - 이름 지정</label>
+  <input type="submit" value="보내기">
+
+  <label for="">라디오버튼</label>
+  <input type="radio">HTML
+  <input type="radio">CSS
+  <hr>
+
+  <label for="">라디오버튼 - 그룹</label>
+  <input type="radio" name="grp">HTML
+  <input type="radio" name="grp">CSS
+
+  <label for="">체크박스</label>
+  <input type="checkbox" checked>HTML
+  <input type="checkbox">CSS
+
+  <label for="">업로드</label>
+  <input type="file">
+  <hr>
+
+  <label for="">이미지 버튼</label>
+  <input type="image" src="http://wooreeweb.com/img/button.jpg" width="100" height="42">
+</body>
+
+</html>

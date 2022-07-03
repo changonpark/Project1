@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>폼</title>
+  <style>
+    input,
+    label {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    input {
+      margin-bottom: 10px;
+    }
+
+    label {
+      margin-top: 10px;
+    }
+
+    input[type='radio'] input[type='checkbox'] {
+      display: inline-block;
+    }
+  </style>
+</head>
+
+<body>
+  <label for="">검색 - 기본형</label>
+  <input type="search">
+
+  <label for="">검색 - placeholder</label>
+  <input type="search" placeholder="검색어를 입력하세요">
+  <hr>
+
+  <div><label for="">콤보 상자(드롭다운)</label>
+    <select name="" id="">
+      <option value="ht">HTML</option>
+      <option value="cs">CSS</option>
+    </select>
+  </div>
+  <hr>
+
+  <div>
+    <label for="">목록상자</label>
+    <select name="" id="" multiple>
+      <option value="ht">HTML</option>
+      <option value="cs">CSS</option>
+    </select>
+  </div>
+
+</body>
+
+</html>
