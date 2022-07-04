@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>트랜지션 활용</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      height: 100%;
+    }
+
+    .wrap {
+      height: 100%;
+      position: relative;
+    }
+
+    .box {
+      width: 100px;
+      height: 100px;
+      border: 1px solid;
+      text-align: center;
+      line-height: 100px;
+      position: absolute;
+      top: 50%;
+      margin-top: -50px;
+      left: 50%;
+      margin-left: -50px;
+      cursor: pointer;
+      transition: all 1s 0.5s;
+    }
+
+    .box:hover {
+      width: 300px;
+      height: 300px;
+      margin-top: -150px;
+      margin-left: -150px;
+      line-height: 300px;
+      font-size: 3em;
+      background-color: gold;
+    }
+  </style>
+  <style>
+    .box:hover {
+      border-radius: 50%;
+      border-color: transparent;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="box">HELLO</div>
+  </div>
+</body>
+
+</html>

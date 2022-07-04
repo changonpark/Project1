@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>트랜지션</title>
+  <link rel="stylesheet" href="css/common.css">
+  <style>
+    .wrap {
+      width: 400px;
+      height: 600px;
+      border: 1px solid silver;
+    }
+
+    .wrap:hover>div {
+      width: 400px;
+      background-color: crimson;
+    }
+
+    div {
+      transition: all 3s;
+    }
+  </style>
+  <style>
+    .box1 {
+      transition-timing-function: linear;
+    }
+
+    .box2 {
+      transition-timing-function: ease;
+    }
+
+    .box3 {
+      transition-timing-function: ease-in;
+    }
+
+    .box4 {
+      transition-timing-function: ease-out;
+    }
+
+    .box5 {
+      transition-timing-function: ease-in-out;
+    }
+
+    .box6 {
+      transition-timing-function: cubic-bezier(.74, .23, .87, .67);
+    }
+  </style>
+</head>
+
+<body>
+  <!-- section.wrap>(.box$)*6 -->
+  <section class="wrap">
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+    <div class="box4"></div>
+    <div class="box5"></div>
+    <div class="box6"></div>
+  </section>
+</body>
+
+</html>

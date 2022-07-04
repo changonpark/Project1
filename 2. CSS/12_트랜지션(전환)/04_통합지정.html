@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>트랜지션</title>
+  <link rel="stylesheet" href="css/common.css">
+  <style>
+    .wrap {
+      width: 400px;
+      height: 600px;
+      border: 1px solid silver;
+    }
+
+    .wrap:hover>div {
+      width: 400px;
+      background-color: crimson;
+    }
+
+    div {
+      transition: all 3s 1s linear;
+    }
+
+    /* 트랜지션 단축표기
+    - 속성값은 순서없이 표기 가능하지만, 진행시간과 대기시간은 다우니가 같으므로 먼저 작성된 내용이 진행시간, 나중에 작성한 내용은 대기시간이 됨 */
+  </style>
+</head>
+
+<body>
+  <!-- section.wrap>(.box$)*6 -->
+  <section class="wrap">
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+    <div class="box4"></div>
+    <div class="box5"></div>
+    <div class="box6"></div>
+  </section>
+</body>
+
+</html>
