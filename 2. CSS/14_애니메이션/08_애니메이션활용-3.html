@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>애니메이션</title>
+  <style>
+    .frame {
+      border: 1px solid red;
+      position: relative;
+      height: 500px;
+      overflow: hidden;
+    }
+
+    .box {
+      width: 100px;
+      height: 100px;
+      background-color: gold;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    @keyframes move {
+      0% {
+        width: 100px;
+        height: 100px;
+        background-color: gold;
+        top: 0;
+        left: 0;
+        transform: scale(1) rotate(0deg);
+      }
+
+      100% {
+        border-radius: 50%;
+        background-color: crimson;
+        top: 100%;
+        left: 100%;
+        transform: scale(3) rotate(720deg);
+      }
+    }
+
+    .box {
+      animation: move 5s 1s linear infinite;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="frame">
+    <div class="box"></div>
+  </div>
+</body>
+
+</html>

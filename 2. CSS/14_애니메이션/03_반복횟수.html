@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>애니메이션</title>
+  <style>
+    .box {
+      width: 100px;
+      height: 100px;
+      background-color: red;
+    }
+  </style>
+  <style>
+    /* 애니메이션 제작
+
+    (1) 키프레임 생성
+    @keyframes 애니메이션이름 {
+      전체진행시간에 대한 비율 {변경내용}
+    } */
+    @keyframes bgchange {
+      0% {
+        background-color: gold;
+      }
+
+      50% {
+        background-color: black;
+      }
+
+      100% {
+        background-color: blue;
+      }
+    }
+
+    /* 애니메이션 생성과 적용 */
+    .box {
+      /* animation-name: bgchange;
+      animation-duration: 6s; */
+      animation: bgchange 6s;
+      animation-delay: 1s;
+      /*대기시간 */
+      animation-iteration-count: infinite;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box"></div>
+</body>
+
+</html>

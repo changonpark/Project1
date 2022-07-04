@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>애니메이션</title>
+  <style>
+    html,
+    body {
+      height: 100%;
+    }
+
+    .obj {
+      width: 200px;
+      height: 200px;
+      background-color: crimson;
+    }
+
+    .frame {
+      width: 400px;
+      height: 400px;
+      background-color: beige;
+    }
+  </style>
+  <style>
+    .box1 {
+      border-radius: 0 200px;
+    }
+
+    .box2 {
+      border-radius: 200px 0;
+    }
+
+    .box3 {
+      border-radius: 200px 0;
+    }
+
+    .box4 {
+      border-radius: 0 200px;
+    }
+
+    .box5 {
+      border-radius: 50%;
+    }
+
+    .obj {
+      float: left;
+    }
+
+    .box5 {
+      background-color: gold;
+      position: absolute;
+      top: 50%;
+      margin-top: -100px;
+      left: 50%;
+      margin-left: -100px;
+    }
+
+    .frame {
+      position: relative;
+      top: 50%;
+      margin-top: -200px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  </style>
+  <style>
+    @keyframes aniyeyo {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    .frame {
+      animation: aniyeyo 2s infinite linear;
+    }
+  </style>
+  <style>
+    .frame {
+      background-color: transparent;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="frame">
+    <div class="obj box1"></div>
+    <div class="obj box2"></div>
+    <div class="obj box3"></div>
+    <div class="obj box4"></div>
+    <div class="obj box5"></div>
+  </div>
+</body>
+
+</html>

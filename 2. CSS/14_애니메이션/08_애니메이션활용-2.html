@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>애니메이션</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .box {
+      width: 100px;
+      height: 100px;
+      background-color: gold;
+      position: absolute;
+      top: 50%;
+      margin-top: -50px;
+      left: 50%;
+      margin-left: -50px;
+    }
+
+    /* (1) 키프레임 생성 */
+    @keyframes mov {
+      0% {
+        width: 100px;
+        height: 100px;
+        background-color: gold;
+      }
+
+      25% {
+        width: 200px;
+        height: 200px;
+        background-color: #068;
+        border-radius: 50%;
+        margin-left: -100px;
+        margin-top: -100px;
+      }
+
+      50% {
+        width: 300px;
+        height: 300px;
+        background-color: #cd0;
+        border-radius: 0;
+        margin-left: -150px;
+        margin-top: -150px;
+      }
+
+      75% {
+        width: 200px;
+        height: 200px;
+        background-color: #0c0;
+        border-radius: 50%;
+        margin-left: -100px;
+        margin-top: -100px;
+      }
+
+      100% {
+        width: 100px;
+        height: 100px;
+        background-color: gold;
+      }
+    }
+
+    /* (2) 애니메이션 생성 및 적용 */
+    .box {
+      animation: mov2 4s infinite alternate;
+    }
+  </style>
+  <style>
+    @keyframes mov2 {
+      50% {
+        background-color: yellowgreen;
+        transform: scale(2) rotate(765deg);
+      }
+
+      100% {
+        background-color: coral;
+        transform: scale(3) rotate(-765deg);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box"></div>
+</body>
+
+</html>
