@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>트랜지션</title>
+  <link rel="stylesheet" href="css/common.css">
+  <style>
+    .wrap {
+      width: 400px;
+      height: 600px;
+      border: 1px solid silver;
+    }
+
+    .wrap:hover>div {
+      width: 400px;
+      background-color: crimson;
+    }
+
+    div {
+      transition: all 3s;
+    }
+  </style>
+  <style>
+    .box1 {
+      transition-delay: 0s;
+    }
+
+    .box2 {
+      transition-delay: 1s;
+    }
+
+    .box3 {
+      transition-delay: 2s;
+    }
+
+    .box4 {
+      transition-delay: 3s;
+    }
+
+    .box5 {
+      transition-delay: 4s;
+    }
+
+    .box6 {
+      transition-delay: 5s;
+    }
+
+    /* 대기시간
+    transition-delay: 시간
+    0.5s = 0.5초 = 500ms
+    1s = 1000ms */
+  </style>
+</head>
+
+<body>
+  <!-- section.wrap>(.box$)*6 -->
+  <section class="wrap">
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+    <div class="box4"></div>
+    <div class="box5"></div>
+    <div class="box6"></div>
+  </section>
+</body>
+
+</html>
