@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NIKE AIR</title>
+  <!-- 웹폰트아이콘 라이브러리 -->
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'/>
+  <link rel="shortcut icon" sizes="16x16 32x32" type="image/x-icon" href="images/favicon.png">
+  <!-- CSS 연결 -->
+  <link rel="stylesheet" href="css/layout.css">
+  
+</head>
+<body>
+  <!-- 배경 동영상 -->
+  <div class="vid">
+    <video autoplay muted loop poster="images/poster.jpg">
+      <source src="media/nike.mp4">
+    </video>
+  </div>
+  <!-- /.vid 배경동영상 -->
+
+  <!-- 배경 패턴 -->
+  <div class="layer"></div>
+
+  <!-- 로고 -->
+  <div id="logo">
+    <img src="images/logo.png" alt="나이키 에어맥스">
+  </div>
+  <!-- /#logo -->
+
+  <!-- 헤더(내비게이션) -->
+  <header>
+    <!-- ul#gnb>(li>a[href=#]>em{메인메뉴$})*5 -->
+    <ul id="gnb">
+      <li><a href="#"><em>메인메뉴1</em></a></li>
+      <li><a href="#"><em>메인메뉴2</em></a>
+        <!-- ul>(li>a[href=#]>em{서브메뉴$})*4 -->
+        <ul>
+          <li><a href="#"><em>서브메뉴1</em></a></li>
+          <li><a href="#"><em>서브메뉴2</em></a></li>
+          <li><a href="#"><em>서브메뉴3</em></a></li>
+          <li><a href="#"><em>서브메뉴4</em></a></li>
+        </ul>
+      </li>
+      <li><a href="#"><em>메인메뉴3</em></a></li>
+      <li><a href="#"><em>메인메뉴4</em></a></li>
+      <li><a href="#"><em>메인메뉴5</em></a></li>
+    </ul>
+    <!-- /ul#gnb -->
+  </header>
+
+  <!-- SNS -->
+  <ul id="sns">
+    <!-- (li>a[href=#]>i.fa.fa-)*3 -->
+    <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+    <li><a href="#"><i class="fa fa-facebook-official"></i></a></li>
+    <li><a href="#"><i class="fa fa-youtube-square"></i></a></li>
+  </ul>
+  <!-- /SNS -->
+
+  <!-- 타이포그래피 슬로건 -->
+  <div class="slogan">
+    <p class="tit">50<em>/24</em></p>
+    <p class="txt">Best Qualified <strong>AIR MAX</strong></p>
+  </div>
+  <!-- /.slogan -->
+
+  <!-- 우측 사이드 배너 -->
+  <div id="side">
+    <!-- 배너 -->
+    <div class="con">
+      <!-- (p>em{배너$}>a[href=#]>img[src=images/ban$.png])*3 -->
+      <p><em>배너1<a href="#"><img src="images/ban1.png" alt=""></a></em></p>
+      <p><em>배너2<a href="#"><img src="images/ban2.png" alt=""></a></em></p>
+      <p><em>배너3<a href="#"><img src="images/ban3.png" alt=""></a></em></p>
+    </div>
+
+    <!-- 모션 아이콘(<<) -->
+    <div class="btn">
+      <i class="fa fa-angle-double-left"></i>
+      <i class="fa fa-angle-double-left"></i>
+      <i class="fa fa-angle-double-left"></i>
+    </div>
+  </div>
+</body>
+</html>

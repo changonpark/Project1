@@ -1,0 +1,23 @@
+/*********************************
+  css/font.css
+*********************************/
+
+/* 구글 웹폰트 라이브러리(noto sans kr, play, monoton 글꼴 사용) 추가 */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;700&family=Monoton&family=Noto+Sans+KR&family=Play&display=swap');
+
+/* Noto Sans KR 글꼴 적용(기본 크기) */
+html {
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+/* play 글꼴 적용(기준 글자 크기의 4배) */
+.slogan .tit em {
+  font-family: 'Play', sans-serif;
+  font-size: 4rem;
+}
+
+/* Monoton 글꼴 적용(기준 글자 크기의 9배) */
+.slogan .tit {
+  font-family: 'Monoton', cursive; 
+  font-size: 9rem;
+}
