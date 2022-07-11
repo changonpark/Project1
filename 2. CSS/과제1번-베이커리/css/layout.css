@@ -1,0 +1,140 @@
+@charset "UTF-8";
+
+/*
+기본 초기값
+================================================ */
+html {
+    font-size: 100%;
+}
+body {
+	color: #555;
+	font-family: sans-serif;
+}
+/* <link rel="shortcut icon" href="D:\WEB\Documents\카카오톡 받은 파일/favicon.ico"> */
+/*
+공통
+================================================ */
+* {
+	margin: 0;
+	padding: 0;
+}
+.title {
+	font-family: 'Dancing Script', cursive;
+	font-size: 7rem;
+	margin-bottom: 2rem;
+}
+
+p {
+	font-size: 1.125rem;
+}
+
+.container {
+	height: 100vh;
+	overflow: auto;
+	scroll-snap-type: y mandatory;
+	
+}
+section {
+	color: #555;
+	height: 100vh;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	scroll-snap-align: start;
+}
+
+/*
+1페이지 - HERO
+================================================ */
+.hero {
+	background-image: url('https://ifh.cc/g/C5Kzhr.jpg');
+	text-align: center;
+	padding-top: 10vh;
+	}
+
+/*
+2페이지 - 메뉴
+================================================ */
+.menu {
+	background-image: url('https://ifh.cc/g/dxyWCk.jpg');
+	display: flex;
+	align-items: center;
+}
+
+.wrapper {
+	max-width: 900px;
+	width: 100%;
+	margin: 0 auto;
+	padding: 0 1rem;
+}
+
+.menu-list tr {
+	font-size: 1.125rem;
+	margin-bottom: 0.5rem;
+}
+
+.menu-list th {
+	font-weight: normal;
+}
+.menu-list td {
+	padding-left: 1rem;
+}
+/*
+3페이지 - CONTACT
+================================================ */
+.contact {
+	background-image: url('https://ifh.cc/g/AC4Z5Y.jpg');
+	text-align: center;
+	padding-top: 10vh;
+}
+
+.btn {
+	font-size: 1.5rem;
+	color: #fff;
+	border: 1px solid #fff;
+	padding: 1rem 3rem;
+	border-radius: 7px;
+	margin: 2rem 0;
+	display: inline-block;
+}
+
+.btn:hover {
+	background-color: #fff;
+	color: #555;
+	border: 1px solid transparent;
+}
+
+.contact-sns {
+	display: flex;
+	justify-content: center;
+}
+
+.contact-sns a {
+	font-size: 2rem;
+	color: #fff;
+	background-color: #555;
+	display: inline-block;
+	width: 4rem;
+	height: 4rem;
+	border-radius: 50%;
+	margin: 0 0.5rem;
+	line-height: 4rem;
+}
+.contact-sns a:hover {
+	background-color: #fff;
+	color: #555;
+}
+/*
+MOBILE SIZE
+================================================ */
+@media (max-width: 600px) {
+	.title {
+		font-size: 4rem;
+	}
+	p, .menu-list li {
+		font-size: 1rem;
+	}
+	.hero {
+		padding-top: 20vh;
+	}
+}

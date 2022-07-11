@@ -14,8 +14,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&family=Poiret+One&display=swap');
 
 html {
-  font-family: 'Noto Sans KR', sans-serif;
-  font-family: 'Poiret One', cursive;
+  font-family: 'Poiret One', 'Noto Sans KR', sans-serif;
   font-size: 14px;
   line-height: 1.5;
   color: #333;
