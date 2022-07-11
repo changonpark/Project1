@@ -1,0 +1,549 @@
+/******************************** 
+  css/layout.css
+********************************/
+
+/* fonts.css 추가 */
+@import url(fonts.css);
+
+
+/* 초기화 */
+* { margin: 0; padding: 0; }
+li { list-style: none; }
+a { text-decoration: none; color: #444; }
+body * { box-sizing: border-box; }
+
+
+/* 헤더 고정, 너비 15%(단, 최대너비는 300px) */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 20%;
+  height: 100%;
+  max-width: 300px;
+}
+
+/* 
+  nav 높이 35px, 상대 위치 
+  배경색: #222
+*/
+nav {
+  width: 80%;
+  background-color: #bcd;
+  margin-left: 20%;
+  position: relative;
+  height: 50px;
+}
+
+
+
+/******************************** 
+  모듈
+********************************/
+
+/* 모듈그룹 컨테이너는 상대위치 */
+.container {
+  position: relative;
+  width: 80%;
+  margin-left: 20%;
+}
+
+/* 
+*모듈
+ -배치: 가로형
+ -기본 높이: 250px
+*/
+.mo {
+  float: left;
+  height: 250px;
+}
+
+/* 1행 */
+.m1 { width: 60%; height: 500px; background-color: #ddd; }
+.m2 { width: 40%; background-color: #ccc; }
+
+/* 2행 */
+.m3 { width: 20%; background-color: #bbb; }
+.m4 { width: 20%; background-color: #aaa; }
+
+/* 3행 */
+.m5 { width: 20%; background-color: #999; }
+.m6 { width: 40%; background-color: #888; }
+.m7 { width: 20%; background-color: #777; }
+.m8 { width: 20%; background-color: #666; }
+
+/* 4행 */
+.m9 { width: 20%; background-color: #555; }
+.m10 { width: 20%; background-color: #444; }
+.m11 { width: 40%; background-color: #333; }
+.m12 { width: 20%; background-color: #222; }
+
+/* 
+ 상대위치, 크기는 부모 요소에 맞추기
+*/
+.mo > div {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+/******************************** 
+  헤더
+********************************/
+
+/* 
+ 로고: 절대위치
+ 크기: 200 x 200
+ 아래로 50px, 가운데 배치
+*/
+#logo {
+  background-image: url(../images/tftlogo.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  margin-left: -75px;
+}
+
+/* 절대위치, 아래로 300px */
+#gnb {
+  position: absolute;
+  top: 250px;
+}
+
+/* 내부여백: 상하 10px, 좌우 30px */
+#gnb li a {
+  display: block;
+  padding: 10px 30px;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+/* 기본 글자 크기만큼 우측 여백 */
+#gnb li a i { margin-right: 1rem; }
+#gnb li a:hover { color: lawngreen; }
+
+/* 
+  절대위치, 위로 50px
+  크기: 120 x 50
+*/
+.sns {
+  position: absolute;
+  width: 120px;
+  height: 50px;
+  bottom: 50px;
+  right: 50%;
+  margin-right: -60px;
+}
+
+/* 가로 배치 */
+.sns a {
+  float: left;
+  display: block;
+}
+
+/* 너비 50%, 대문자화, 글꼴은 Arial, Helvetica */
+.sns .stxt {
+  width: 50%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-transform: uppercase;
+}
+
+/* 너비: 40px, 글자 크기: 30px */
+.sns .icon {
+  font-size: 30px;
+  width: 40px;
+}
+
+
+
+/******************************** 
+  퀵링크
+********************************/
+
+/* 
+  절대위치, 7px 아래로 이동
+  글자 색상: #eee
+  글꼴: Arial, Helvetica
+*/
+nav a {
+  position: absolute;
+  color: #eee;
+  font-family: Arial, Helvetica, sans-serif;
+  top: 15px
+}
+
+/* 좌우 위치: 20px, 100px */
+nav a:nth-child(1) { left: 20px; }
+nav a:nth-child(2) { left: 100px; }
+nav a:nth-child(3) { right: 100px; }
+nav a:nth-child(4) { right: 20px; }
+
+
+
+/******************************** 
+  컨테이너
+********************************/
+
+/* .bg 에 배경 이미지 삽입 */
+.bg1 { background-image: url(../images/lc1.png); }
+.bg2 { background-image: url(../images/chall.png); }
+.bg3 { background-image: url(../images/chall2.png); }
+.bg4 { background-image: url(../images/chall3.png); }
+.bg5 { background-image: url(../images/chall4.jpg); }
+.bg6 { background-image: url(../images/chall5.png); }
+.bg7 { background-image: url(../images/chall6.png); }
+.bg8 { background-image: url(../images/chall7.png); }
+
+/* 배경 이미지 크기 및 위치 조정 */
+.bg {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+/* .
+  bg 내부 텍스트(span) 
+  기본 글자 크기의 4.5배
+  절대위치, 오른쪽으로 20px, 아래 기준 0
+  투명하게
+*/
+.bg span {
+  font-size: 2.5rem;
+  color: #fff;
+  position: absolute;
+  bottom: 0;
+  right: 20px;
+  opacity: 0;
+}
+
+/* 호버시 보이기 */
+.mo:hover span { opacity: 1; }
+
+
+/*
+  메인 모듈 재설정
+  보이도록 변경
+  기본 글자 크기의 8배
+  위로 50px, 오른쪽으로 5px
+*/
+.bg1 span {
+  opacity: 1;
+  font-size: 5rem;
+  bottom: -20px;
+  right: 0px;
+}
+
+
+/* 텍스트 모듈 공통 */
+/*
+  배경색: 흰색, 글자색: #555
+  내부여백: 상하 40px, 좌우 30px
+*/
+.txt {
+  background-color: #fff;
+  color: #555;
+  padding: 40px 30px;
+}
+.txt strong {
+  font-size: 2rem;
+  color: #444;
+  margin-bottom: 20px;
+  font-weight: normal;
+}
+.txt i {
+  font-size: 15rem;
+  color: #2184e7;
+  position: absolute;
+  bottom: -70px;
+  right: -200px;
+  opacity: 0;
+}
+
+/* 텍스트 모듈 호버 효과 */
+/* 
+  배경색: #6ccce7
+  글자색: 흰색
+*/
+.mo:hover .txt {
+  background-color: slateblue;
+  color: #000;
+  font-weight: bold;
+}
+.mo:hover .txt strong { color: #fff; }
+.mo:hover .txt i { right: 0; opacity: 0.5; }
+
+/* 텍스트 모듈 일부 재설정 */
+.mo:nth-child(3) .txt {
+  background-color: #6fcbe7;
+}
+.mo:nth-child(11) .txt {
+  background-color: #eee;
+}
+
+/* 모듈 3 아이콘 재설정 */
+.mo:nth-child(3) .txt i {
+  bottom: -40px;
+  right: -20px;
+  opacity: 0.7;
+  color: #fff;
+  font-size: 10rem;
+}
+
+
+/******************************** 
+  전환 효과 및 모션
+********************************/
+
+/* 전환시간 0.6초 */
+header,
+nav,
+.mo,
+#gnb a { transition: all 0.6s; }
+
+/* 키프레임 zoom
+  0 ~ 100%로 확대
+*/
+@keyframes zoom-in-zoom-out {
+  0% {
+    transform: scale(0.2, 0.2);
+  }
+  50% {
+    transform: scale(1.1, 1.1);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
+/* zoom 1초 적용(한번만 실행) */
+.mo { animation: zoom-in-zoom-out 1.2s 1; }
+
+
+/* 배경 이미지 모듈 텍스트 
+  10배 확대, 전환 시간: 0.6초
+*/
+.bg span {
+  transform: scale(10);
+  transition: all 0.6s;
+}
+
+.bg2 span {
+  color: #6ccce7;
+}
+
+
+
+.bg3 span {
+  color: goldenrod;
+}
+
+.mo:hover .bg span {
+  transform: scale(1);
+}
+
+/* 모듈1 재설정 */
+.mo .bg1 span {
+  transform: rotateY(0); transition: all 0.6s;
+}
+.mo .bg1:hover span {
+  transform: rotateX(270deg); color: #222;
+  text-shadow: 10px 10px 10px #eee;
+}
+
+/* 
+  텍스트 모듈 효과 
+  strong 전환 1초
+  i 전환 0.7초
+*/
+.txt,
+.txt strong { transition: all 1s; }
+.txt i { transition: all 0.7s; }
+
+
+
+
+/******************************** 
+  반응형 - 미디어쿼리
+********************************/
+
+
+/* 화면 너비 1600px 이하에서 적용 */
+@media screen and (max-width: 1600px) {
+
+  /* 
+    상대위치, 너비 100%, 높이 80px 
+  */
+  header {
+    
+  }
+
+  /* 너비 100% */
+  nav,
+  .container {
+    
+  }
+
+  /* 로고 변경
+    너비 150px, 우측 아래로 20px
+  */
+  #logo {
+    
+  }
+
+  /* 왼쪽으로 200px */
+  #gnb {  }
+
+  /* 가로 배치 */
+  #gnb li {  }
+
+  /* 왼쪽으로 80px, 위로 20px */
+  .sns {  }
+}
+
+
+/* 화면 너비 1200px 이하에서 적용 */
+@media screen and () {
+  .sns {  }
+
+  /* 왼쪽으로 20px */
+  #gnb {  } 
+
+  /* 모듈 크기 재설정 */
+  .m1 {   }
+  .m2 {   }
+  .m3 {   }
+  .m4 {   }
+  .m5 {   }
+  .m6 {   }
+  .m7 {   }
+  .m8 {   }
+  .m9 {   }
+  .m10 {  }
+  .m11 {  }
+  .m12 {  }
+}
+
+
+/* 화면 너비 1024px 이하에서 적용 */
+@media screen and () {
+  .m1 {  }
+  .m2 {  }
+  .m3 {  }
+  .m4 {  }
+  .m5 {  }
+  .m6 {  }
+  .m7 {  }
+  .m8 {  }
+  .m9 {  }
+  .m10 { }
+  .m11 { }
+  .m12 { }
+
+}
+
+
+/* 화면 너비 780px 이하에서 적용 */
+@media screen and () {
+  .m1 {  }
+  .m2 {  }
+  .m3 {  }
+  .m4 {  }
+  .m5 {  }
+  .m6 {  }
+  .m7 {  }
+  .m8 {  }
+  .m9 {  }
+  .m10 { }
+  .m11 { }
+  .m12 { }
+}
+
+
+/* 화면 너비 640px 이하에서 적용 */
+@media screen and () {
+
+  /* 높이 150px */
+  header {  }
+
+  nav {  }
+
+  /* 
+    크기: 150 x 50
+    상대위치, 아래로 20px 
+    가운데 정렬
+  */
+  #logo {
+    
+  }
+
+  /* 아래로 90px, 높이 40px */
+  #gnb {
+   
+  }
+  #gnb li {  }
+  #gnb li a i {  }
+}
+
+
+/* 화면 너비 480px 이하에서 적용 */
+@media screen and () {
+
+  /*
+    헤더 고정, 높이: 160px
+    배경색: 투명
+    z-index: 50
+  */
+  header {
+    
+  }
+
+  /* 크기: 200 x 200, 아래로 20px */
+  #logo {
+    
+  }
+
+  /* 상대위치, 너비: 60%, 아래로 100px */
+  #gnb {
+    
+  }
+
+  /* 상하 여백: 20px */
+  #gnb li {
+    
+  }
+
+  /* 
+    배경색: 검정
+    글자색: 흰색
+    불투명도: 0.7
+    둥근모서리: 10px
+  */
+  #gnb li a {
+    
+  }
+  #gnb li a i {  }
+
+  .container {
+    
+  }
+
+  /* 숨기기 */
+  .container .mo {  }
+
+  /* 고정 위치, 꽉 채워 보이기 */
+  .container .m1 {
+    
+  }
+
+  /* 글자 숨기기 */
+  .container .m1 span {  }
+
+  /* 호버시 불투명 1, 1.1배 확대 */
+  #gnb a:hover {
+    
+  }
+}

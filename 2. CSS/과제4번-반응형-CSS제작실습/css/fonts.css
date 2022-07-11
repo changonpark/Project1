@@ -1,0 +1,20 @@
+/********************************* 
+  css/fonts.css
+*********************************/
+/*********************************
+* 개요
+ 기본 글꼴: 구글 웹폰트 사용
+ -영문: Shrikhand
+ -한글: Noto Sans KR
+
+ 기본 글자 크기: 16px
+ 기본 행간: 150%
+ 기본 글자 색상: #abc
+*********************************/
+
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&family=Shrikhand&display=swap');
+
+html {
+  font-family: 'Shrikhand', 'Noto Sans KR', sans-serif;
+}
