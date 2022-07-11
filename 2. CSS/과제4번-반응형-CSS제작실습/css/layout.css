@@ -374,176 +374,188 @@ nav,
 /* 화면 너비 1600px 이하에서 적용 */
 @media screen and (max-width: 1600px) {
 
-  /* 
-    상대위치, 너비 100%, 높이 80px 
-  */
   header {
-    
+    position: relative;
+    width: 100%;
+    height: 80px;
+    max-width: 100%;
   }
 
-  /* 너비 100% */
   nav,
   .container {
-    
+    width: 100%;
+    margin-left: 0;
   }
 
-  /* 로고 변경
-    너비 150px, 우측 아래로 20px
-  */
   #logo {
-    
+    background-image: url(../images/tft.png);
+    width: 150px;
+    top: 20px;
+    left: 20px;
+    margin-left: 0;
   }
 
-  /* 왼쪽으로 200px */
-  #gnb {  }
+  #gnb { top: 20px; right: 200px; }
+  #gnb li { float: left; }
 
-  /* 가로 배치 */
-  #gnb li {  }
-
-  /* 왼쪽으로 80px, 위로 20px */
-  .sns {  }
+  .sns { right: 80px; bottom: 20px; }
+  
 }
+
 
 
 /* 화면 너비 1200px 이하에서 적용 */
-@media screen and () {
-  .sns {  }
+@media screen and (max-width: 1200px) {
 
-  /* 왼쪽으로 20px */
-  #gnb {  } 
+  .sns { display: none; }
+  #gnb { right: 20px; }
 
   /* 모듈 크기 재설정 */
-  .m1 {   }
-  .m2 {   }
-  .m3 {   }
-  .m4 {   }
-  .m5 {   }
-  .m6 {   }
-  .m7 {   }
-  .m8 {   }
-  .m9 {   }
-  .m10 {  }
-  .m11 {  }
-  .m12 {  }
+  .m1 { width: 75%; }
+  .m2 { width: 25%; }
+  .m3 { width: 25%; }
+
+  .m4 { width: 25%; }
+  .m5 { width: 25%; }
+  .m6 { width: 50%; }
+
+  .m7 { width: 50%; }
+  .m8 { width: 25%; }
+  .m9 { width: 25%; }
+
+  .m10 { width: 25%; }
+  .m11 { width: 50%; }
+  .m12 { width: 25%; }
+ 
 }
 
+/* 화면 너비 1024px 이하에서 적용 (3 GRID) */
+@media screen and (max-width: 1024px) {
 
-/* 화면 너비 1024px 이하에서 적용 */
-@media screen and () {
-  .m1 {  }
-  .m2 {  }
-  .m3 {  }
-  .m4 {  }
-  .m5 {  }
-  .m6 {  }
-  .m7 {  }
-  .m8 {  }
-  .m9 {  }
-  .m10 { }
-  .m11 { }
-  .m12 { }
+   .m1 { width: 100%; }
 
+   .m2 { width: 66.6666%; }
+   .m3 { width: 33.3333%; }
+
+   .m4 { width: 33.3333%; }
+   .m5 { width: 66.6666%; }
+   .m6 { display: none; }
+
+   .m7 { width: 33.3333%; }
+   .m8 { display: none; }
+   .m9 { display: none; }
+   .m10 { width: 33.3333%; }
+   .m11 { width: 33.3333%; }
+   .m12 { display: none; }
 }
 
+/* 화면 너비 780px 이하에서 적용 - 태블릿 */
+@media screen and (max-width: 780px) {
 
-/* 화면 너비 780px 이하에서 적용 */
-@media screen and () {
-  .m1 {  }
-  .m2 {  }
-  .m3 {  }
-  .m4 {  }
-  .m5 {  }
-  .m6 {  }
-  .m7 {  }
-  .m8 {  }
-  .m9 {  }
-  .m10 { }
-  .m11 { }
-  .m12 { }
+ /* 모듈 크기 재설정 - 2 GRID */
+ .m1 { width: 100%; }
+ .m2 { width: 100%; }
+ .m3 { display: none; }
+ .m4 { width: 50%; }
+ .m5 { width: 50%; }
+ .m6 { display: none; }
+ .m7 { width: 50%; }
+ .m8 { display: none; }
+ .m9 { display: none; }
+ .m10 { width: 50%; }
+ .m11 { width: 100%; }
+ .m12 { display: none; }
+ 
 }
-
 
 /* 화면 너비 640px 이하에서 적용 */
-@media screen and () {
+@media screen and (max-width: 640px) {
 
-  /* 높이 150px */
-  header {  }
+ header { height: 150px; }
+ nav { display: none; }
 
-  nav {  }
+ #logo {
+   width: 150px; height: 50px;
+   position: relative;
+   top: 20px; left: 0;
+   margin: 0 auto;
+ }
 
-  /* 
-    크기: 150 x 50
-    상대위치, 아래로 20px 
-    가운데 정렬
-  */
-  #logo {
-    
-  }
+ #gnb {
+   width: 100%; top: 90px; left: 0;
+   height: 40px;
+ }
+ #gnb li { width: 25%; text-align: center; }
+ #gnb li a i { display: block; }
 
-  /* 아래로 90px, 높이 40px */
-  #gnb {
-   
-  }
-  #gnb li {  }
-  #gnb li a i {  }
+ /* 모듈 크기 재설정 */
+ .m1 { width: 100%; height: 300px; }
+ .m2 { width: 100%; }
+ .m3 { display: none; }
+ .m4 { width: 50%; }
+ .m5 { width: 50%; }
+ .m6 { display: none; }
+ .m7 { width: 50%; }
+ .m8 { display: none; }
+ .m9 { display: none; }
+ .m10 { width: 50%; }
+ .m11 { width: 50%; }
+ .m12 { display: block; width: 50%; }
+ 
 }
 
+/* 화면 너비 480px 이하에서 적용 - 모바일 */
+@media screen and (max-width: 480px) {
 
-/* 화면 너비 480px 이하에서 적용 */
-@media screen and () {
+ header {
+   position: fixed;
+   width: 100%; height: 160px;
+   background-color: transparent;
+   z-index: 50;
+ }
 
-  /*
-    헤더 고정, 높이: 160px
-    배경색: 투명
-    z-index: 50
-  */
-  header {
-    
-  }
+ #logo {
+   width: 200px; height: 200px;
+   background-image: url(../images/chall8.png);
+   top: 20px;
+ }
 
-  /* 크기: 200 x 200, 아래로 20px */
-  #logo {
-    
-  }
+ #gnb {
+   position: relative;
+   width: 60%; left: 20%; top: 100px;
+ }
+ #gnb li {
+   float: none; width: 100%;
+   margin: 20px 0;
+ }
+ #gnb li a {
+   background-color: #000;
+   color: #fff; opacity: 0.8;
+   width: 100%; 
+   border-radius: 10px;
+   text-align: left;
+ }
+ #gnb li a i { 
+   display: inline;
+ }
 
-  /* 상대위치, 너비: 60%, 아래로 100px */
-  #gnb {
-    
-  }
+ .container {
+   width: 100%; z-index: 40;
+ }
+ .container .mo { display: none; }
 
-  /* 상하 여백: 20px */
-  #gnb li {
-    
-  }
+ .container .m1 {
+   display: block;
+   position: fixed;
+   width: 100%; height: 100%;
+ }
+ .container .m1 span { 
+   display: none;
+ }
 
-  /* 
-    배경색: 검정
-    글자색: 흰색
-    불투명도: 0.7
-    둥근모서리: 10px
-  */
-  #gnb li a {
-    
-  }
-  #gnb li a i {  }
-
-  .container {
-    
-  }
-
-  /* 숨기기 */
-  .container .mo {  }
-
-  /* 고정 위치, 꽉 채워 보이기 */
-  .container .m1 {
-    
-  }
-
-  /* 글자 숨기기 */
-  .container .m1 span {  }
-
-  /* 호버시 불투명 1, 1.1배 확대 */
-  #gnb a:hover {
-    
-  }
+ #gnb a:hover {
+   opacity: 1;
+   transform: scale(1.1);
+ }
+ 
 }

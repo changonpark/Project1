@@ -1,10 +1,8 @@
-/******************************** 
+/************************************ 
   css/layout.css
-********************************/
+************************************/
 
-/* fonts.css 추가 */
 @import url(fonts.css);
-
 
 /* 초기화 */
 * { margin: 0; padding: 0; }
@@ -13,185 +11,139 @@ a { text-decoration: none; color: #444; }
 body * { box-sizing: border-box; }
 
 
-/* 헤더 고정, 너비 15%(단, 최대너비는 300px) */
+/************************************ 
+  레이아웃
+************************************/
 header {
   position: fixed;
-  top: 0; left: 0;
+  top: 0;
+  left: 0;
   width: 15%;
-  max-width: 300px;
-  /* 겹침현상이 발생하기 때문에 높이를 잡아줘라 */
   height: 100%;
-
+  max-width: 200px;
 }
 
-/* 
-  nav 높이 35px, 상대 위치 
-  배경색: #222
-*/
 nav {
   width: 85%;
   background-color: #222;
   margin-left: 15%;
-  /* 왼쪽으로 가기 때문에 왼쪽 여백을 줘서 우로이동 */
-  /* 포지션을 relative로 주고 left 15%를 줘도 된다. */
-  height: 35px;
   position: relative;
+  height: 35px;
 }
 
-
-/******************************** 
-  모듈
-********************************/
-
-/* 모듈그룹 컨테이너는 상대위치 */
+/* 모듈 */
 .container {
   position: relative;
   width: 85%;
   margin-left: 15%;
-  /* 가장 큰 것부터 해야 오류가 적어진다. */
 }
 
-/* 
-*모듈
- -배치: 가로형
- -기본 높이: 250px
-*/
 .mo {
   float: left;
   height: 250px;
-  /* 높이는 대부분 고정해서 px값으로 되어 있다.
-  너비는 상대값으로 지정해도 상관없다. */
 }
 
+/* 카드 UI 모듈 */
 /* 1행 */
-.m1 { width: 60%; height: 500px; background-color: #ddd;}
-.m2 { width: 40%; background-color: #ccc;}
+.m1 { width: 60%; height: 500px; background-color: #ddd; }
+.m2 { width: 40%; background-color: #ccc; }
 
 /* 2행 */
 .m3 { width: 20%; background-color: #bbb; }
 .m4 { width: 20%; background-color: #aaa; }
 
 /* 3행 */
-.m5 { width: 20%; background-color: #999;}
-.m6 { width: 40%; background-color: #888;}
-.m7 { width: 20%; background-color: #777;}
-.m8 { width: 20%; background-color: #666;}
+.m5 { width: 20%; background-color: #999; }
+.m6 { width: 40%; background-color: #888; }
+.m7 { width: 20%; background-color: #777; }
+.m8 { width: 20%; background-color: #666; }
 
 /* 4행 */
-.m9 { width: 20%; background-color: #555;}
-.m10 { width: 20%; background-color: #444;}
-.m11 { width: 40%; background-color: #333;}
-.m12 { width: 20%; background-color: #222;}
+.m9 { width: 20%; background-color: #555; }
+.m10 { width: 20%; background-color: #444; }
+.m11 { width: 40%; background-color: #333; }
+.m12 { width: 20%; background-color: #222; }
 
-/* 
- 상대위치, 크기는 부모 요소에 맞추기
-*/
+/* 모듈 내부 컨텐츠 설정 */
 .mo > div {
   position: relative;
-  width: 100%; height: 100%;
+  width: 100%;
+  height: 100%;
   overflow: hidden;
 }
 
-
-/******************************** 
+/************************************ 
   헤더
-********************************/
+************************************/
 
-/* 
- 로고: 절대위치
- 크기: 200 x 200
- 아래로 50px, 가운데 배치
-*/
 #logo {
   background-image: url(../images/logo1.png);
-  position: absolute;
   background-repeat: no-repeat;
   background-size: contain;
-  width: 200px; height: 200px;
-  top: 50px; left: 50%;
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  top: 50px;
+  left: 50%;
   margin-left: -100px;
 }
 
-/* 절대위치, 아래로 300px */
 #gnb {
   position: absolute;
   top: 300px;
 }
-
-/* 내부여백: 상하 10px, 좌우 30px */
 #gnb li a {
   display: block;
+  padding: 10px 30px;
   font-weight: bold;
   font-size: 16px;
-  padding: 10px 30px;
 }
-
-/* 기본 글자 크기만큼 우측 여백 */
 #gnb li a i { margin-right: 1rem; }
 #gnb li a:hover { color: dodgerblue; }
 
-/* 
-  절대위치, 위로 50px
-  크기: 120 x 50
-*/
 .sns {
   position: absolute;
+  width: 120px;
+  height: 50px;
   bottom: 50px;
-  width: 120px; height: 50px;
-  margin-left: -60px;
-  left: 50%;
-  /* 중간으로 오게 하는 양식 */
-
+  right: 50%;
+  margin-right: -60px;
 }
-
-/* 가로 배치 */
-.sns a { float: left; display: block; }
-
-/* 너비 50%, 대문자화, 글꼴은 Arial, Helvetica */
+.sns a {
+  float: left;
+  display: block;
+}
 .sns .stxt {
   width: 50%;
-  text-transform: uppercase;
   font-family: Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
 }
-
-/* 너비: 40px, 글자 크기: 30px */
 .sns .icon {
-  width: 40px;
   font-size: 30px;
+  width: 40px;
 }
 
-
-
-/******************************** 
+/************************************ 
   퀵링크
-********************************/
+************************************/
 
-/* 
-  절대위치, 7px 아래로 이동
-  글자 색상: #eee
-  글꼴: Arial, Helvetica
-*/
 nav a {
   position: absolute;
-  top: 7px;
   color: #eee;
   font-family: Arial, Helvetica, sans-serif;
   font-style: italic;
+  top: 7px
 }
-
-/* 좌우 위치: 20px, 100px */
 nav a:nth-child(1) { left: 20px; }
 nav a:nth-child(2) { left: 100px; }
 nav a:nth-child(3) { right: 100px; }
 nav a:nth-child(4) { right: 20px; }
 
-
-
-/******************************** 
+/************************************ 
   컨테이너
-********************************/
+************************************/
 
-/* .bg 에 배경 이미지 삽입 */
+/* 모듈 중 .bg 에 배경 이미지 삽입 */
 .bg1 { background-image: url(../images/bg1.jpg); }
 .bg2 { background-image: url(../images/bg2.jpg); }
 .bg3 { background-image: url(../images/bg3.jpg); }
@@ -207,30 +159,18 @@ nav a:nth-child(4) { right: 20px; }
   background-position: center;
 }
 
-/* .
-  bg 내부 텍스트(span) 
-  기본 글자 크기의 4.5배
-  절대위치, 오른쪽 기준으로 20px, 아래 기준 0
-  투명하게
-*/
+/* .bg 내부 텍스트(span) */
 .bg span {
   font-size: 4.5rem;
-  position: absolute;
-  right: 20px; bottom: 0;
-  opacity: 0;
   color: #fff;
+  position: absolute;
+  bottom: 0;
+  right: 20px;
+  opacity: 0;
 }
-
-/* 호버시 보이기 */
 .mo:hover span { opacity: 1; }
 
-
-/*
-  메인 모듈 재설정
-  보이도록 변경
-  기본 글자 크기의 8배
-  위로 50px, 오른쪽으로 5px
-*/
+/* 메인모듈 재설정 */
 .bg1 span {
   opacity: 1;
   font-size: 8rem;
@@ -238,231 +178,179 @@ nav a:nth-child(4) { right: 20px; }
   right: -5px;
 }
 
-
 /* 텍스트 모듈 공통 */
-/*
-  배경색: 흰색, 글자색: #555
-  내부여백: 상하 40px, 좌우 30px
-*/
 .txt {
   background-color: #fff;
   color: #555;
   padding: 40px 30px;
 }
-
-/* 
-  기본 글자 크기의 2.5배
-  글자색: #444
-  아래 여백: 20px
-*/
 .txt strong {
   font-size: 2.5rem;
   color: #444;
   margin-bottom: 20px;
   font-weight: normal;
 }
-
-/*
-  기본 글자 크기의 20배
-  글자색: #2184e7
-  절대위치, 아래로 70px, 오른쪽으로 200px
-  투명하게
-*/
 .txt i {
   font-size: 20rem;
   color: #2184e7;
   position: absolute;
-  bottom: -70px; right: -200px;
+  bottom: -70px;
+  right: -200px;
   opacity: 0;
 }
 
 /* 텍스트 모듈 호버 효과 */
-/* 
-  배경색: #6ccce7
-  글자색: 흰색
-*/
 .mo:hover .txt {
   background-color: #6ccce7;
   color: #fff;
 }
-
-/* 글자색: 흰색 */
 .mo:hover .txt strong { color: #fff; }
-
-/* 오른쪽 기준 0, 반투명 */
 .mo:hover .txt i { right: 0; opacity: 0.5; }
 
-/* 일부 텍스트 모듈 재설정 */
-.mo:nth-child(3) .txt { background-color: #6fcbe7; }
-.mo:nth-child(11) .txt {background-color: #eee; }
+/* 텍스트 모듈 일부 재설정 */
+.mo:nth-child(3) .txt {
+  background-color: #6fcbe7;
+}
+.mo:nth-child(11) .txt {
+  background-color: #eee;
+}
 
-/* 모듈 3 아이콘 재설정 
-  아래로 40px, 오른쪽으로 20px
-  글자색: 흰색
-  기본 글자 크기의 15배
-  불투명도 0.7
-*/
+/* 모듈 3 아이콘 재설정 */
 .mo:nth-child(3) .txt i {
-  bottom: -40px; right: -20px;
+  bottom: -40px;
+  right: -20px;
+  opacity: 0.7;
   color: #fff;
   font-size: 15rem;
-  opacity: 0.7;
 }
 
 
-
-/******************************** 
+/************************************ 
   전환 효과 및 모션
-********************************/
+************************************/
 
-/* 전환시간 0.6초 */
 header,
 nav,
 .mo,
 #gnb a { transition: all 0.6s; }
 
-/* 키프레임 zoom
-  0 ~ 100%로 확대
-*/
+/* 키프레임 생성 */
 @keyframes zoom {
-  0% { transform: scale(0);}
-  100% { transform: scale(1);}
+  0% { transform: scale(0); }
+  100% { transform: scale(1); }  
 }
 
-/* zoom 1초 적용(한번만 실행) */
+/* 모듈 모션 */
 .mo { animation: zoom 1s 1; }
 
-
-/* 배경 이미지 모듈 텍스트 
-  10배 확대, 전환 시간: 0.6초
-*/
+/* 배경이미지 모듈 텍스트 */
 .bg span {
   transform: scale(10);
   transition: all 0.6s;
 }
-
-/* 호버시 크기: 100% */
 .mo:hover .bg span {
   transform: scale(1);
 }
 
-/* 전환시간: 0.6초 */
+/* 모듈1 재설정 */
 .mo .bg1 span {
-  transition: all 0.6s;
-  transform: rotateY(0);
+  transform: rotateY(0); transition: all 0.6s;
 }
-
-/* .bg1 호버시 글자
-  Y축 한바퀴 회전
-  글자색: #222
-  그림자: 흰색으로 지정. 가로, 세로, 흐림도 1px 
-*/
 .mo .bg1:hover span {
-  transform: rotateY(360deg);
-  color: #222;
+  transform: rotateY(360deg); color: #222;
   text-shadow: 1px 1px 1px #eee;
-  /* 처음상태의 기준값을 잡아줘야 한다. */
 }
 
-/* 
-  텍스트 모듈 효과 
-  strong 전환 1초
-  i 전환 0.7초
-*/
+/* 텍스트 모듈 효과 */
 .txt,
 .txt strong { transition: all 1s; }
 .txt i { transition: all 0.7s; }
 
 
-
-
-/******************************** 
+/************************************ 
   반응형 - 미디어쿼리
-********************************/
-
+************************************/
 
 /* 화면 너비 1600px 이하에서 적용 */
 @media screen and (max-width: 1600px) {
 
-  /* 
-    상대위치, 너비 100%, 높이 80px 
-  */
   header {
     position: relative;
-    width: 100%; height: 80px;
+    width: 100%;
+    height: 80px;
     max-width: 100%;
   }
 
-  /* 너비 100% */
   nav,
   .container {
     width: 100%;
     margin-left: 0;
   }
 
-  /* 로고 변경
-    너비 150px, 우측 아래로 20px
-  */
   #logo {
     background-image: url(../images/logo2.png);
-    width: 150px; top: 20px; left: 20px;
+    width: 150px;
+    top: 20px;
+    left: 20px;
     margin-left: 0;
   }
 
-  /* 왼쪽으로 200px */
   #gnb { top: 20px; right: 200px; }
-
-  /* 가로 배치 */
   #gnb li { float: left; }
 
-  /* 왼쪽으로 80px, 위로 20px */
   .sns { right: 80px; bottom: 20px; }
+  
 }
-
 
 /* 화면 너비 1200px 이하에서 적용 */
 @media screen and (max-width: 1200px) {
-  .sns { display: none; }
 
-  /* 왼쪽으로 20px */
-  #gnb { right: 20px; } 
+   .sns { display: none; }
+   #gnb { right: 20px; }
 
-  /* 모듈 크기 재설정 */
-  .m1 { width: 75%;  }
-  .m2 { width: 25%;  }
-  .m3 { width: 25%;  }
-  .m4 { width: 25%;  }
-  .m5 { width: 25%;  }
-  .m6 { width: 50%;  }
-  .m7 { width: 50%;  }
-  .m8 { width: 25%;  }
-  .m9 { width: 25%;  }
-  .m10 {width: 25%;  }
-  .m11 {width: 50%;  }
-  .m12 {width: 25%;  }
+   /* 모듈 크기 재설정 */
+   .m1 { width: 75%; }
+   .m2 { width: 25%; }
+   .m3 { width: 25%; }
+
+   .m4 { width: 25%; }
+   .m5 { width: 25%; }
+   .m6 { width: 50%; }
+
+   .m7 { width: 50%; }
+   .m8 { width: 25%; }
+   .m9 { width: 25%; }
+
+   .m10 { width: 25%; }
+   .m11 { width: 50%; }
+   .m12 { width: 25%; }
+  
 }
 
-
-/* 화면 너비 1024px 이하에서 적용 */
+/* 화면 너비 1024px 이하에서 적용 (3 GRID) */
 @media screen and (max-width: 1024px) {
-  .m1 { width: 100%; }
-  .m2 { width: 66.6666%; }
-  .m3 { width: 33.3333%; }
-  .m4 { width: 33.3333%; }
-  .m5 { width: 66.6666%; }
-  .m6 { display: none; }
-  .m7 { width: 33.3333%; }
-  .m8 { display: none; }
-  .m9 { display: none; }
-  .m10 { width: 33.3333%; }
-  .m11 { width: 33.3333%; }
-  .m12 { display: none; }
 
+    .m1 { width: 100%; }
+
+    .m2 { width: 66.6666%; }
+    .m3 { width: 33.3333%; }
+
+    .m4 { width: 33.3333%; }
+    .m5 { width: 66.6666%; }
+    .m6 { display: none; }
+
+    .m7 { width: 33.3333%; }
+    .m8 { display: none; }
+    .m9 { display: none; }
+    .m10 { width: 33.3333%; }
+    .m11 { width: 33.3333%; }
+    .m12 { display: none; }
 }
 
-
-/* 화면 너비 780px 이하에서 적용 */
+/* 화면 너비 780px 이하에서 적용 - 태블릿 */
 @media screen and (max-width: 780px) {
+
+  /* 모듈 크기 재설정 - 2 GRID */
   .m1 { width: 100%; }
   .m2 { width: 100%; }
   .m3 { display: none; }
@@ -475,120 +363,97 @@ nav,
   .m10 { width: 50%; }
   .m11 { width: 100%; }
   .m12 { display: none; }
+  
 }
-
 
 /* 화면 너비 640px 이하에서 적용 */
 @media screen and (max-width: 640px) {
 
-  /* 높이 150px */
   header { height: 150px; }
-
   nav { display: none; }
 
-  /* 
-    크기: 150 x 50
-    상대위치, 아래로 20px 
-    가운데 정렬
-  */
   #logo {
     width: 150px; height: 50px;
     position: relative;
-    top: 20px;
-    left: 0;
+    top: 20px; left: 0;
     margin: 0 auto;
   }
 
-  /* 아래로 90px, 높이 40px */
   #gnb {
-    width: 100%;
-   top: 90px; height: 40px;
-   left: 0;
+    width: 100%; top: 90px; left: 0;
+    height: 40px;
   }
-  #gnb li { width: 25%; text-align: center;}
+  #gnb li { width: 25%; text-align: center; }
   #gnb li a i { display: block; }
+
+  /* 모듈 크기 재설정 */
+  .m1 { width: 100%; height: 300px; }
+  .m2 { width: 100%; }
+  .m3 { display: none; }
+  .m4 { width: 50%; }
+  .m5 { width: 50%; }
+  .m6 { display: none; }
+  .m7 { width: 50%; }
+  .m8 { display: none; }
+  .m9 { display: none; }
+  .m10 { width: 50%; }
+  .m11 { width: 50%; }
+  .m12 { display: block; width: 50%; }
+  
 }
 
-
-/* 화면 너비 480px 이하에서 적용 */
+/* 화면 너비 480px 이하에서 적용 - 모바일 */
 @media screen and (max-width: 480px) {
 
-  /*
-    헤더 고정, 높이: 160px
-    배경색: 투명
-    z-index: 50
-  */
   header {
     position: fixed;
-    width: 100%;
-    height: 160px;
+    width: 100%; height: 160px;
     background-color: transparent;
     z-index: 50;
   }
 
-  /* 크기: 200 x 200, 아래로 20px */
   #logo {
-    width: 200px; height: 200px; top: 20px;
+    width: 200px; height: 200px;
     background-image: url(../images/logo3.png);
+    top: 20px;
   }
 
-  /* 상대위치, 너비: 60%, 아래로 100px */
   #gnb {
     position: relative;
-    width: 60%; top: 100px;
-    left: 20%;
-    /* relative기 때문에 margin auto를 쓸 수 있다. */
+    width: 60%; left: 20%; top: 100px;
   }
-
-  /* 상하 여백: 20px */
   #gnb li {
-    float: none;
-    width: 100%;
+    float: none; width: 100%;
     margin: 20px 0;
-    
   }
-
-  /* 
-    배경색: 검정
-    글자색: 흰색
-    불투명도: 0.7
-    둥근모서리: 10px
-  */
   #gnb li a {
     background-color: #000;
-    color: #fff;
-    opacity: 0.7;
+    color: #fff; opacity: 0.8;
+    width: 100%; 
     border-radius: 10px;
     text-align: left;
-
   }
-  #gnb li a i { display: inline; }
+  #gnb li a i { 
+    display: inline;
+  }
 
   .container {
-    width: 100%;
-    z-index: 40;
-
+    width: 100%; z-index: 40;
   }
-
-  /* 숨기기 */
   .container .mo { display: none; }
 
-  /* 고정 위치, 꽉 채워 보이기 */
   .container .m1 {
-    position: fixed;
     display: block;
+    position: fixed;
     width: 100%; height: 100%;
   }
+  .container .m1 span { 
+    display: none;
+  }
 
-  /* 글자 숨기기 */
-  .container .m1 span { display: none; }
-
-  /* 호버시 불투명 1, 1.1배 확대 */
   #gnb a:hover {
     opacity: 1;
     transform: scale(1.1);
   }
+  
 }
-/* 미디어 커리는 바뀌는것만 설정한다 */
-/* 요소 검사를 해서 어떤식으로 바뀌는지 확인 해야 한다. */
-/* 3~4단계 정도 나누면 된다. 1600 1200 780 600 */
