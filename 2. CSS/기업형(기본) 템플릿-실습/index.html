@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>기업형(기본) 템플릿</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="css/layout.css">
+</head>
+<body>
+  <!-- 헤더: 로고, 유틸(퀵링크), GNB(네이게이션) -->
+  <header>
+    <div class="inner">
+      <!-- 로고 -->
+      <h1><a href="index.html">DevWeb</a></h1>
+      <!--h1 나중에 고쳐야됨(임시영역) -->
+      <!-- GNB -->
+      <ul id="gnb">
+        <li><a href="#">depart</a></li>
+        <li><a href="#">gallery</a></li>
+        <li><a href="#">youtube</a></li>
+        <li><a href="#">community</a></li>
+        <li><a href="#">location</a></li>
+      </ul>
+      <!-- 유틸(퀵) -->
+      <ul class="util">
+        <li><a href="#">contact</a></li>
+        <li><a href="#">help</a></li>
+        <li><a href="#">login</a></li>
+        <li><a href="#">join</a></li>
+        <li><a href="#">sitemap</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- 메인: 배경영상, 슬로건, 고스트버튼 -->
+  <!-- main 태그는 html에서 하나밖에 못쓴다. 가장 큰 영역을 주로 메인으로 쓴다. -->
+  <main>
+    <video src="media/bg.mp4" autoplay muted loop></video>
+    <div class="inner">
+      <h1>innovation</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <br> Alias corrupti veritatis cum eos, recusandae et quaerat. Est dignissimos aut expedita voluptatibus veritatis cum eos, recusandae et quaerat.!</p>
+      <a href="#">view</a>
+    </div>
+  </main>
+  <!-- 콘텐츠 -->
+  <div class="contents">
+    <div class="inner">
+      <h1>recent</h1>
+      <div class="card-wrap clear">
+        <div class="card">
+          <div class="pic">
+            <img src="images/news1.jpg" alt="">
+          </div>
+          <h2><a href="#">Title</a></h2>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt magni labore corrupti! Nam, maiores molestias soluta, aliquam at eveniet asperiores voluptate facilis dignissimos, labore minima assumenda praesentium ex officiis non?</p>
+        </div>
+        <div class="card">
+          <div class="pic">
+            <img src="images/news2.jpg" alt="">
+          </div>
+          <h2><a href="#">Title</a></h2>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Labore perferendis, architecto asperiores ullam quia sed molestias commodi, ab, quis nesciunt distinctio. Nostrum excepturi ipsum perferendis totam dolorum voluptatibus dicta asperiores?</p>
+        </div>
+        <div class="card">
+          <div class="pic">
+            <img src="images/news3.jpg" alt="">
+          </div>
+          <h2><a href="#">Title</a></h2>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Labore perferendis, architecto asperiores ullam quia sed molestias commodi, ab, quis nesciunt distinctio. Nostrum excepturi ipsum perferendis totam dolorum voluptatibus dicta asperiores?</p>
+        </div>
+        <div class="card">
+          <div class="pic">
+            <img src="images/news4.jpg" alt="">
+          </div>
+          <h2><a href="#">Title</a></h2>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Labore perferendis, architecto asperiores ullam quia sed molestias commodi, ab, quis nesciunt distinctio. Nostrum excepturi ipsum perferendis totam dolorum voluptatibus dicta asperiores?</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- 푸터 -->
+  <footer>
+    <div class="inner">
+      <div class="upper">
+        <h1>DevWeb</h1>
+        <ul>
+          <li><a href="#">policy</a></li>
+          <li><a href="#">terms</a></li>
+          <li><a href="#">family</a></li>
+          <li><a href="#">sitemap</a></li>
+        </ul>
+      </div>
+      <div class="lower">
+        <address>
+          인천광역시 부평구... <br>
+          TEL: 010-1234-5678
+        </address>
+        <p>&copy; 2022 DevWeb</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

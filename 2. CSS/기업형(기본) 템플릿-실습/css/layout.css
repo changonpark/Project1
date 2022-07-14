@@ -1,0 +1,270 @@
+/* 초기화 */
+* {margin: 0; padding: 0;}
+body * { box-sizing: border-box;}
+li { list-style: none;}
+a { text-decoration: none; color: #333;}
+
+html {
+  font-size: 14px;
+  line-height: 1.5;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.clear:after{
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/* 고정폭을 위한 .inner */
+.inner {
+  position: relative;
+  /* absolute 요소의 기준(시작) 위치설정 */
+  width: 1180px;/* 맨 오른쪽과 왼쪽의 여백을 빼려면 10px씩 빼서 1180이 나옴 */
+  margin: 0 auto;
+}
+
+/* 헤더(HEADER) */
+header {
+  border-bottom: 1px solid #ddd;
+}
+
+header .inner {
+  height: 120px;
+}
+
+header .inner h1 {
+  position: absolute;
+  left: 0;
+  bottom: 14px;
+}
+
+header .inner h1 a {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 1;
+}
+
+/* 유틸(퀵) */
+header .inner .util {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+
+header .inner .util li {
+  float: left;
+}
+
+header .inner .util li a {
+  display: block;
+  padding: 0 10px;
+  font-size: 12px;
+  line-height: 1;
+  text-transform: capitalize;
+  color: #999;
+}
+
+/* GNB */
+header .inner #gnb {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+header .inner #gnb li {
+  float: left;
+}
+
+header .inner #gnb li a {
+  display: block;
+  padding: 20px 40px;
+  font-weight: bold;
+  color: #555;
+  text-transform: uppercase;
+  transition: all 0.6s;
+}
+
+header .inner #gnb li a:hover {
+  background-color: #555;
+  color: #fff;
+}
+/* 살짝 밑에 보이는 여백은 header에 border bottom이다 */
+/* 로고 내릴려면 padding값 줘도 되고 absolute를 줘도 된다 36번*/
+/* absolute 를 사용하지말고 공간은 40% 60%로 나눠서 float로 해서 반응형으로 하기 좋게 만드는 방법을 해봐야 한다. */
+
+
+
+
+
+/* 컨텐츠 메인: 영상 / 배경 / 캐러셀(이미지슬라이더) */
+
+
+main {
+  position: relative;
+  background-color: #000;
+  height: calc(100vh - 120px);
+  overflow: hidden;
+  padding-top: 250px;
+  /* (메인텍스트의 여백조정) */
+}
+
+main video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* object-fit 영상을 부모 영역에 가득 채워주는 속성(신규) */
+  opacity: 0.3;
+  /* 뒷면이 검정색이기 때문에 전체적으로 어두워짐 */
+}
+
+main .inner h1 {
+  color: #fff;
+  font-size: 8rem;
+  font-weight: normal;
+  text-transform: uppercase;
+  line-height: 1;
+  margin-bottom: 20px;
+}
+
+main .inner p {
+  color: #aaa;
+  margin-bottom: 60px;
+}
+
+main .inner a {
+  display: block;
+  color: #fff;
+  border: 1px solid #ddd;
+  width: 100px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 1px;
+  transition: all 0.6s;
+}
+
+main .inner a:hover {
+  background-color: #fff;
+  color: #555;
+  font-weight: bold;
+}
+
+/* 콘텐츠 */
+
+.contents {
+  width: 100%;
+  padding: 200px 0;
+}
+
+.contents h1 {
+  color: #555;
+  line-height: 1;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.contents .card-wrap {
+  width: 100%;
+}
+
+.contents .card {
+  float: left;
+  width: 280px;
+  margin-right: 20px;
+}
+
+.contents .card:last-child {
+  margin-right: 0;
+}
+
+.contents .card .pic {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 120px;
+  margin-bottom: 20px;
+}
+
+.contents .card .pic img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* 커서를 갖다 댔을때 확대되는 느낌을 주고싶으면
+  백그라운드 이미지를 주는게 좋다. 상황에따라 다르다. */
+}
+
+.contents .card h2 {
+  margin-bottom: 10px;
+}
+
+.contents .card h2 a {
+  font-size: 16px;
+  color: #555;
+  line-height: 1;
+}
+
+.contents .card p {
+  color: #777;
+}
+
+
+
+/*푸터(FOOTER)*/
+
+footer {
+  padding: 100px 0;
+  border-top: 1px solid #888;
+  background-color: #333;
+}
+
+footer .upper {
+  border-bottom: 1px solid #777;
+  padding-bottom: 20px;
+  height: 40px;
+}
+
+footer .upper h1 {
+  float: left;
+  color: #888;
+  line-height: 1;
+}
+
+footer .upper ul {
+  float: right;
+
+}
+
+footer .upper ul li {
+  float: left;
+  margin: 0 10px;
+}
+
+footer .upper ul li a {
+  color: #888;
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+footer .lower {
+  padding-top: 20px;
+  color: #eee;
+  font-size: 12px;
+}
+
+footer .lower address {
+  font-style: normal;
+  /* 이태릭체 기울어짐 해제 */
+  margin-bottom: 20px;
+}
+
+footer .lower {
+  line-height: 1.5;
+}
