@@ -1,0 +1,242 @@
+@import url(fonts.css);
+/* 초기화 */
+* {margin: 0; padding: 0;}
+body * { box-sizing: border-box;}
+li { list-style: none;}
+a { text-decoration: none; color: #333;}
+
+html {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.clear:after{
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.inner {
+  position: relative;
+  width: 1770px;
+  margin: 0 auto;
+}
+
+/* header */
+
+header {
+  border-bottom: 1px solid #eee;
+}
+
+header .inner {
+  height: 110px;
+}
+
+header .inner h1 {
+  position: absolute;
+  left: 0;
+  bottom: 36px;
+}
+
+header .inner .util {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+
+header .inner .util li {
+  float: left;
+}
+
+header .inner .util li a {
+  display: block;
+  padding: 0 10px;
+  font-size: 12px;
+  line-height: 1;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #000;
+}
+
+header .inner #gnb {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+header .inner #gnb li {
+  float: left;
+}
+
+header .inner #gnb li a {
+  display: block;
+  padding: 20px 15px;
+  font-weight: bold;
+  color: #444;
+  text-transform: capitalize;
+  transition: all 0.6s;
+}
+
+header .inner #gnb li a:hover {
+  color: #eee;
+}
+
+
+
+.contents {
+  width: 100%;
+  margin: 200px 0;
+
+  position: relative;
+  background-image: url(../images/ma0.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 500px;
+}
+
+.contents .card-wrap {
+  width: 100%;
+  text-align: center;
+}
+
+.contents .card-wrap2 {
+  margin-top: 300px;
+}
+
+.contents .card {
+  float: left;
+  width: 330px;
+  margin-right: 30px;
+}
+
+.contents .card:last-child {
+  margin-right: 0;
+}
+
+.contents .card .pic {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 500px;
+  margin-bottom: 20px;
+}
+
+.contents .card .pic img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.contents .card .pic2 img {
+  width: 100%;
+}
+
+.contents .card h2 {
+  margin-bottom: 10px;
+}
+
+.contents .card h2 a {
+  font-size: 18px;
+
+  line-height: 1;
+}
+
+@keyframes move {
+  0% {
+    transform: translateX(2000px);
+  }
+
+  100% {
+    transform: translateX(-1217.68px)
+  }
+}
+
+.ani {
+  position: relative;
+  animation: move 10s 1s linear infinite;
+  font-size: 80px;
+  width: 100%;
+  color: #ddd;
+
+}
+
+
+footer {
+  margin-top: 100px;
+  padding-top: 50px;
+  background-color: #333;
+  position: absolute;
+  width: 100%;
+  height: 400px
+}
+
+
+footer .upper {
+  padding-bottom: 10px;
+  height: 100px;
+}
+
+footer .upper a {
+  float: left;
+  padding-right: 10px;
+  margin-top: 30px;
+  color: #fff;
+}
+
+footer .lower {
+  padding-top: 25px;
+  font-size: 12px;
+}
+
+footer .lower address {
+  font-style: normal;
+  font-weight: bold;
+  margin-bottom: 50px;
+  color: #aaa;
+  opacity: 0.5;
+}
+
+footer .lower p {
+  text-transform: uppercase;
+  color: #aaa;
+  opacity: 0.5;
+}
+
+footer .lower .lowright {
+  float: right;
+}
+
+footer .lower .lowright {
+  position: relative;
+  color: #ccc;
+  bottom: 150px;
+  right: 100px;
+}
+
+footer .lower .lowright li {
+  float: right;
+  position: relative;
+  right: 25px;
+  border: 1px solid #222;
+  border-radius: 5px;
+  margin: 5px;
+  padding: 0 5px;
+  background-color: #222;
+}
+
+footer .lower .lowright li a {
+  color: #fff;
+}
+
+footer .lower .lowright p {
+  color: #ddd;
+  opacity: 1;
+}
+
+footer .lower .lowright span {
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  opacity: 1;
+  
+}
