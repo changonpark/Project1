@@ -105,18 +105,30 @@ main .inner #gnb li a {
   font-weight: bold;
   color: #fff;
   font-size: 16px;
-  transition: all 0.6s;
   margin-top: 15px;
 }
 
 main .inner #menu {
+  position: absolute;
   float: right;
-  display: block;  
+  display: block;
+  right: 0%;
+}
+
+ .last {
+  top: -500px;
+  position: relative;
+  margin: 0 auto;
+  left: calc(50% - 450px) ;
 }
 
 .contents {
   width: 100%;
   padding: 100px 0;
+}
+
+.contents .inner {
+  margin-top: -300px;
 }
 
 .contents .card-wrap {
@@ -127,7 +139,6 @@ main .inner #menu {
   float: left;
   width: 440px;
   margin: 0 30px;
-
 }
 
 .contents .card:last-child {
