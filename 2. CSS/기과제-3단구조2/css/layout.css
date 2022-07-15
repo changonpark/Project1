@@ -1,0 +1,201 @@
+@import url(fonts.css);
+/* 초기화 */
+* {margin: 0; padding: 0;}
+body * { box-sizing: border-box;}
+li { list-style: none;}
+a { text-decoration: none; color: #333;}
+
+
+html {
+  font-size: 14px;
+  line-height: 1.5;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.clear:after{
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.inner {
+  position: relative;
+  width: 1480px;
+  margin: 0 auto;
+}
+
+.lower {
+  position: relative;
+  width: 1480px;
+  margin: 0 auto;
+}
+
+header {
+  border-bottom: 1px solid #bbb;
+}
+
+header .inner {
+  height: 50px;
+}
+
+header .inner h1 {
+  position: absolute;
+  left: 38px;
+  bottom: 4px;
+}
+header .inner h1 img {
+  width: 70px;
+}
+
+header .inner #gnb {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+header .inner #gnb li {
+  float: left;
+}
+
+header .inner #gnb li a {
+  display: block;
+  padding: 3px 10px;
+  font-weight: bold;
+  color: #555;
+  transition: all 0.6s;
+}
+
+header .inner #gnb li a:hover{
+  text-decoration: underline;
+}
+
+header .inner #gnb li a img:hover {
+  content: url(../images/9dot2.svg)
+}
+
+main {
+  position: relative;
+  background-color: #000;
+  height: 1000px;
+  background-image: url(../images/water.jpg);
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
+}
+
+main .inner {
+  height: 80px;
+  margin-left: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+main .inner h1 {
+  float: left;
+  margin-top: 15px;
+}
+
+
+main .inner #gnb li {
+  float: left;
+}
+
+main .inner #gnb li a {
+  display: block;
+  padding: 10px 20px;
+  font-weight: bold;
+  color: #fff;
+  font-size: 16px;
+  transition: all 0.6s;
+  margin-top: 15px;
+}
+
+main .inner #menu {
+  float: right;
+  display: block;  
+}
+
+.contents {
+  width: 100%;
+  padding: 100px 0;
+}
+
+.contents .card-wrap {
+  width: 100%;
+}
+
+.contents .card {
+  float: left;
+  width: 440px;
+  margin: 0 30px;
+
+}
+
+.contents .card:last-child {
+  margin-right: 0;
+}
+
+.contents .card .pic {
+  margin-bottom: 100px;
+}
+
+.contents .lower h1 {
+  margin-left: 30px;
+}
+
+.contents .lower .card  {
+  float: left;
+  width: 300px;
+}
+
+.contents .lower .card:last-child {
+  margin-right: 0;
+}
+
+
+footer {
+  padding: 100px 0;
+  padding-left: 100px;
+  border-top: 1px solid #888;
+  background-color: #333;
+}
+
+footer .upper {
+  padding-bottom: 20px;
+  height: 40px;
+}
+
+footer .upper h1 {
+  float: left;
+  color: #888;
+  line-height: 1;
+  margin-right: 30px;
+}
+
+
+footer .upper ul li {
+  float: left;
+  margin: 0 10px;
+}
+
+footer .upper ul li a {
+  color: #fff;
+  font-weight: bold;
+  line-height: 1;
+}
+footer .lower {
+  padding-top: 20px;
+  color: #eee;
+  font-size: 12px;
+}
+
+footer .lower address {
+  font-style: normal;
+  margin-bottom: 20px;
+  opacity: 0.5;
+}
+
+footer .lower #company li a {
+  float: left;
+  margin-right: 10px;
+  color: #fff;
+}
