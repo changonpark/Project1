@@ -87,6 +87,7 @@ main .inner {
   height: 80px;
   margin-left: 20px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  left: calc(20% - 180px);
 }
 
 main .inner h1 {
