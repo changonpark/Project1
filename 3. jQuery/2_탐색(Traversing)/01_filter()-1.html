@@ -3,24 +3,29 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>08_속성선택-2</title>
+  <title>01_filter()-1</title>
   <!-- jQuery -->
   <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
   <script src="https://code.jquery.com/jquery-migrate-1.4.1.min.js"></script>
-  <!-- CSS 연결 -->
-  <link rel="stylesheet" href="css/common.css">
   <script>
     $( function () {
-
-      $( '[title=p]' ).css('background-color', 'gold');
+      $( '.box' ).filter( ':even' ).css(  {
+        backgroundColor: 'red'
+      });
     });
   </script>
+  <link rel="stylesheet" href="css/common.css">
 </head>
 <body>
-  <h2>title 속성의 값이 "p"([title=p])인 요소 선택</h2>
+  <h2>.filter( ':even' )</h2>
   <hr>
-  <p title="p">p[title=p]</p>
-  <p title>p[title]</p>
-  <p title="p">p[title=p]</p>
+
+  <div class="clear">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+    <div class="box">4</div>
+    <div class="box">5</div>
+  </div>
 </body>
 </html>
