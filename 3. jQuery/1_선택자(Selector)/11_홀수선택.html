@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>11_홀수선택</title>
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+  <script src="https://code.jquery.com/jquery-migrate-1.4.1.min.js"></script>
+  <!-- CSS 연결 -->
+  <link rel="stylesheet" href="css/common.css">
+  <script>
+    $( function () {
+
+      $( '.box:odd' ).css( 'background-color', 'gold');
+    });
+  </script>
+</head>
+<body>
+  <h2>.box 중에서 홀수(:odd) 요소만 선택 (INDEX 기준)</h2>
+  <hr>
+  <div class="box">1</div>
+  <div class="box">2</div>
+  <div class="box">3</div>
+  <div class="box">4</div>
+  <div class="box">5</div>
+  <div class="box">6</div>
+  <div class="box">7</div>
+  <div class="box">8</div>
+</body>
+</html>

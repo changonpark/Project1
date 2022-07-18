@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>06_첫번째선택</title>
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+  <script src="https://code.jquery.com/jquery-migrate-1.4.1.min.js"></script>
+    <!-- CSS 연결 -->
+    <link rel="stylesheet" href="css/common.css">
+  <script>
+    $( function () {
+
+      $( 'ul li:first' ).css( 'background-color', 'gold');
+    });
+  </script>
+</head>
+<body>
+  <h2>li 태그 중 첫번 째(:first) 요소 선택</h2>
+  <hr>
+
+  <h3>목록1</h3>
+  <ul>
+    <li>목록1-1</li>
+    <li>목록1-2</li>
+    <li>목록1-3</li>
+  </ul>
+
+  <h3>목록2</h3>
+  <ul>
+    <li>목록2-1</li>
+    <li>목록2-2</li>
+    <li>목록2-3</li>
+  </ul>
+</body>
+</html>

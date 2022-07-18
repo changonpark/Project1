@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>06_첫번째선택</title>
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+  <script src="https://code.jquery.com/jquery-migrate-1.4.1.min.js"></script>
+  <!-- CSS 연결 -->
+  <link rel="stylesheet" href="css/common.css">
+  <script>
+    $( function () {
+
+      $( 'p:first' ).css( 'background-color', 'gold');
+    });
+  </script>
+</head>
+<body>
+  <h2>p 태그 중 첫번 째(:first) 요소 선택</h2>
+  <hr>
+  <div class="bg">div.bg</div>
+  <p class="bg">p.bg</p>
+  <p id="bg">p#bg</p>
+</body>
+</html>

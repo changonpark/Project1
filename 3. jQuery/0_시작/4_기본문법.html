@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>jQuery 기본 문법</title>
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+  <script src="https://code.jquery.com/jquery-migrate-1.4.1.min.js"></script>
+  
+</head>
+<body>
+  <fieldset>
+    <legend>jQuery 기본 문법</legend>
+    <h4>$( 'selector' ).attribute;</h4>
+    <h4>$( 'selector' ).method();</h4>
+    <dl>
+      <dt>$</dt>
+      <dd>- jQuery 정의 및 접근(access)</dd>
+      <dt>( 'selector' )</dt>
+      <dd>- 선택자</dd>
+      <dd>- 객체 또는 HTML 요소(문자열로 처리)</dd>
+      <dt>.attribute / .method()</dt>
+      <dd>- 해당 객체(요소)에 속성 또는 행동 지정(설정)</dd>
+    </dl>
+
+    <h4>jQuery 작성 예</h4>
+    <ul>
+      <li>$( this ).hide();   // 현재 요소를 숨겨라!</li>
+      <li>$( 'p' ).hide();    // (모든) 'p' 태그를 숨겨라!</li>
+      <li>$( '.cls' ).hide(); // (모든) 'cls' 클래스를 숨겨라!</li>
+      <li>$( '#i').hide();    // 아이디 'i'를 숨겨라</li>
+    </ul>
+  </fieldset>
+</body>
+</html>
