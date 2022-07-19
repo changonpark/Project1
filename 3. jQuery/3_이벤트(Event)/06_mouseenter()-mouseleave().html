@@ -13,13 +13,14 @@
 
       $('p').mouseenter(function(){
         $(this).css('background-color', 'crimson');
-      });
+      }); //마우스가 들어가면 
 
       $('p').mouseleave(function(){
         $(this).css('color', 'white').text('BYE!');
-      });
+      }); //마우스가 떠나가면 
     });
     // 자식 영역에서는 이벤트가 발생하지 않는다.
+    // 부모 영역에서 발생한 이벤트는 자식 영역으로 이동해도 다시 발생하지 않는다.
   </script>
   <link rel="stylesheet" href="css/common.css">
 </head>

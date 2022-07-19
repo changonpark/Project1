@@ -11,13 +11,14 @@
     <script>
     $(function(){
 
-      var n = 0;      //이미지 시작 번호
-      var count = 4;  //이미지 개수
+      var n = 0;      //이미지 시작 번호   n이라는 컵에다가 0이라는 숫자를 집어넣은것
+      var count = 4;  //이미지 개수        count라는 박스에다가 4를 집어넣은것
+      // 변수는 값을 저장할 수 있는 공간이다/ 변수의 이름은 라벨이다.
 
       $('img').click(function(){
-        n++;
-        n = n % count;
-        $(this).attr('src', 'http://wooreeweb.com/img/h0' + n + 'jpg');
+        n++; //현재 n값에 1을 더해라
+        n = n % count; //n값을 4로 나누었을때 나머지 1230 반복되게
+        $(this).attr('src', 'http://wooreeweb.com/img/h0' + n + '.jpg');
       });
     });
   </script>
@@ -33,3 +34,5 @@
 </body>
 
 </html>
+
+<!-- 더 추가하면 일정 시간마다 사진 바꾸는것같은것도 가능 -->
