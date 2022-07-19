@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>01_click()-8</title>
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+  <script src="https://code.jquery.com/jquery-migrate-1.4.1.min.js"></script>
+    <script>
+    $(function(){
+
+      var n = 0;      //이미지 시작 번호
+      var count = 4;  //이미지 개수
+
+      $('img').click(function(){
+        n++;
+        n = n % count;
+        $(this).attr('src', 'http://wooreeweb.com/img/h0' + n + 'jpg');
+      });
+    });
+  </script>
+  <link rel="stylesheet" href="css/common.css">
+</head>
+
+<body>
+  <div>
+    <img src="http://wooreeweb.com/img/h00.jpg" alt="">
+  </div>
+  <hr>
+  <button>위 이미지 클릭</button>
+</body>
+
+</html>

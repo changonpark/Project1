@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>01_click()-2</title>
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+  <script src="https://code.jquery.com/jquery-migrate-1.4.1.min.js"></script>
+  <script>
+    $(function(){
+      $('a').click(function(){
+        $('img').attr('src','http://wooreeweb.com/img/h02.jpg');
+      });
+      // 작동불가(a 태그의 고유한 특징 때문에 창이 넘어간다.)
+    });
+  </script>
+  <link rel="stylesheet" href="css/common.css">
+</head>
+<body>
+  <p><img src="http://wooreeweb.com/img/h01.jpg" alt=""></p>
+  <h2><a href="http://wooreeweb.com/img/h02.jpg">클릭</a></h2>
+</body>
+</html>
+

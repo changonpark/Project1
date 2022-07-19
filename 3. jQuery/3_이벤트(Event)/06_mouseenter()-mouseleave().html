@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>06_mouseenter()-mouseleave()</title>
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+  <script src="https://code.jquery.com/jquery-migrate-1.4.1.min.js"></script>
+  <script>
+    $(function(){
+
+      $('p').mouseenter(function(){
+        $(this).css('background-color', 'crimson');
+      });
+
+      $('p').mouseleave(function(){
+        $(this).css('color', 'white').text('BYE!');
+      });
+    });
+    // 자식 영역에서는 이벤트가 발생하지 않는다.
+  </script>
+  <link rel="stylesheet" href="css/common.css">
+</head>
+
+<body>
+  <h2>.mouseenter() / .mouseleave()</h2>
+  <hr>
+  <p class="pa">p.pa</p>
+  <p id="pa">p#pa</p>
+  <p class="pb">p.pb</p>
+  <hr>
+  <button>위 요소 클릭</button>
+</body>
+
+</html>

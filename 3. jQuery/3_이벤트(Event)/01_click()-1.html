@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>01_click()-1</title>
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+  <script src="https://code.jquery.com/jquery-migrate-1.4.1.min.js"></script>
+  <script>
+    $(function(){
+      $('button').click(function(){
+        $('img').attr('src','http://wooreeweb.com/img/h02.jpg');
+      });
+    });
+  </script>
+  <!-- 버튼을 찾아서 클릭하면 함수를 실행하세요.
+    이미지 태그에 src 속성을 http값으로 바꿔라.  -->
+  <link rel="stylesheet" href="css/common.css">
+</head>
+<body>
+  <p><img src="http://wooreeweb.com/img/h01.jpg" alt=""></p>
+  <hr>
+  <button>jQuery 실행 결과 확인</button>
+</body>
+</html>
+
+<!-- 
+$('선택자').이벤트명(함수);
+$('선택자').이벤트명( fucntion(){이벤트 발생시 실행할 내용});
+.attr('속성명')      : 해당 속성 가져오기 -> getter(갖고오는 역할) 라고 한다.
+.attr('속성명','값') : 해당 속성을 값으로 적용하기 -> setter(설정하는 역할) 라고 한다. --> 

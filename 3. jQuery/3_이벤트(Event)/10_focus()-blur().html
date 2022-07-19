@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>10_focus()-blur()</title>
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+  <script src="https://code.jquery.com/jquery-migrate-1.4.1.min.js"></script>
+  <script>
+    $( function(){
+
+      $('input').focus(function(){
+        $(this).css('background-color', 'gold');
+        $(this).attr('placeholder', 'focus()');
+      });
+
+      $('input').blur(function(){
+        $(this).css('background-color', 'white');
+        $(this).attr('placeholder', 'blur()');
+      });
+    });
+  </script>
+  <link rel="stylesheet" href="css/common.css">
+</head>
+<body>
+  <h2>.focus() / .blur()</h2>
+  <hr>
+  선택1 : <input type="text" placeholder="blur()">
+  <br>
+  선택2 : <input type="text" placeholder="blur()">
+  <hr>
+  <button>위 input 영역안에 마우스 커서 넣기</button>
+</body>
+</html>

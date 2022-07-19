@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>01_click()-7</title>
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+  <script src="https://code.jquery.com/jquery-migrate-1.4.1.min.js"></script>
+  <script>
+    $(function(){
+
+      $('a').click(function(){
+        $('img').attr('src', $(this).attr('href'));
+        return false;
+      });
+    });
+  </script>
+  <link rel="stylesheet" href="css/common.css">
+</head>
+<body>
+  <div class="img-wrap">
+    <ul>
+      <li><a href="http://www.wooreeweb.com/img/h01.jpg">1</a></li>
+      <li><a href="http://www.wooreeweb.com/img/h02.jpg">2</a></li>
+      <li><a href="http://www.wooreeweb.com/img/h03.jpg">3</a></li>
+      <li><a href="http://www.wooreeweb.com/img/h04.jpg">4</a></li>
+      <li><a href="http://www.wooreeweb.com/img/h05.jpg">5</a></li>
+    </ul>
+    <img src="http://wooreeweb.com/img/h01.jpg" alt="">
+  </div>
+</body>
+</html>
