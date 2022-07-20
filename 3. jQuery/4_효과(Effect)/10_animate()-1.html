@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>10_animate()-1</title>
+  <style>
+    #frame { width: 400px; height: 300px;}
+    .wrap { width: 800px; height: 100%; margin: 0;}
+    .wrap img { width: 400px; float: left;}
+    #frame { overflow: hidden;}
+  </style>
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+  <script src="https://code.jquery.com/jquery-migrate-1.4.1.min.js"></script>
+  <script>
+    $( function () {
+      var w = $('img').width();
+
+      $('.wrap img:first-child').click(function(){
+        $('.wrap').stop().animate({marginLeft: -w}, 1000, 'linear');
+      });
+
+      $('.wrap img:last-child').click(function(){
+        $('.wrap').stop().animate({marginLeft: 0}, 1000, 'linear')
+      });
+    } );
+  </script>
+</head>
+<body>
+  <div id="frame">
+    <div class="wrap">
+      <img src="http://wooreeweb.com/img/s05.jpg" alt="">
+      <img src="http://wooreeweb.com/img/s07.jpg" alt="">
+    </div>
+  </div>
+      <hr>
+      <button>위 이미지 클릭</button>
+</body>
+</html>

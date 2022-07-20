@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>09_slideToggle()</title>
+  <style>
+    div { width: 100px; height: 100px; background-color: gold;}
+  </style>
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+  <script src="https://code.jquery.com/jquery-migrate-1.4.1.min.js"></script>
+  <script>
+    $(function(){
+      $('div').hide();
+      $('button').click(function(){
+        $('div').slideToggle(1000);
+      });
+    });
+  </script>
+</head>
+
+<body>
+  <button>클릭</button>
+  <hr>
+  <div></div>
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>07_fadeTo()-2</title>
+  <style>
+    .box {
+      width: 200px; height: 200px; background-color: gold;
+      margin: 10px; display: none; float: left;
+    }
+    .clear::after { content: ''; display: block; clear: both;}
+  </style>
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+  <script src="https://code.jquery.com/jquery-migrate-1.4.1.min.js"></script>
+  <script>
+    $( function () {
+      $('button').click(function(){
+        var opa = $(this).attr('title');
+        $('.box').fadeTo(1000, opa);
+      });
+    } );
+  </script>
+</head>
+<body>
+  <button title="0.0">0.0</button>
+  <button title="0.2">0.2</button>
+  <button title="0.4">0.4</button>
+  <button title="0.6">0.6</button>
+  <button title="0.8">0.8</button>
+  <button title="1.0">1.0</button>
+
+  <hr>
+  <div class="clear">
+    <div class="box"></div>
+  </div>
+</body>
+</html>
