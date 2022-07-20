@@ -17,7 +17,7 @@
   <script src="https://code.jquery.com/jquery-migrate-1.4.1.min.js"></script>
   <script>
     $( function () {
-      var $front = $('#front');
+      var $front = $('#front'); // #front 를 많이 쓰기는 귀찮기 때문에 짧게 쓰기 위해 / $ 를 안써도 되지만, 선택자임을 나타내기 위해 명시적사용
       var $nav = $('button');
       $front.css({top: '-100%'});
       $nav.css({
@@ -26,7 +26,7 @@
         right: '10px',
         zIndex: '1000'
       })
-      var flag = false;
+      var flag = false; //논리변수라고 한다. 논리값(참/거짓)
       var speed = 1000;
 
       $nav.click(function(){
