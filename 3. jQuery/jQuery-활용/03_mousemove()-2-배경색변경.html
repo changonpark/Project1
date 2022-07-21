@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>배경색상 변경</title>
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+  <script src="https://code.jquery.com/jquery-migrate-1.4.1.min.js"></script>
+  <script>
+    $( function () {
+      
+      $('html, body').mousemove(function(e){
+
+        var $win = $(window); //브라우저
+        var col = 3; // 열 개수
+        var cw = $win.width() / 3; //열의 너비
+        var $body = $('body');
+
+        if (cw > e.pageX){
+          $body.removeClass();
+          $body.addClass('bgc1');
+        } else if ( cw * 2 > e.pageX) {
+          $body.removeClass();
+          $body.addClass('bgc2');
+        } else {
+          $body.removeClass();
+          $body.addClass('bgc3');
+        }
+      });
+    } );
+  </script>
+  <style>
+    body { background-color: ivory; transition: all 0.6s;}
+    body.bgc1 { background-color: palevioletred;}
+    body.bgc2 { background-color: dodgerblue;}
+    body.bgc3 { background-color: greenyellow;}
+  </style>
+</head>
+<body>
+  
+</body>
+</html>
