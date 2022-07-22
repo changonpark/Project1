@@ -18,7 +18,7 @@
 
       $fr.on('mousemove resize', function(e){
         var ww = $(window).width(); //브라우저 너비
-        var startX = ww / 2 - frhw; //프레임 시작 X좌표
+        var startX = ww / 2 - frhw; //프레임 시작 X좌표 (마우스 이벤트가 발생하는 위치 설정)
         var endX = startX + frw;
 
         var n = Math.ceil( imgCnt / frw * (e.pageX - startX) + 1);

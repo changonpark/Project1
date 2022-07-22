@@ -11,9 +11,11 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
   <script>
     $( function () {
+
+      var offset = 100; //화면 이동 거리
       
       $('html, body').mousewheel(function(e,d){
-        this.scrollLeft -= (d * 100);
+        this.scrollLeft -= (d * offset);
         e.preventDefault(); //스크롤 다운 방지
       });
     } );

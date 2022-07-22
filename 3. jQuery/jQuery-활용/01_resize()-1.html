@@ -8,7 +8,6 @@
   <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
   <script src="https://code.jquery.com/jquery-migrate-1.4.1.min.js"></script>
   <script>
-    $( function () {
       $(function(){
 
         var $win = $(window); //브라우저
@@ -20,15 +19,14 @@
           var bs = ww / 2; //브라우저 너비의 50%
           console.log('현재 브라우저 너비의 50%' + bs);
 
-          //$('.box2').stop().animate({width:bs}, 1000);
+          // $('.box2').css('width', 'bs');
           $('.box2').stop().animate({width:bs}, 1000);
         }
 
         boxSize(); // 함수 호출
 
-        $win.resize(function(){boxsize()});
+        $win.resize(function() { boxsize() });
       });
-    } );
   </script>
 </head>
 <body>
