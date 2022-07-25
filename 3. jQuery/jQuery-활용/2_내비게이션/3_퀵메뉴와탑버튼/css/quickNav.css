@@ -1,0 +1,20 @@
+#qm {
+  position: absolute;
+  right: 0;
+  width: 100px;
+  background-color: #111;
+}
+
+#qm li a {
+  display: block;
+  color: #fff;
+  text-align: center;
+  letter-spacing: 1px;
+  border-bottom: 1px solid #ddd;
+  padding: 10px 0;
+}
+
+#qm li:last-child a { border-bottom: none;}
+#qm li a:hover,
+#qm li a:focus { background-color: darkorange;}
+#qm li a.on { background-color: orangered; font-weight: bold;}
