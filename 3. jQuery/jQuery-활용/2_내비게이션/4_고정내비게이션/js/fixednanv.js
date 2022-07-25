@@ -15,13 +15,13 @@ $(function(){
       $gnb.css({
         position: 'fixed',
         top: 0,
-        left: 'calc(50% - ' + uhw + 'px)',
+        left: 'calc(50% - ' + uhw + 'px)', //가운데 배치
         zIndex: 1000
       });
       $gu.addClass('sticky');
     } else {
       $gnb.css({
-        position: '',
+        position: '',// 초기값으로 돌려준다. 초기값으로 돌리면 바뀌지 않도록.
       });
       $gu.removeClass('sticky');
     }

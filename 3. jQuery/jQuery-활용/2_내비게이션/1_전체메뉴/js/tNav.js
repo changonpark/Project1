@@ -12,8 +12,8 @@
 //   $( '#navBtn').click(function(){
 
 //     //전체메뉴 열고 닫기
-//     //$('#gnb').toggle();
-//     $('gnb').slideToggle(600);
+//     // $('#gnb').toggle();
+//     $('#gnb').slideToggle(600);
 //   });
 
 //   //닫기(X) 클릭시 메뉴 숨기기
@@ -26,7 +26,7 @@
 // });
 
 
-//2. 고오급형
+// 2. 고오급형
 $(function(){
 
 //닫기 함수
@@ -45,13 +45,13 @@ function txtOpen(){
 //전체 메뉴의 열리고 닫힌 상태를 판단하는 변수
 var flag = false;
 
-//전체메뉴열기 클릭시 발생하는 이벤트
+//전체메뉴열기 클릭시 발생하는 이벤트 - navBtn에 클릭 이벤트가 발생하면
 $('#navBtn').on('click', function(){
 
 //전체메뉴를 슬라이스로 열고 닫기
 $('#gnb').stop().slideToggle(600);
 
-//전체 메뉴 상태에 따라 함수를 실행하는 제어문
+//전체 메뉴 상태에 따라 함수를 실행하는 제어문 - 열렸다 닫혔다 할 수 있게 해놓은것.
 if(flag){      //메뉴가 열려있으면
   txtOpen();
   flag = false;

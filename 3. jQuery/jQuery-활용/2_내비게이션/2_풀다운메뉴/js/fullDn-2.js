@@ -14,17 +14,17 @@ $sub.hide();
 $gnb.mouseenter(function(){
 
   if( !flag ){
-    $('#headerWrap').stop().animate({
+    $('#headerWrap').stop().animate({ //
       height: headerMax
     }, speed, function(){
       //sub.show();
-      $sub.stop().fadeIn(speed);
+      $sub.stop().fadeIn(speed); //0.2초동안 2차메뉴를 나오게 해라.
     });
     flag = true;
   }
 
-  // 1차 메뉴에 .on 부여
-  $(this).find('a').addClass('on');
+  // 1차 메뉴에 .on 부여 (동적으로 제어)
+  $(this).find('a').addClass('on'); 
 
   // 2차 메뉴에 .on 부여
   $(this).find('ul').addClass('on')
