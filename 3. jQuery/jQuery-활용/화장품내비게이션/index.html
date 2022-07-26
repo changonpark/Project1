@@ -13,28 +13,46 @@
   <script src="js/fullDn-1.js"></script>
 </head>
 <body>
-  <header>
-    <div class="inner">
-      <h1><a href="index.html"><img src="images/logo.png" alt=""></a></h1>
-      <ul id="gnb">
-        <li><a href="#"><img src="images/kor.png" alt=""></a></li>
-        <li><a href="#"><img src="images/ch.png" alt=""></a></li>
-        <li><a href="#"><img src="images/us.png" alt=""></a></li>
-        <li><a href="#"><img src="images/jin.png" alt=""></a></li>
-        <li><a href="#"><img src="images/fit.png" alt=""></a></li>
-      </ul>
-      <ul class="util">
-        <li><a href="#">로그인</a></li>
-        <li><a href="#">회원가입</a></li>
-        <li><a href="#">장바구니</a></li>
-        <li><a href="#">고객센터</a></li>
-      </ul>
+  <div class="wrap">
+
+    <header>
+      <div class="inner">
+        <h1><a href="index.html"><img src="images/logo.png" alt=""></a></h1>
+        <ul id="gnb">
+          <li><a href="#"><img src="images/kor.png" alt=""></a></li>
+          <li><a href="#"><img src="images/ch.png" alt=""></a></li>
+          <li><a href="#"><img src="images/us.png" alt=""></a></li>
+          <li><a href="#"><img src="images/jin.png" alt=""></a></li>
+          <li><a href="#"><img src="images/fit.png" alt=""></a></li>
+        </ul>
+        <ul class="util">
+          <li><a href="#">로그인</a></li>
+          <li><a href="#">회원가입</a></li>
+          <li><a href="#">장바구니</a></li>
+          <li><a href="#">고객센터</a></li>
+        </ul>
+
+        <div class="search_con">
+          <form>
+              <tbody>
+                <tr>
+                  <td align="left">
+                    <input type="text" name="str" class="input">
+                  </td>
+                  <td align="center" width="16">
+                    <input type="image" src="images/search.png" alt="검색">
+                  </td>
+                </tr>
+              </tbody>
+          </form>
+        </div>
+
     </div>
   </header>
-
+  
   <!-- 헤더 -->
   <main>
-
+    
     <div id="headerWrap">
       <div id="head">
         <!-- 내비게이션 -->
@@ -43,56 +61,57 @@
             <ul class="sub">
               <li><a href="#">전체제품</a></li>              
             </ul>
-        </li>
-        <li class="nav2"><a href="#">REVIEW</a>
+          </li>
+          <li class="nav2"><a href="#">REVIEW</a>
+            <ul class="sub">
+              <li><a href="#">베스트후기</a></li>
+              <li><a href="#">일반후기</a></li>
+              <li><a href="#">포토 후기</a></li>
+            </ul>
+          </li>
+          <li class="nav3"><a href="#">제품유형별</a>
+            <ul class="sub">
+              <li><a href="#">클렌저/토너</a></li>
+              <li><a href="#">에센스</a></li>
+              <li><a href="#">크림</a></li>
+              <li><a href="#">젤/마스크</a></li>
+              <li><a href="#">이너뷰티</a></li>
+              <li><a href="#">미용소품</a></li>
+            </ul>
+          </li>
+      <li class="nav4"><a href="#">제품라인별</a>
         <ul class="sub">
-          <li><a href="#">베스트후기</a></li>
-          <li><a href="#">일반후기</a></li>
-          <li><a href="#">포토 후기</a></li>
+          <li><a href="#">진정라인</a></li>
+          <li><a href="#">안정라인</a></li>
+          <li><a href="#">집중라인</a></li>
+          <li><a href="#">재생라인</a></li>
+          <li><a href="#">기능성라인</a></li>
+          <li><a href="#">더마라인</a></li>
         </ul>
       </li>
-      <li class="nav3"><a href="#">제품유형별</a>
-      <ul class="sub">
-        <li><a href="#">클렌저/토너</a></li>
-        <li><a href="#">에센스</a></li>
-        <li><a href="#">크림</a></li>
-        <li><a href="#">젤/마스크</a></li>
-        <li><a href="#">이너뷰티</a></li>
-        <li><a href="#">미용소품</a></li>
-      </ul>
-    </li>
-      <li class="nav4"><a href="#">제품라인별</a>
-      <ul class="sub">
-        <li><a href="#">진정라인</a></li>
-        <li><a href="#">안정라인</a></li>
-        <li><a href="#">집중라인</a></li>
-        <li><a href="#">재생라인</a></li>
-        <li><a href="#">기능성라인</a></li>
-        <li><a href="#">더마라인</a></li>
-      </ul>
-    </li>
       <li class="nav5"><a href="#">이벤트</a>
-      <ul class="sub">
-        <li><a href="#">진행중인 이벤트</a></li>
-        <li><a href="#">종료된 이벤트</a></li>
-        <li><a href="#">기획전</a></li>
-      </ul>
-    </li>
-    <li class="nav6"><a href="#">브랜드 스토리</a>
-      <ul class="sub">
-        <li><a href="#">브랜드</a></li>
-        <li><a href="#">철학</a></li>
-        <li><a href="#">시스템</a></li>
-        <li><a href="#">제품성분</a></li>
-        <li><a href="#">기업정신</a></li>
-        <li><a href="#">캠페인</a></li>
-      </ul>
-    </li>
-   </ul>
- </div>
+        <ul class="sub">
+          <li><a href="#">진행중인 이벤트</a></li>
+          <li><a href="#">종료된 이벤트</a></li>
+          <li><a href="#">기획전</a></li>
+        </ul>
+      </li>
+      <li class="nav6"><a href="#">브랜드 스토리</a>
+        <ul class="sub">
+          <li><a href="#">브랜드</a></li>
+          <li><a href="#">철학</a></li>
+          <li><a href="#">시스템</a></li>
+          <li><a href="#">제품성분</a></li>
+          <li><a href="#">기업정신</a></li>
+          <li><a href="#">캠페인</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
 </div>
 </main>
 <!-- 컨텐츠 -->
 <div class="container">여기는 컨텐츠 영역</div>
+</div>
 </body>
 </html>
