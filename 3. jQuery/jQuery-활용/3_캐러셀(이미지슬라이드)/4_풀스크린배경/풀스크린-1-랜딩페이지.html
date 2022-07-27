@@ -13,6 +13,26 @@
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&family=Oleo+Script+Swash+Caps&display=swap" rel="stylesheet">
   <script>
     $( function () {
+
+      var ww, wh, bh;
+
+      function init(){
+        ww = window.innerWidth; //브라우저 너비
+        wh = window.innerHeight;//브라우저 높이
+
+        bh = document.getElementById('big'); //배경이미지 영역
+        bh.style.height = wh + 'px';
+      }
+
+      init();
+
+      //브라우저 크기가 변경되는 것을 감지하는 이벤트 리스너
+      function el(){
+        window.addEventListener('resize', init);
+      }
+      el(); //호출
+
+      // $(window).resize(function(){init()}); jq문법
       
     } );
   </script>
