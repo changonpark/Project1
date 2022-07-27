@@ -82,7 +82,7 @@
   .container {width: auto;}
 }
 /* 랩탑 */
-@media (max-width: 768px) and (max-width: 979px) {
+@media (min-width: 768px) and (max-width: 979px) {
   .container {width: 720px;}
 }
 /* 데스크탑 */
@@ -99,13 +99,13 @@
       $('#slides').slidesjs({
         width: 900,
         height: 600,
-        navigation: false,
+        // navigation: false,
 
         play: {
           active: true,
           auto: true,
           interval: 5000,
-          swap: trueg
+          swap: true
         }
       });
     } );
