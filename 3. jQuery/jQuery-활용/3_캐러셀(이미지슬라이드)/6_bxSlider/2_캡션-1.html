@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>bxSlider</title>
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+  <script src="https://code.jquery.com/jquery-migrate-1.4.1.min.js"></script>
+  <!-- bxSlider 추가 -->
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.css' integrity='sha512-UBY4KATrDAEKgEEU+RAfY4yWrK0ah43NGwNr5o/xmncxsT+rv8jp7MI3a00I0Ep3NbAx05U5kw3DvyNCoz+Wcw==' crossorigin='anonymous'/>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.js' integrity='sha512-p55Bpm5gf7tvTsmkwyszUe4oVMwxJMoff7Jq3J/oHaBk+tNQvDKNz9/gLxn9vyCjgd6SAoqLnL13fnuZzCYAUA==' crossorigin='anonymous'></script>
+  <script>
+    $( function () {
+      $('.slide').bxSlider({
+        captions: true
+      });
+    } );
+  </script>
+</head>
+<body>
+  <div id="mainSlide">
+    <ul class="slide">
+      <li><img src="http://wooreeweb.com/img/bg-1.jpg" alt="" title="이미지캡션1"></li>
+      <li><img src="http://wooreeweb.com/img/bg-2.jpg" alt="" title="이미지캡션2"></li>
+      <li><img src="http://wooreeweb.com/img/bg-3.jpg" alt="" title="이미지캡션3"></li>
+      <li><img src="http://wooreeweb.com/img/bg-4.jpg" alt="" title="이미지캡션4"></li>
+    </ul>
+  </div>
+</body>
+</html>
