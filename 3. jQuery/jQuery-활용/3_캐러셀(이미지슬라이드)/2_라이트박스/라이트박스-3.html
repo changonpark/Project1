@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>라이트박스</title>
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+  <script src="https://code.jquery.com/jquery-migrate-1.4.1.min.js"></script>
+  <style>
+    a > img { width: 100px;}
+  </style>
+  <!-- 라이트박스 추가 -->
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css' integrity='sha512-ZKX+BvQihRJPA8CROKBhDNvoc2aDMOdAlcm7TUQY+35XYtrd3yh95QOOhsPDQY9QnKE0Wqag9y38OIgEvb88cA==' crossorigin='anonymous'/>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js' integrity='sha512-k2GFCTbp9rQU412BStrcD/rlwv1PYec9SNrkbQlo6RZCf75l6KcC3UwDY8H5n5hl4v77IDtIPwOk9Dqjs/mMBQ==' crossorigin='anonymous'></script>
+  <!-- <script>  이런식으로 사이트에서 추가할 수 있다.
+    lightbox.option({
+      'resizeDuration': 200,
+      'wrapAround': true
+    })
+</script> -->
+</head>
+<body>
+  <div class="container">
+    <h2>라이트박스</h2>
+    <hr>
+    
+    <div class="gal">
+      <a href="http://wooreeweb.com/img/s01.jpg" data-lightbox="g1">
+        <img src="http://wooreeweb.com/img/s01.jpg" alt="">
+      </a>
+      <a href="http://wooreeweb.com/img/s02.jpg" data-lightbox="g1">
+        <img src="http://wooreeweb.com/img/s02.jpg" alt="">
+       </a>
+       <a href="http://wooreeweb.com/img/s03.jpg" data-lightbox="g1" data-title="이미지 설명이 들어가는 부분">
+        <img src="http://wooreeweb.com/img/s03.jpg" alt="">
+       </a>
+      </div>
+</div>
+</body>
+</html>

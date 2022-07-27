@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>팬시박스</title>
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+  <script src="https://code.jquery.com/jquery-migrate-1.4.1.min.js"></script>
+<style>
+  a > img {width: 100px;}
+</style>
+<!-- jQuery easing 추가 -->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.compatibility.min.js' integrity='sha512-sZ2H+EQd+WBqD/p1lsiqdLI6IldPoh0aWEL6gGyXVboGOzfMlUWT57pdGk9iVzO0qIWTTs7yRXQhgAncsjdbWA==' crossorigin='anonymous'></script>
+<!-- 마우스 휠 추가 -->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js' integrity='sha512-rCjfoab9CVKOH/w/T6GbBxnAH5Azhy4+q1EXW5XEURefHbIkRbQ++ZR+GBClo3/d3q583X/gO4FKmOFuhkKrdA==' crossorigin='anonymous'></script>
+<!-- 팬시박스 추가 -->
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css' integrity='sha512-H9jrZiiopUdsLpg94A333EfumgUBpO9MdbxStdeITo+KEIMaNfHNvwyjjDJb+ERPaRS6DpyRlKbvPUasNItRyw==' crossorigin='anonymous'/>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js' integrity='sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA==' crossorigin='anonymous'></script>
+<script>
+  $(function(){
+
+    //기본형
+    //$('.gal a').fancybox();
+
+    //옵션 지정
+    $('a.ibox').fancybox({
+      'transitionIn'  : 'elastic',
+      'transitionOut' : 'elastic',
+      'cyclic'        : true,
+      'overlayColor'  : '#ffff00'
+    });
+
+  });
+</script>
+</head>
+<body>
+  <div class="container">
+    <h2>팬시박스</h2>
+    <hr>
+
+    <div class="gal">
+      <a href="http://wooreeweb.com/img/s01.jpg" rel="g1" class="ibox"><img src="http://wooreeweb.com/img/s01.jpg" alt="">
+      </a>
+      <a href="http://wooreeweb.com/img/s02.jpg" rel="g1" class="ibox"><img src="http://wooreeweb.com/img/s02.jpg" alt="">
+      </a>
+      <a href="http://wooreeweb.com/img/s03.jpg" rel="g1" class="ibox"><img src="http://wooreeweb.com/img/s03.jpg" alt="">
+      </a>
+    </div>
+  </div>
+</body>
+</html>

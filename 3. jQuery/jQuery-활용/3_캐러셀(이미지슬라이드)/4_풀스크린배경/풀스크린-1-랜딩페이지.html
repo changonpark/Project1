@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>풀스크린 랜딩페이지</title>
+  <!-- 웹 폰트 아이콘 - Font Awesome -->
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css' integrity='sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==' crossorigin='anonymous'/>
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+  <script src="https://code.jquery.com/jquery-migrate-1.4.1.min.js"></script>
+  <!-- 웹 폰트 -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&family=Oleo+Script+Swash+Caps&display=swap" rel="stylesheet">
+  <script>
+    $( function () {
+      
+    } );
+  </script>
+  <style>
+    * {margin: 0; padding: 0;}
+    a {text-decoration: none; color: #222;}
+
+    html {font-size: 16px; line-height: 1.5; font-family: 'noto sans kr';}
+    body * {box-sizing: border-box;}
+    .clearfix:after {content: ''; display: block; clear: both;}
+
+    body {background-color: #fff; color: #222; }
+    section {background-color: beige; text-align: center; padding: 1rem;}
+    footer {text-align: center; background-color: ivory; padding: 3rem 1rem;}
+
+    /* 헤더 */
+    .header {
+      max-width: 960px; margin: 0 auto;
+      padding: 2rem; text-align: center;
+    }
+
+    .header h1 {margin: 0; font-size: 5rem; line-height: 1; }
+    .header h1 span {
+      display: block; font-size: 1.4rem; color: #aaa; line-height: 1.5;
+      padding: 1rem 0;
+    }
+    /* 상단 내비게이션(.top-gnb) */
+    .top-gnb {
+      text-align: right; padding: 0.5rem 0; font-size: 0.8rem;
+    }
+    .top-gnb a {
+      display: inline-block; padding: 0.5rem; letter-spacing: 2px;
+    }
+
+    /* 내비게이션(.gnb) */
+    .gnb { font-size: 1.2rem; padding-top: 1rem;}
+    .gnb a {
+      display: inline-block; margin: 0.4rem 0.1rem;
+      padding: 0.5rem 1.2rem; letter-spacing: 1px;
+      border: 2px solid transparent; border-radius: 2px;
+    }
+
+    .gnb a:hover,
+    .gnb a:focus {background-color: #333;}
+    .gnb a.on {background-color: #eee; border-color: #222;}
+
+    /* 컨텐츠 */
+    .contents { padding: 10rem 0;}
+    .contents p { font-size: 1.5rem;}
+    .contents > a {
+      display: inline-block; margin: 20px 10px; padding: 25px;
+    }
+    .contents > a > img {max-width: 100%; border-radius: 10px; opacity: 0.5;}
+    .contents > a > strong { display: block; font-size: 1.3rem;}
+
+    .contents > a:hover img,
+    .contents > a:focus img { opacity: 1;}
+  </style>
+  <style>
+    /* 풀스크린 배경 */
+    .big-header {
+      position: relative; background-color: #333; height: 700px;
+    }
+    .big-header {
+      background-image: url(http://wooreeweb.com/img/bigbg.jpg);
+      background-position: center bottom;
+      background-size: cover;
+      background-repeat: no-repeat;
+      z-index: 10;
+      overflow: hidden;
+    }
+
+    .main-title {
+      position: absolute; color: #fff; text-align: center;
+      font-size: 7rem; top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      font-family: 'Oleo Script Swash Caps';
+    }
+    .main-title:before {
+      content: '';
+      background-image: url(http://wooreeweb.com/img/deco.svg);
+      width: 20vw;
+      height: 20vh;
+      min-width: 3.5rem;
+      min-height: 3.5rem;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    @media screen and (max-width: 768px) {
+      .main-title { font-size: 3rem;}
+      .header h1 { font-size: 2.5rem;}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- 배경+헤더 -->
+    <div class="content">
+      <!-- (1) 배경이미지: 풀스크린 -->
+      <div id="big" class="big-header">
+        <div class="main-title">Landing</div>
+      </div>
+      <!-- (2) 상단 내비게이션 -->
+      <div class="top-gnb clearfix">
+        <a href="#"><i class="fa fa-globe"></i><span>사이트맵</span></a>
+        <a href="#"><i class="fa fa-user-circle"></i><span>로그인</span></a>
+      </div>
+
+      <!-- (3) 페이지 헤더(메인 내비게이션) -->
+      <div class="header clearfix">
+        <h1>HEADER<span>페이지 헤더</span></h1>
+      </div>
+
+      <nav class="gnb">
+        <a href="#" class="on">메뉴1</a>
+        <a href="#">메뉴2</a>
+        <a href="#">메뉴3</a>
+        <a href="#">메뉴4</a>
+      </nav>
+    </div>
+
+    <!-- 컨텐츠 -->
+    <section class="contents">
+      <p>컨텐츠</p>
+      <a href="#"><img src="http://placehold.it/300x200" alt=""><strong>컨텐츠1</strong></a>
+      <a href="#"><img src="http://placehold.it/300x200" alt=""><strong>컨텐츠2</strong></a>
+    </section>
+
+    <!-- 푸터 -->
+    <footer>
+      &copy; 2013 WOOREEWEB
+    </footer>
+  </div>
+</body>
+</html>
