@@ -12,7 +12,8 @@
   <script src='https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.js' integrity='sha512-p55Bpm5gf7tvTsmkwyszUe4oVMwxJMoff7Jq3J/oHaBk+tNQvDKNz9/gLxn9vyCjgd6SAoqLnL13fnuZzCYAUA==' crossorigin='anonymous'></script>
   <script>
     $( function () {
-      $('.slide').bxSlider();
+      $('.slide').bxSlider(); //이미지의 부모요소에 대해서 bxSlider를 실행하라. 자동으로 인디케이터가 나오고
+                              //이미지의 좌우에 내비게이터가 있다(<>) 자동으로 실행이 되지는 않는다.
     } );
   </script>
 </head>

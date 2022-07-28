@@ -49,15 +49,15 @@
       });
 
       // 필터 버튼 활성화
-      $('.button-group').each(function(i,btn){
+      $('.button-group').each(function(i,btn){ //each 각각 뭐해라. i=index / 버튼그룹 안에있는 것들 각각 얘기하는것 - btn
         var $btn = $(btn);
-        $btn.on('click', 'button', function(){
+        $btn.on('click', 'button', function(){ //버튼을 클릭하면 $btn의 자손중 on클래스를 찾아서 클래스 지워라.
           $btn.find('.on').removeClass('on');
-          $(this).addClass('on');
+          $(this).addClass('on'); // 클릭한 버튼에 on 클래스를 붙여라.
         });
       });
 
-      //첫 번째 버튼 기본 활성화
+      //첫 번째 버튼 기본 활성화 - 모두보기 활성화 / 이걸 안주고 싶으면 첫번째버튼 클래스에 on을 줘야함.
       $('.btn').first().addClass('on');
     } );
   </script>
@@ -77,10 +77,10 @@
       <button class="btn" data-filter=".lan">풍경</button>
     </div>
     
-    <!-- 이미지 갤러리 -->
+    <!-- 이미지 갤러리 / 라이트 박스 적용하고 싶으면 data-lightbox="gal$" -->
     <div class="grid-gal clearfix">
       <div class="item hoz pot">
-        <a href="http://wooreeweb.com/img/h01.jpg">
+        <a href="http://wooreeweb.com/img/h01.jpg" data-lightbox="gal1"> 
           <img src="http://wooreeweb.com/img/h01.jpg" alt="">
         </a>
       </div>

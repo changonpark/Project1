@@ -43,12 +43,12 @@
       });
 
       //필터 버튼 연결
-      $('#filters').on('click', 'button', function(){
-        var df = $(this).attr('data-filter');
+      $('#filters').on('click', 'button', function () { //ID filters 안의 버튼에서 클릭이라는 이벤트가 발생하면 함수를 실행하라.(이 경우 filter은 그냥 영역이됨.)
+        var df = $(this).attr('data-filter'); //이때는 this가 버튼을 가르킨다. 클릭이벤트가 발생한 버튼.(on메소드의 특징) 버튼이 클릭이 됐을때 data-filter의 속성값
         $grid.isotope({filter: df});
       });
 
-      // 필터 버튼 활성화
+      // 필터 버튼 활성화 - 필터를 구동시켜주는 아이
       $('.button-group').each(function(i,btn){
         var $btn = $(btn);
         $btn.on('click', 'button', function(){

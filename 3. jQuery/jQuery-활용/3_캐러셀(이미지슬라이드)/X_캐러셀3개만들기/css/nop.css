@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+.slideContainer {
+  width: 100%;
+  position: relative;
+}
+
+/*-아래 pageBt abosolute로 위치를 잡기 위하여 부모에 position: relative 필요*/
+.slideWrap {
+  width: calc(100%*6);
+  overflow: hidden;
+  margin-left: calc(-100%*1);
+  position: relative;
+  z-index: 1;
+}
+
+/*총600장을 나열하기위하여 calc(100%*6) 또는 600%, 맨처음 1번째 이미지 가기위하여 margin-left: calc(-100%*0)*/
+.slide {
+  float: left;
+}
+
+
+.slideWrap > li > img { width: 600px;}

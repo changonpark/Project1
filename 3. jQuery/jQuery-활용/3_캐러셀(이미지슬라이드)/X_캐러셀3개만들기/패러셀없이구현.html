@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>직접구현</title>
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+  <script src="https://code.jquery.com/jquery-migrate-1.4.1.min.js"></script>
+  <link rel="stylesheet" href="css/nop.css">
+  <script>
+$(function() {
+  var winW = i = setId = 0;
+  resizeFn();
+
+  function resizeFn() {
+    winW = $(window).innerWidth();
+    $(".slide").css({
+      width: winW
+    });
+  };
+
+  $(window).resize(function() {
+    resizeFn();
+  });
+
+  autoplayFn();
+
+  function autoplayFn() {
+    setId = setInterval(nextCountFn, 2500);
+  };
+
+  $(".pageBt").each(function(idx) {
+    $(this).click(function() {
+      clearInterval(setId);
+      i = idx;
+      mainslideFn();
+    });
+  });
+
+  function nextCountFn() {
+    i++;
+    mainslideFn();
+  };
+
+  function prevCountFn() {
+    i--;
+    mainslideFn();
+  };
+
+  function mainslideFn() {
+    $(".slideWrap").stop().animate({
+      left: (-100 * i) + "%"
+    }, 600, function() {
+      if (i > 3) {
+        i = 0;
+      }
+      if (i < 0) {
+        i = 3
+      }
+      $(".slideWrap").stop().animate({
+        left: (-100 * i) + "%"
+      }, 0)
+    });
+    $(".pageBt").removeClass("addPageBt");
+    $(".pageBt").eq(i > 3 ? i = 0 : i).addClass("addPageBt");
+  };
+});
+  </script>
+</head>
+<body>  
+<div class="slideContainer">
+  <ul class="slideWrap">
+    <li class="slide slide4"><img src="images/car53.jpg" alt=""></li>
+    <li class="slide slide1"><img src="images/city53.jpg" alt=""></li>
+    <li class="slide slide2"><img src="images/cow53.jpg" alt=""></li>
+    <li class="slide slide3"><img src="images/girl53.jpg" alt=""></li>
+    <li class="slide slide4"><img src="images/car53.jpg" alt=""></li>
+  </ul>
+  <ul class="pageBtWrap">
+    <li><a href="#" class="pageBt addPageBt"></a></li>
+    <li><a href="#" class="pageBt"></a></li>
+    <li><a href="#" class="pageBt"></a></li>
+    <li><a href="#" class="pageBt"></a></li>    
+  </ul>
+</div>
+</body>
+</html>
