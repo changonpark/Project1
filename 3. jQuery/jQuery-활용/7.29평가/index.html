@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>롤토체스 티어덱</title>
+  <link rel="shortcut icon" sizes="16x16 32x32" type="image/x-icon" href="images/favicon.png">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/Nav.css">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/fonts.css">
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://code.jquery.com/jquery-migrate-1.4.1.min.js"></script>
+    <script src="js/Dn.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="css/swipper.css">
+</head>
+<body>
+  <header>
+
+    <div class="inner">
+      <h1><a href="index.html"><img src="images/tftlogo.jpg" alt=""></a></h1>
+      <ul id="gnb">
+      </ul>
+      <ul class="util">
+        <li><a href="#">login</a></li>
+        <li><a href="#">join</a></li>
+        <li><a href="#">mypage</a></li>
+        <li><a href="#">kor</a></li>
+      </ul>
+    </div>
+    <div id="headerWrap">
+      <div id="head">
+
+        <ul id="gnb">
+          <li class="nav1"><a href="#">추천 메타</a>
+            <ul class="sub">
+              <li><a href="#">Finish 7</a></li>
+              <li><a href="#">Fast 8</a></li>
+              <li><a href="#">Fast 9</a></li>
+            </ul>
+          </li>
+          <li class="nav2"><a href="#">추천 빌드업</a>
+            <ul class="sub">
+              <li><a href="#">3별 3요</a></li>
+              <li><a href="#">2조 2수 2포</a></li>
+              <li><a href="#">3비 3용 2수</a></li>
+            </ul>
+          </li>
+          <li class="nav3"><a href="#">티어덱</a>
+            <ul class="sub">
+              <li><a href="#">아우솔덱</a></li>
+              <li><a href="#">쉬바나덱</a></li>
+              <li><a href="#">아래 사진 참고</a></li>
+            </ul>
+          </li>
+      <li class="nav4"><a href="#">패치노트</a>
+        <ul class="sub">
+          <li><a href="#">내가 패치해도</a></li>
+          <li><a href="#">이거보단</a></li>
+          <li><a href="#">잘하겠다</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</div>
+
+  </header>
+
+  <main>
+    <!-- 캐러셀 - 이미지 슬라이드 -->
+    <!-- Swiper -->
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="images/lolchess1.jpg" alt=""></div>
+        <div class="swiper-slide"><img src="images/lolchess2.jpg" alt=""></div>
+        <div class="swiper-slide"><img src="images/lolchess3.jpg" alt=""></div>
+        <div class="swiper-slide"><img src="images/lolchess4.jpg" alt=""></div>
+        <div class="swiper-slide"><img src="images/lolchess5.jpg" alt=""></div>
+        <div class="swiper-slide"><img src="images/lolchess6.jpg" alt=""></div>
+        <div class="swiper-slide"><img src="images/lolchess7.jpg" alt=""></div>
+        <div class="swiper-slide"><img src="images/lolchess8.jpg" alt=""></div>
+        <div class="swiper-slide"><img src="images/lolchess9.jpg" alt=""></div>
+        <div class="swiper-slide"><img src="images/lolchess10.jpg" alt=""></div>
+      </div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-pagination"></div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        spaceBetween: 30,
+        centeredSlides: true,
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          type: "progressbar",
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
+
+    <div class="art clear">
+      <div class="art-1">
+        <a href="#"><img src="images/tft1.jpg" alt=""></a>
+      </div>
+      <div class="art-2">
+        <a href="#"><img src="images/tft2.jpg" alt=""></a>
+      </div>
+    </div>
+
+
+  </main>
+    
+  <footer>
+    <div class="inner">
+      <div class="upper">
+        <ul>
+          <li><a href="https://lolchess.gg/">© LoLCHESS.GG.</a></li>
+          <li><a href="#">All Rights Reserved.</a></li>
+          <li><a href="#">TFT@LoLCHESS.GG</a></li>
+          <li><a href="#">개인정보처리방침</a></li>
+          <li><a href="#">사업자정보확인</a></li>
+        </ul>
+      </div>
+
+       <div class="lower">
+        <address>
+          lolchess.gg is hosted by PlayXP Inc. lolchess.gg isn’t endorsed by Riot Games and doesn’t reflect the views or opinions of Riot Games or anyone officially involved in producing or managing League of<br>
+          Legends. League of Legends and Riot Games are trademarks or registered trademarks of Riot Games, Inc. League of Legends © Riot Games, Inc.
+        </address>
+        <p>copyright &copy; 2022 lanbelle. all rights reserved. hosting by 엔에이치엔커머스(주). site by 디자인위브.</p>
+        <li><a href="#">이용약관</a></li>
+        <li><a href="#">개인정보 처리방침</a></li>
+
+        <div class="lowright">
+          <li><a href="#">이용약관</a></li>
+          <li><a href="#">개인정보 처리방침</a></li>
+        </div>
+       </div>
+
+     
+    </div>
+  </footer>
+</body>
+</html>

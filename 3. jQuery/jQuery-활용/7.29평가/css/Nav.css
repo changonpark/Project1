@@ -1,0 +1,79 @@
+@import url(fonts.css);
+header {
+  position: relative;
+  height: 400px;
+}
+
+#headerWrap {
+  background-color: #fff;
+  position: absolute;
+  top: 200px; left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* 고정 너비 내비게이션 */
+#head {
+  width: 1480px;
+  margin: 0  auto;
+}
+
+/* 1차 메뉴 */
+
+#gnb { position: relative; top: 30px; }
+#gnb > li {
+  width: 25%; height: 40px;
+  float: left;
+  text-align: center;
+  display: table;
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+#gnb > li > a {
+  display: table-cell;
+  vertical-align: middle;
+  transition: all 0.4s;
+  padding: 10px;
+}
+#gnb .sub { top: 50px;}
+
+#gnb > li > a:hover,
+#gnb > li > a:focus,
+#gnb > li > a.on {
+  background-color: #09f; color: #fff;
+}
+
+/* 2차 메뉴 */
+#gnb > li > ul {
+  background-color: #fff;
+  padding: 5px;
+  position: absolute;
+  left: 0;
+  top: 30px;
+  width: 120px;
+}
+
+/* 2차 메뉴 배치 */
+#gnb li.nav1 ul { left: 8.5%; }
+#gnb li.nav2 ul { left: 33.5%; }
+#gnb li.nav3 ul { left: 58.5%; }
+#gnb li.nav4 ul { left: 83.5%; }
+
+#gnb > li > a {font-family: 'Stylish'; }
+
+#gnb > li > ul > li { padding: 0 10px;}
+#gnb > li > ul > li > a {
+  display: block;
+  padding: 8px 0;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+#gnb > li > ul > li > a:hover,
+#gnb > li > ul > li > a:focus { color: darkseagreen;}
+
+#gnb > li > ul.on {
+  background-color: rgba(30, 30, 30, 0.5);
+}
+
