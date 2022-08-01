@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>03_논리(Boolean)-1</title>
+  <script>
+    var boo1 = true; //따옴표로 묶으면 안된다. 묶으면 그냥 문자가 된다.
+    var boo2 = false; //논리형은 숫자로 변환이 가능하다. true = 1 / false = 0
+
+    document.write('<p>boo1 = ' + boo1);
+    document.write('<p>boo2 = ' + boo2);
+
+    document.write('<p>boo1의 숫자형 = ' + Number(boo1));
+    document.write('<p>boo2의 숫자형 = ' + Number(boo2));
+
+    var boo3 = 1;
+    var boo4 = 0;
+    var boo5 = 3;
+    var boo6 = -2;
+
+    document.write('<p>boo3의 논리형) : ' + Boolean(boo3));
+    document.write('<p>boo4의 논리형) : ' + Boolean(boo4));
+    document.write('<p>boo5의 논리형) : ' + Boolean(boo5));
+    document.write('<p>boo6의 논리형) : ' + Boolean(boo6));
+  </script>
+</head>
+<body>
+  
+</body>
+</html>
