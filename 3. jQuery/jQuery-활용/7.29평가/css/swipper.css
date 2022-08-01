@@ -13,11 +13,7 @@ body {
   padding: 0;
 }
 
-main {
-  position: relative;
-  background-image: url(../images/bg-top.jpg);
-  background-repeat: no-repeat;
-}
+
 
 .swiper {
   width: 100%;
