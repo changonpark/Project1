@@ -14,7 +14,7 @@ header {
 
 /* 고정 너비 내비게이션 */
 #head {
-  width: 1480px;
+  width: 100%;
   margin: 0  auto;
 }
 

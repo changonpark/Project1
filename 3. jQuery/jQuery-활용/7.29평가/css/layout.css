@@ -24,7 +24,7 @@ header {
 
 header .inner {
   position: relative;
-  width: 1480px;
+  width: 100%;
   height: 200px;
   margin: 0 auto;
 }
@@ -78,13 +78,47 @@ header .inner #gnb li a:hover {
   color: #eee;
 }
 
+header #headerWrap #head ul#gnb { width: 100%;}
+
 main .art {
-   width: 1480px;
+   width: 100%;
    position: relative;
    margin: 0 auto;
    }
 
-main .art img {float: left;}
+main .art img {float: left; width: 50%;}
+
+main .gg {position: relative;}
+
+main .gg img {display: block; margin: auto; padding: 30px;}
+
+main .search-mode {
+  position: relative;
+  width: 480px;
+  height: 50px;
+  margin: 10px auto;
+}
+
+main input {
+  width: 100%;
+  height: 100%;
+}
+
+main .icon {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  top: 12px;
+  right: 10px;
+  left: 10px;
+}
+
+main .plus-option i {
+  display: inline-block;
+  margin-left: 5px;
+  color: rgb(214, 138, 50);
+}
+
 
 
 footer {
