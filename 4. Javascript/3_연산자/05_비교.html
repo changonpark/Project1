@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>비교 연산자</title>
+  <script>
+    var a = 10;   //변수 a의 값 10
+    var b = 20;   //변수 b의 값 20
+    var c = 10;   //변수 c의 값 10
+    var d = "20"; //변수 f의 값 문자 형 "20"
+    var result;
+
+    document.write("변수 a 에 저장된 값 : " + a + "<br>");
+    document.write("변수 b 에 저장된 값 : " + b + "<br>");
+    document.write("변수 c 에 저장된 값 : " + c + "<br>");
+    document.write("변수 d 에 저장된 값 : " + d + "(문자)<hr>");
+
+    result = a > b; //거짓
+    document.write("result = a > b 결과 result 에 저장된 값 : ");
+    document.write(result, "<br>");
+
+    result = a < b; //참
+    document.write("result = a < b 결과 result 에 저장된 값 : ");
+    document.write(result, "<br>");
+
+    result = a <= b; //참
+    document.write("result = a <= b 결과 result 에 저장된 값 : ");
+    document.write(result, "<br>");
+
+    result = b == d; //데이터형 상관없이 데이터가 같으므로 참
+    document.write("result = b == d 결과 result 에 저장된 값 : ");
+    document.write(result, "<br>");
+
+    result = a != b; //데이터가 다르므로 참
+    document.write("result = a != b 결과 result 에 저장된 값 : ");
+    document.write(result, "<br>");
+
+    result = b === d; //데이터형이 일치하지 않으므로 거짓
+    document.write("result = b === d 결과 result 에 저장된 값 : ");
+    document.write(result, "<br>");
+
+    // > 크다, <작다, >=크거나같다, <=작거나같다, ==같다, !=같지않다(다르다), ===진짜완전히똑같다
+
+    //==는 순수한 값만 따진다.(문자, 숫자 중요하지않음 값만 같으면됨)
+    //===는 데이터 타입까지 검사해서 같아야한다.(데이터 형식까지)
+
+    //왼쪽이 주인공
+
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

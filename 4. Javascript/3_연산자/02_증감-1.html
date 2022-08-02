@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>연산자</title>
+  <script>
+    var n1, n2, n3, n4;
+    n1 = 5;
+
+    //n1 = n1 + 1;
+    //n2 = n1;
+    n2 = ++n1;//선계산 후대입
+
+    document.write('<p>n2 = ++n1 결과 : ');
+    document.write('n1 = ' + n1);
+    document.write(', n2 = ' + n2);
+
+    n3 = 5;
+
+    // n4 = n3;
+    // n3 = n3 + 1;
+    n4 = n3++;//선대입 후계산
+    document.write('<p>n4 = n3++ 결과 : ');
+    document.write('n3 = ' + n3);
+    document.write(', n4 = ' + n4);
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

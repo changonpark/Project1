@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>증감 연산자</title>
+  <script>
+    var num1 = 10; //변수 num1에 10 저장
+    var num2 = 20; //변수 num2에 20 저장
+    var result; //변수 result 를 선언
+
+    document.write( "# num1 = " + num1 + "<br>");
+    document.write( "# num2 = " + num2 + "<br>");
+
+    num1--; //변수 num1 데이터 1 감소
+
+    //변수 num1에 변화된 데이터를 출력
+    document.write( "num1-- 결과 : " + num1, "<br>" )
+
+    num1++; //변수 num1 데이터 1 증가
+
+    //변수 num1에 변화된 데이터를 출력
+    document.write( "num1++ 결과 : " + num1, "<br><br>")
+
+    //대입 연산자가 먼저 실행되고, 증가 연산자가 실행
+    result = num2++;
+    //num2 = num2 + 1
+
+    //변수 result에 저장된 값 20 출력
+    document.write("result = num2++ 결과 result 에 저장된 값 : ");
+    document.write(result, "<br>");
+    document.write("result = num2++ 결과 num2 에 저장된 값 : ");
+    document.write(num2, "<br><br>");
+
+    //증가 연산자가 먼저 발생되고, 대입 연산자가 실행
+    //num2 = num2 + 1
+    result = ++num2;
+
+    //변수 result 저장된 값 22 출력
+    document.write("result ++num2 결과 result 에 저장된 값 : ");
+    document.write(num2, "<br>");
+    document.write("result ++num2 결과 num2 에 저장된 값 : ");
+    document.write(result, "<br>");
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

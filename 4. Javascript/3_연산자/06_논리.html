@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>논리연산자</title>
+  <script>
+    var a = 10;
+    var b = 20;
+    var m = 30;
+    var n = 40;
+    var result;
+
+    document.write("변수 a 에 저장된 값 : " + a + "<br>");
+    document.write("변수 b 에 저장된 값 : " + b + "<br>");
+    document.write("변수 m 에 저장된 값 : " + m + "<br>");
+    document.write("변수 n 에 저장된 값 : " + n + "<hr>");
+
+    // false || false || false
+    result = a > b || b >= m || m > n;
+    document.write("result = a > b || b >= m || m > n 결과 : ");
+    document.write(result, "<br>"); //false
+
+    // false || false || true
+    document.write("result = a > b || b >= m || m <= n 결과 : ");
+    result = a > b || b >= m || m <= n;
+
+    document.write( result, "<br>"); //true
+
+    // true && false && true
+    result = a <= b && b >= m && m <= n;
+    document.write("result = a <= b && b >= m && m <= n 결과 : ");
+    document.write(result, "<br>"); //false
+
+    // true && true && true
+    result = a <= b && b <= m && m <= n;
+    document.write("result = a <= b && b <= m && m <= n 결과 : ");
+    document.write(result, "<br>"); //false
+
+    result = !(a > b); // !false
+    document.write("result = !(a > b) 결과 : ");
+    document.write(result, "<br>"); //true
+
+    //and(&&) 연산 - 그리고                    2개 이상의 조건이 모두 참이어야 전체가 참이된다.
+    //or(||) 연산 - 또는, ~이거나              여러가지 조건 중 모두 하지 않았을때만 거짓이 된다.
+  </script>
+</head>
+<body>
+  
+</body>
+</html>
