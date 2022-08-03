@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>for</title>
+  <script>
+    // 1행 5열 테이블 생성
+    var tbl = '<table>';
+    tbl += '<tr>';
+    
+    // td 반복
+    for(var i = 1; i <= 5; i++){
+      tbl += '<td>' + i + '</td>';
+    }
+
+    tbl += '</tr>';
+    tbl += '</table>';
+
+    document.write(tbl);
+  </script>
+  <style>
+    table, tr, td {
+      border: 1px solid crimson;
+      border-collapse: collapse;
+    }
+    td {padding: 10px;}
+  </style>
+</head>
+<body>
+  
+</body>
+</html>

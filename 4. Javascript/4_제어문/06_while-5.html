@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>while</title>
+  <script>
+    // 1부터 10까지 출력 - 서식(1+2+3+..+10=55)
+    var hp = prompt('체력을 입력하세요', 100);
+    var dam = prompt('1회 피해량을 입력하세요', 10);
+    var hit = 0;
+
+    while(hp > 0){
+      document.write('<p>남은 체력 : ' + hp);
+      hp = hp - dam;
+      hit++;
+      document.write('<p>방어 횟수 : ' + hit);
+      }
+      document.write('<h3>');
+      document.write(hit + '번 공격 받은 후 게임오버!')
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

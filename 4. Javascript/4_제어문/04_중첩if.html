@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>if-else-if</title>
+  <script>
+    var grade = prompt('점수를 입력하세요', 0);
+
+    //grade는 0보다 크거나 같고, 100보다 작거나 같다.
+    if (grade >= 0 && grade <= 100){
+      document.write('입력한' + grade + '점은(는)');
+
+    if (grade >= 90){
+      document.write('A');
+    } else if (grade >= 80){
+      document.write('B');
+    } else if (grade >= 70){
+      document.write('C');
+    } else if (grade >= 60) {
+      document.write('D');
+    } else {
+      document.write('F');
+    }
+
+      document.write('입니다.');
+    } else {
+      document.write('<p>잘못입력했습니다.')
+    }
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>중첩for문</title>
+  <script>
+    // 2에서 9단 만큼 반복
+    for (var i = 2; i <= 9; i++){
+
+      // 2단부터 9단까지 단수 출력
+      document.write("=========<br>");
+      document.write(" <h1> " + i + " 단 </h1>");
+      document.write("=========<br>");
+
+      // 1~9까지 곱할 수
+      for (var j = 1; j <= 9; j++){
+        // 구구단 출력
+        document.write( i + " x " + j + " = ");
+        document.write( i * j, "<br>");
+      }
+    }
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

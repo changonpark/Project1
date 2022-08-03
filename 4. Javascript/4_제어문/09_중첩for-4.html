@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>for</title>
+  <style>
+    table, tr, td {
+      border: 2px solid #09f;
+      border-left: none; border-right: none;
+      border-collapse: collapse;
+    }
+    td { padding: 10px;}
+  </style>
+  <script>
+    var dan = 0; //단 수
+    var n = 0;   //곱할 수
+    var tbl = '<table>';
+
+    // 단(행)
+    for (dan = 2; dan < 10; dan++){
+      tbl += '<tr>'; // 행 시작
+
+      // 곱할 수(열)
+      for (n = 1; n <= 9; n++){
+        tbl += '<td>'; //열 시작
+        tbl += dan + 'x' + n + '=';
+        tbl += dan * n;
+        tbl += '</td>'; //열 종료
+      }
+
+      tbl += '</tr>'    //행 종료
+}
+
+tbl += '</table>';      //테이블 종료
+document.write(tbl);    //테이블 출력
+</script>
+</head>
+<body>
+
+</body>
+</html>

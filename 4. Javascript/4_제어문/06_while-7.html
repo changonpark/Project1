@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>while</title>
+  <script>
+    // var target = 2;     //타겟의 위치
+    var target = Math.floor(Math.random() * 10) + 1;
+    var guess;          //추측 좌표
+    var guessCount = 0; //시도 횟수
+    var hitCount = 0;   //명중 횟수
+    var destroy = false;//파괴 여부
+
+    while (destroy == false){
+      guess = prompt('좌표를 입력하세요(1-10)', 1);
+
+      if (guess < 1 || guess > 10){
+        alert('올바른 좌표가 아닙니다.');
+      } else {
+        guessCount++;
+
+        if(guess == target){
+          alert('명중!!');
+          hitCount++;
+
+          if (hitCount == 1){
+            destroy = true;
+            alert('파괴 성공!');
+          }
+        } else {
+          alert('빗나갔습니다.');
+        }
+      }
+    }
+
+    var ratio = '당신은' + guessCount + '번 발사했습니다.';
+    ratio += '<h3>명중률은 [';
+    ratio += (1 / guessCount) * 100;
+    ratio += ']% 입니다.';
+
+    document.write(ratio);
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

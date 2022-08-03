@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>while</title>
+  <script>
+    // 1부터 10까지 출력 - 서식(1+2+3+..+10=55)
+    var i = parseInt(prompt('시작값을 입력하세요')); //초기값
+    var s = 0;     //누적합계
+    var end = parseInt(prompt('종료값을 입력하세요')); //최종값
+
+    while(i <= end){
+      document.write(i);
+
+      if (i < end){
+        document.write('+');
+      }
+      s = s + i;
+      i++;
+    }
+
+    document.write(' = ' + s);
+  </script>
+</head>
+<body>
+  
+</body>
+</html>
