@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>함수</title>
+  <script>
+    var num = prompt('제곱미터 값을 입력하세요', 85);
+
+    document.write('<h3>입력한 값 : ' + num);
+    document.write('<h3>변환 결과 : ');
+
+    var cal = function(m){
+      m = m / 3.3;
+      return m;
+    }
+    
+    function changeArea(mv){
+      var res = cal(mv).toFixed(1); //소수점 첫째짜리까지 보이게 - toFixed(1)
+      document.write(res + '평형');
+    }
+
+    changeArea(num);
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

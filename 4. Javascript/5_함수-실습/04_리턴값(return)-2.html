@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>함수</title>
+  <script>
+    var input = prompt('변환할 초를 입력하세요', 1);
+
+    function unit(){
+      var result =  input * 1000;
+      return result;
+    }
+
+    document.write('<h3>입력한 ' + input + '초(s)는 ');
+    document.write(unit() + '밀리초(ms) 입니다.');
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

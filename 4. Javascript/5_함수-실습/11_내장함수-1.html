@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>함수</title>
+  <script>
+    var x = 10;
+    var y = 1/0;
+
+    document.write('<h3>x = ' + x);
+    if(isNaN(x)){
+      document.write(' : 숫자 아님(isNaN)');
+    } else {
+      document.write(' : 숫자');
+    }
+
+    document.write('<h3>y = ' + y);
+    if(isFinite(y)){
+      document.write(' : 유한한 값(isFinite)');
+    } else {
+      document.write(' : 무한한 값(Infinity)');
+    }
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

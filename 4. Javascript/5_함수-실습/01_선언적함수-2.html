@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>함수</title>
+  <script>
+    // (1) 함수 정의
+    function show(){
+      document.write('show() 함수 호출 성공!');
+    }
+
+    // (2) 함수 호출(실행)
+    var view = show; //변수에 함수 대입 - 1. 이름을 통해 이름을 바꿔치기(보안성강화/캡슐화)
+                     // 이름이 있는 함수 - 선언적 함수 명시적 함수
+
+    view(); //실행 1 : 변수 실행
+
+    document.write(view); //실행 2 : 변수의 내용 출력
+
+  </script>
+</head>
+<body>
+  
+</body>
+</html>
