@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>02_객체리터럴</title>
+  <script src="js/output.js"></script>
+  <script>
+    var str = '';
+
+    // 객체 생성
+    var cc = {
+      color: 'red',
+      diameter: 100,
+      radius: function(){
+        var n = this.diameter / 2;
+        return n;
+      }
+    } //리터럴 표기법(있는그대로)
+
+    // 속성이 0개인 객체 생성
+    // var 객체변수명 = {};
+
+    // 속성이 n개인 객체 생성
+    // var 객체변수명 = {
+    //   속성명1: 값1,
+    //   속성명2: 값2,
+    //   속성명3: 값3,
+    //   ...,
+    //   속성명n: 값n
+    // }
+
+    cc.color = 'green';
+    cc.diameter = 200;
+
+    str += 'cc.color: ' + cc.color + '<br>';
+    str += 'cc.diameter: ' + cc.diameter + '<br>';
+    str += 'cc.radius(): ' + cc.radius();
+
+    prn(str);
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

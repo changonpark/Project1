@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>08-활용-2-가위바위보</title>
+  <script src="js/output.js"></script>
+  <script>
+    var username = prompt('이름을 입력하세요', '사용자');
+    var select = prompt('가위, 바위, 보 중 선택하세요', '가위');
+    var sel;
+    switch(select){//가위, 바위, 보를 숫자 0,1,2으로 변경
+      case '가위':
+        sel = 0;
+        break;
+      case '바위':
+        sel = 1;
+        break;
+      case '보':
+        sel = 2;
+        break;
+      default:
+        alert('잘못 입력하였습니다.');
+        location.reload();
+    }
+
+    // (1) 가위바위보 시스템 함수 정의
+    function gaibaibo(uName, gbb){
+      // 컴퓨터가 낼 값의 배열
+      var com = ['가위', '바위', '보'];
+
+      // 판단 결과 배열
+      var win = ['이겼다', '졌다', '비겼다'];
+
+      // 컴퓨터가 무작위로 낼 값(가위, 바위, 보) == INDEX
+      var computer = Math.floor( Math.random() * 3);
+
+      // 가위바위보 출력 함수
+      function winner(n){
+        var result = '<table><tr>'
+            result += '<th>' + uName+ ' : ' + select + '</th>';
+            result += '<th>컴퓨터 : ' + com[computer] + '</th>';
+            result += '</tr><tr>'
+            result += '<td><img src=http://wooreeweb.com/img/gbb-l-' + (sel+1) + '.png></td>';
+            result += '<td><img src=http://wooreeweb.com/img/gbb-r-' + (computer+1) + '.png></td>';
+            result += '<tr><tr>'
+            result += '<td colspan=2><marquee behavior="alternate" direction="right" bgcolor="#ed5">' + uName;
+            result += '이(가) ' + win[n] + '</marquee></td></tr></table>'; //marquee - 뉴스티커(글자를 흐르게하는 태그)
+
+          prn(result);
+      }
+      // 승패 판단 제어
+      // 사용자가 이기는 경우
+      if (gbb == 0 && computer == 2 || gbb == 1 && computer == 0 || gbb == 2 && computer == 1){winner(0);//이겼다
+      }
+      //사용자가 지는 경우
+      else if (gbb == 0 && computer == 1 || gbb == 1 && computer == 2 || gbb == 2 && computer == 0){winner(1);//졌다
+      }
+      // 비기는 경우
+      else {
+        winner(2);
+      }
+    }
+
+    // (2) 가위바위보 시스템 함수 호출
+    gaibaibo(username, sel);
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

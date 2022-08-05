@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>05_활용-2-이메일검사</title>
+  <script src="js/output.js"></script>
+  <script>
+    var userEmail = prompt('이메일 주소를 입력하세요', 'haha@google.co');
+    // 이메일 주소의 뒷부분 형식을 배열로 저장
+    var arrUrl = [".co.kr", ".com", ".net", ".or.kr", ".go.kr"];
+
+    var check1 = false; //초기값 저장
+    var check2 = false; //초기값 저장
+
+    // 입력한 이메일 주소에 "@"이 포함되어 있으면 변수 check1에 true 저장
+    if ( userEmail.indexOf("@") > 0 ){
+      check1 = true;
+    }
+
+    // 이메일의 배열 데이터 포함여부 검사
+    for(var i = 0; i < arrUrl.length; i++){
+      if (userEmail.indexOf(arrUrl[i]) > 0){
+        check2 = true;
+      }
+    }
+
+    // AND(&&)연산자는 모두 피연산자가 모두 참이어야만 true 반환
+    if(check1 && check2){
+      prn(userEmail);
+    } else {
+      alert('이메일 형식이 잘못되었습니다.')
+    }
+
+
+
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

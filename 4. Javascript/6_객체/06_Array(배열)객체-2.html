@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>06_Array(배열)객체-2</title>
+  <script src="js/output.js"></script>
+  <script>
+    var ary = new Array();//배열 객체 생성
+
+    ary[0] = ['J', 'a', 'v', 'a'];
+    ary[1] = ['S', 'c', 'r'];
+    ary[2] = ['i', 'p', 't'];
+
+    var idx = [0, 1, 2, 3];
+
+    prn('index 번호 : ' + idx);
+    prn('ary[0]의 값 : ' + ary[0]);
+    prn('ary[1]의 값 : ' + ary[1]);
+    prn('ary[2]의 값 : ' + ary[2]);
+    line();
+
+    prn('ary[0][0] : ' + ary[0][0]);//J
+    prn('ary[0][1] : ' + ary[0][1]);//a
+    prn('ary[0][2] : ' + ary[0][2]);//v
+    prn('ary[0][3] : ' + ary[0][3]);//a
+    line();
+
+    prn('ary[1][0] : ' + ary[1][0]);//S
+    prn('ary[1][1] : ' + ary[1][1]);//c
+    prn('ary[1][2] : ' + ary[1][2]);//r
+    line();
+
+    prn('ary[2][0] : ' + ary[2][0]);//i
+    prn('ary[2][1] : ' + ary[2][1]);//p
+    prn('ary[2][2] : ' + ary[2][2]);//t
+    line();
+
+    prn('<h3>배열 객체 변수 ary 에 저장된 값 : ' + ary + '</h3>');
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

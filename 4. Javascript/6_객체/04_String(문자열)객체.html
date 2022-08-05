@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>04_String(문자열)객체</title>
+  <script src="js/output.js"></script>
+  <script>
+    var str = 'Java_Script';
+    var code = '01ABac';
+
+    prn('<h3> 변수 str = ' + str + '</h3>');
+    prn('[문자열 길이] str.length : ' + str.length); //11
+    prn('[0번 문자] str.charAt(0) : ' + str.charAt(0)); //J
+    prn('[3번 문자] str.charAt(3) : ' + str.charAt(3)); //a
+    line();
+
+    prn('<h3> 변수 code = ' + code + '</h3>'); //아스키코드
+    prn('[문자열 0번을 코드로 변환] code.charCodeAt(0) : ' + code.charCodeAt(0)); //0 -> 48
+    prn('[문자열 1번을 코드로 변환] code.charCodeAt(1) : ' + code.charCodeAt(1)); //1 -> 49
+    prn('[문자열 2번을 코드로 변환] code.charCodeAt(2) : ' + code.charCodeAt(2)); //A -> 65
+    prn('[문자열 3번을 코드로 변환] code.charCodeAt(3) : ' + code.charCodeAt(3)); //B -> 66
+    prn('[문자열 4번을 코드로 변환] code.charCodeAt(4) : ' + code.charCodeAt(4)); //a -> 97
+    prn('[문자열 5번을 코드로 변환] code.charCodeAt(5) : ' + code.charCodeAt(5)); //c -> 99
+    line();
+
+    prn('[()안 코드를 문자열로 변환] String.fromCharCode() : ' + String.fromCharCode(51088, 48148, 49828, 53356, 47549, 53944));
+    line(); //유니코드
+
+    prn('<h3> 변수 str = ' + str + '</h3>'); //to ~ 메소드는 변환이다.
+    prn('[소문자로 변환] str.toLowerCase() : ' + str.toLowerCase());
+    prn('[대문자로 변환] str.toUpperCase() : ' + str.toUpperCase());
+    line();
+
+    prn('[앞부터 a의 인덱스 번호] str.indexOf("a") : ' + str.indexOf('a'));
+    prn('[뒤부터 a의 인덱스 번호] str.lastIndexOf("a") : ' + str.lastIndexOf('a'));
+    line();
+
+    // str = Java_Script
+    prn('[인덱스 5번부터 11번 전까지 잘라서 추출] str.slice(5, 11) : ' + str.slice(5,11));
+    prn('[인덱스 5번부터 11번 전까지 추출] str.substring(5, 11) : ' + str.substring(5,11));
+    prn('[인덱스 5번부터 6글자 추출] str.substr(5, 6) : ' + str.substr(5,6));
+    line();
+
+    // str = Java_Script -> ['Java', 'Script']
+    prn('["_" 기준으로 분리한 후 0번 추출] str.split("_")[0] : ' + str.split('_')[0]);//Java
+    prn('["_" 기준으로 분리한 후 1번 추출] str.split("_")[1] : ' + str.split('_')[1]);//Script
+    line();
+
+    prn('[찾아바꾸기] str.replace("ava_Script", "Query") : ' + str.replace('ava_Scrript', 'Query'));//JQuery
+    line();
+
+    var str1 = 'java';
+    var str2 = 'script';
+
+    prn('<h3> 변수 str1 = ' + str1 + '</h3>');
+    prn('<h3> 변수 str2 = ' + str2 + '</h3>');
+
+    prn('[str1 뒤에 str2 결합] str1.concat(str2) : ' + str1.concat(str2));
+
+    var str3 = null;
+    prn('<h3> str3 = ' + str3 + '</h3>');
+    var str3 = str1.concat(str2);
+    prn('[var str3 = str1.concat(str2) 결과 : ' + str3);
+    line();
+
+    // 서식
+    prn('<h3> 변수 str = ' + str + '</h3>');
+    prn('<h3> 변수 str3 = ' + str3 + '</h3>');
+
+    prn('[아래첨자] str3.sub() : ' + str + str3.sub());
+    prn('[윗첨자] str3.sup() : ' + str + str3.sup());
+
+    prn('[&lt;b&gt; 태그 추가] str3.bold() : ' + str3.bold());
+    prn('[&lt;b&gt; 태그에 name=js 부여] str3.anthor("js") : ' + str3.anchor('js'));
+    prn('[&lt;b&gt; 태그에 링크 연결] str3.link() : ' + str3.link('http://wooreeweb.com'));
+
+    //length charAt, indexOf, (slice,substring,[substr]), link 가 중요하다.
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

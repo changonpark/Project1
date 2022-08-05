@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>03_Number(숫자)객체</title>
+  <script src="js/output.js"></script>
+  <script>
+    prn('최대값(Number.MAX_VALUE) : ' + Number.MAX_VALUE);
+    prn('최소값(Number.MIN_VALUE) : ' + Number.MIN_VALUE);
+
+    prn('양의 무한대(Number.POSITIVE_INFINITY) : ' + Number.POSITIVE_INFINITY);
+    prn('음의 무한대(Number.NEGATIVE_INFINITY) : ' + Number.NEGATIVE_INFINITY);
+
+    line();
+
+    var num = 328.5764;
+
+    prn('<h2> 변수 num = ' + num + '</h2>');
+    line();
+
+    prn('[소수점 첫째자리 반올림] num.toFixed() : ' + num.toFixed());
+    prn('[소수점 세째자리 반올림] num.toFixed(2) : ' + num.toFixed(2));
+    line();
+
+    prn('[숫자를 문자열로 변환] num.toString() : ' + num.toString());
+    prn('[숫자를 8진수 문자열로 변환] num.toString(8) : ' + num.toString(8));
+    prn('[숫자를 16진수 문자열로 변환] num.toString(16) : ' + num.toString(16));
+    line();
+
+    prn('[지수형으로 변환] num.toExponetial() : ' + num.toExponential());
+    prn('[소수점 2자리까지만 지수형으로 변환] num.toExponetial(2) : ' + num.toExponential(2));
+    line();
+
+    prn('[자리수만큼 반환] num.toPrecision() : ' + num.toPrecision());
+    prn('[3자리만큼 반환] num.toPrecision(3) : ' + num.toPrecision(3));
+  </script>
+</head>
+<body>
+  
+</body>
+</html>
