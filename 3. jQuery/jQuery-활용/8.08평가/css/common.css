@@ -1,0 +1,25 @@
+/* 웹폰트 노토산스KR */
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+html { font-family: 'Noto Sans KR', sans-serif;
+font-weight: 600; }
+
+/* 초기화 부분 */
+
+*{margin: 0; padding: 0;}
+
+a{color: #222; text-decoration: none;}
+
+li{ list-style: none; }
+
+img{outline: none;}
+
+html{ font-size: 14px; line-height: 1.5; 
+  -webkit-font-smoothing: antialiased;}
+
+body * { box-sizing: border-box; }
+
+.clearfix:after {
+  content: '';
+  display: block;
+  clear:both;}

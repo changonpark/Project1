@@ -1,0 +1,434 @@
+/* 헤더 */
+header {
+  height: 126px; width: 100%;
+  min-width: 1200px;
+  background-color: #000;
+}
+.inner {
+  position: relative;
+  width: 1400px;
+  margin: 0 auto;
+}
+header #logo {
+  z-index: 2000;
+  width: 100%; height: 130px;
+  position: relative;
+}
+header #logo a{
+  color: #fff;
+  font-weight: 400;
+}
+header #logo p{
+  color: #fff;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+header #logo .logoa {
+  position: absolute;
+  top: 20px; left: 0;
+}
+header #logo .logob {
+  position: absolute;
+  top: 20px; right: 0;
+}
+header #logo .logob ul li {
+  float: left;
+  margin-left: 15px;
+}
+.toplogo {
+  background-image: url(../img/toplogo.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 276px; height: 48px;
+  position: absolute;
+  top: calc(50% - 10px );
+  left: calc(50% - 138px);
+}
+header #shopping .shoppingbag {
+  width: 50%; height: 100%;
+  float: left;
+  background-color: #eee;
+}
+header #shopping .shoppingbag h2 {
+  display: block;
+  text-align: center;
+  position: relative;
+  top: 150px;
+}
+header #shopping .shoppingbag > p > a  {
+  display: block;
+  text-align: center;
+  position: relative;
+  top: 150px;
+  color: #000;
+  text-decoration: underline;
+  font-weight: bold;
+}
+header #shopping .shoppingbag .shoppingbottom {
+  width: 50%; height: 60px;
+  padding: 10px 15px;
+  position: absolute;
+  bottom: 0;
+  background-color: #222;
+}
+.cnt {
+  width: 100%; background-color: #fff;
+  position: absolute; z-index: 500;
+  height: 491px; display: none;
+  opacity: 0;
+}
+.cnt.onf {
+  opacity: 1;
+  display: block;
+}
+.cnt.ons {
+  opacity: 1;
+  display: block;
+}
+.cnt.ont {
+  opacity: 1;
+  display: block;
+}
+.cnt.ong{
+  opacity: 1;
+  display: block;
+}
+.nava {
+  border-bottom: 1px solid #000;
+  background-color: #fff;
+  position: relative;
+  z-index: 1000;
+  left: 0;
+  padding: 4px;
+  width: 110%;
+  transform: scale(1.15);
+}
+#nav {
+  position: relative;
+  width: 100%;
+  height: 40px;
+  background-color: #fff;
+  z-index: 1500;
+}
+#nav li {
+  display: block;
+  float: left;
+  line-height: 40px;
+  margin-right: 20px;
+}
+#nav li a {
+  color: #000;
+}
+#nav .aRed {
+  color: #D63716;
+}
+#nav li > p {
+  cursor: pointer;
+}
+.navmenu {
+  display: none;
+  width: 100%; height: 450px;
+  position: absolute;
+  left: 0;top: 41px;
+  z-index: 500;
+}
+.navmenu dl {
+  width: calc( 100% / 7 * 1);
+  float: left;
+  line-height: 30px;
+}
+.navmenu .navimg {
+  position: absolute;
+  width: 50%;
+  bottom: 0;
+  background-color: #fff;
+}
+.navmenu .navimg a,
+.navmenu .navimg h1,
+.navmenu .navimg p,
+.navmenu .navimg h3 {
+  display: block;
+  float: left;
+  line-height: 30px;
+}
+.navmenu dl dt {
+  margin: 10px 0;
+}
+.navmenu dl dd {
+  font-weight: 400;
+}
+.navmenu .navimg.tleft {
+  bottom: 200px;
+}
+.navmenu .navimg.tright {
+  bottom: 200px;
+}
+.navmenu .navimg a {
+  width: 45%;
+}
+.navmenu .navimg h1 {
+  font-size: 1.4rem;
+  width: 55%;
+}
+.navmenu .navimg p {
+  font-size: 12px;
+  line-height: 16px;
+  width: 55%;
+}
+.navmenu .navimg h3 {
+  font-size: 14px;
+  width: 55%;
+}
+.navmenu .navimg.tright {
+  left: 50%;
+}
+.navmenu .navimg.right {
+  left: 50%;
+}
+.dot:before {
+  content: '';
+  background: transparent url(../img/dot.png) no-repeat;
+  display: inline-block;
+  width: 5px; height: 5px;
+  opacity: 0.3;
+}
+.is-selected:hover .inner .txt a{
+  background-color: #222;
+  color: #fff;
+  border: 1px solid #222;
+}
+.is-selected .inner .txt h3,
+.is-selected .inner .txt h2,
+.is-selected .inner .txt p,
+.is-selected .inner .txt a{
+  transform: scale(1);
+  transition: all 0.6s;
+  color: #fff;
+}
+.md:nth-child(3) .inner .txt h3,
+.md:nth-child(3) .inner .txt h2,
+.md:nth-child(3) .inner .txt p,
+.md:nth-child(3) .inner .txt a{
+  text-shadow: 0px 0px 3px #000;
+}
+.md:nth-child(5) .inner .txt h3,
+.md:nth-child(5) .inner .txt h2,
+.md:nth-child(5) .inner .txt p{
+  color: #222;
+}
+.md:nth-child(5) .inner .txt a{
+  color: #222; border: 1px solid #222;
+}
+.md:nth-child(5):hover .inner .txt a{
+  color: #fff;
+}
+.is-selected:hover .inner .txt h3,
+.is-selected:hover .inner .txt h2,
+.is-selected:hover .inner .txt p,
+.is-selected:hover .inner .txt a{
+  transform: scale(1.1);
+}
+main {
+  position: relative;
+  margin: 0 auto;
+}
+main .swtext{
+  position: absolute;
+  margin: 0 auto;
+  left: 57%;
+  text-align: left;
+}
+main .swtext button {
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px 65px;
+  cursor: pointer;
+}
+main .swtext button:hover {
+  background-color: #000;
+  color: #fff;
+}
+main .swtext .sw button {
+  color: #fff;
+  background-color: #000;
+}
+main .swtext .sw button:hover {
+  background-color: #fff;
+  color: #000;
+}
+main .swtext2{
+  position: absolute;
+  margin: 0 auto;
+  left: 57%;
+  text-align: left;
+  color: #fff;
+}
+main .swtext2 button {
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px 65px;
+  cursor: pointer;
+  color: #fff;
+  background-color: #000;
+  border: 1px solid #fff;
+}
+main .swtext2 button:hover {
+  background-color: #fff;
+  color: #000;
+}
+main .swtext2 .sw2 button {
+  color: #000;
+  background-color: #fff;
+}
+main .swtext2 .sw2 button:hover {
+  background-color: #000;
+  color: #fff;
+}
+main .swtext2 .short button {
+  padding: 10px 20px;
+  letter-spacing: -2px;
+}
+main .category .cate img {
+  width: 100%;
+  margin-bottom: 30px;
+}
+main .category {
+  width: 1480px;
+  margin: 0 auto;
+}
+main .category .cateall p,
+main .category .cateall h1{
+  text-align: center;
+}
+main .category .cate {
+  float: left;
+  width: 300px;
+  margin: 0 30px;
+}
+main .category .cate {
+  margin-top: 50px;
+  margin-bottom: 100px;
+}
+main .category .cate a h4 {
+  text-decoration: underline;
+}
+main .pic img{
+  width: 100%;
+  margin: 0 auto;
+  padding-right: 10%;
+}
+#topbtn {
+  width: 82px;
+  height: 75px;
+  background-color: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  right: 0;
+  bottom: 50px;
+  border: 1px solid #333;
+}
+#topbtn a {
+  text-align: center;
+  width: 82px;
+  height: 75px;
+  display: block;
+  line-height: 25px;
+  color: #fff;
+  text-decoration: none;
+  padding-top: 10px;
+}
+
+/* 푸터 */
+footer {
+  padding-top: 20px;
+  padding-bottom: 50px;
+  background-color: #000; min-width: 1200px;
+  overflow: hidden;
+}
+footer .upper h1 {
+  float: left;
+  color: #888;
+  line-height: 1;
+}
+footer .upper img {
+  transform: scale(0.8);
+}
+footer .upper .sns {
+  width: 100%; position: absolute;
+  top: 30px; left: 28%;
+  transform: scale(0.9);
+}
+footer .upper .sns a {
+  display: block; float: left;
+  background-color: #aaa;
+  margin-right: 5px;
+  width: 45px; height: 45px;
+  line-height: 44px; border-radius: 50%;
+  text-align: center;
+  color: #000;
+  font-weight: 400; font-size: 2.4rem;
+}
+footer .upper .sns a:hover {
+  background-color: #fff;
+}
+footer .lower {
+  padding-top: 20px;
+  color: #aaa;
+  font-size: 12px;
+}
+footer .lower .part .first address {
+  font-size: 15px;
+  font-style: normal;
+  margin-bottom: 20px;
+}
+footer .lower .part .first p {
+  font-size: 15px;
+  text-decoration: underline;
+  margin-bottom: 10px;
+}
+footer .lower .part .first a {
+  color: #aaa;
+  font-size: 15px;
+  text-decoration: underline;
+}
+footer .lower .part .last address {
+  line-height: 25px;
+  font-style: normal;
+}
+footer .lower .part h3 {
+  color: white;
+  font-size: 15px;
+  padding-bottom: 10px;
+}
+
+footer .lower p {
+  line-height: 1;
+}
+footer .lower .part {
+  float: left;
+  width: calc(100% / 3 * 1);
+}
+footer .lower .part li {
+  font-size: 14px;
+}
+footer .lower .part strong {
+  color: #ddd;
+  letter-spacing: 1px;
+}
+footer .lower .part:nth-child(3) a {
+  color: #bbb;
+  text-decoration: underline;
+}
+footer .lower .part:nth-child(2) ul li a{
+  color: #888;
+  font-size: 1rem;
+  font-weight: 400;
+}
+footer .lower .part:nth-child(2) ul li .private{
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+footer .lower .part:nth-child(2) ul li a:hover{
+  color: #fff;
+}
