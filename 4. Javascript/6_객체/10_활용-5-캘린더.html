@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>10_활용-5-캘린더</title>
+  <script src="js/output.js"></script>
+  <script>
+    // 9~17 현재 날짜와 현재 달에 1일의 날짜 객체 생성
+    var date = new Date(); //날짜 객체 생성
+    var y = date.getFullYear(); //현재 연도
+    var m = date.getMonth(); //현재 월
+    var d = date.getDate(); //현재 일
+
+    // 현재 월의 1일에 해당하는 요일 구하기
+    // -> 해당 원 첫 번째 줄의 빈칸 개수 구하기
+    var theDate = new Date(y, m, 1);
+    var theDay = theDate.getDay();
+
+    // 20~26 현재 월에 마지막 일 구하기
+
+    // 1월 부터 12월 까지 마지막 일을 배열로 저장
+    var last = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+
+    // 현재 연도가 윤년(4년 주기이고 100년 주기는 제외 또는 400년 주기)
+    // 일 경우 2월에 마지막 날짜는 29가 되어야 함
+    if (y % 4 && y % 100 != 0 || y % 400 == 0){
+      lastDate = last[1] = 29;
+    }
+
+    var lastDate = last[m]; //현재 월의 마지막 날 구하기
+
+    // 29~26 현재 월의 달력에 필요한 행의 개수 계산
+    // var row(행의 개수) = Math.ceil((theDay(빈 칸)+lastDate(월의 전체 일수)) / 7)
+    var row = Math.ceil((theDay + lastDate) / 7); //필요한 행수
+
+    // 달력 년도/월 표기 및 달력 테이블 생성
+    document.write("<div><h4>" + y + "년 </h4>");
+    document.write("<h1>" + (m + 1) + "월</h1></div>");
+
+    // 문자 결합 연산자로 요일이 나오는 행 생성
+    var calendar = "<table border='1'>";
+      calender += "<tr>";
+      calender += "<th>일</th>";
+      calender += "<th>월</th>";
+      calender += "<th>화</th>";
+      calender += "<th>수</th>";
+      calender += "<th>목</th>";
+      calender += "<th>금</th>";
+      calender += "<th>토</th>";
+      calender += "</tr>";
+
+      var dNum = 1;
+
+      // 달력 테이블 생성
+      for(var i = 1; i <= row; i++){ //행 생성 (tr 태그 생성)
+         calendar += "<tr>";
+
+          for(var j = 1; j <= 7; j++){ //열 생성 (td 태그 생성)
+
+            // 행이 첫 줄이고 현재 월의 1일의 요일 이전과 날짜가 마지막 일보다 크면 빈 열로 표시
+            if(i == 1 && j <= theDay || dNum > lastDate){
+              calendar += "<td> &nbsp; </td>";
+            } else {
+              calendar += "<td>" + dNum + "</td>";
+              dNum++;
+            }
+          }
+          calendar += "</tr>"
+      }
+
+      // 문자로 결합된 달력 테이블을 문서에 출력
+      document.write(calendar);
+  </script>
+  <style>
+    * {margin: 0; padding: 0; box-sizing: border-box;}
+    table, tr, th, td { border-collapse: collapse;}
+    th, td { width: 50px; height: 50px; text-align: center;}
+    div { width: 350px;}
+    h1, h4 { display: inline-block;}
+    h1 { margin-left: 90px;}
+    th:first-child, td:first-child { color: crimson;}
+    th:last-child, td:last-child { color: deepskyblue;}
+    div, table { margin: 10px auto;}
+  </style>
+</head>
+<body>
+  
+</body>
+</html>

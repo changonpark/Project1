@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>10_활용-1-날짜연산</title>
+  <script src="js/output.js"></script>
+  <script>
+    var t = new Date();//오늘 날짜 객체 생성
+    var nowYear = t.getFullYear();//오늘 날짜의 연도 정보 가져오기
+
+    //현재 연도에 12월 31일 날짜 객체 생성
+    var theDate = new Date(nowYear, 11, 31);
+
+    var diffDate = theDate - t; //연말까지 남은 기간 = 연말 날짜 - 현재 날짜
+
+    //밀리초(ms)를 일로 계산하여 소수점은 정수로 올림
+    var result = Math.ceil(diffDate / (24 * 60 * 60 * 1000));
+
+    document.write("<h1>");
+      //남은 일수를 출력
+    document.write(nowYear + "년도 앞으로" + result + "일 남았습니다.");
+    document.write("</h1>");
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

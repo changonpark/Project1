@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>10_활용-3-카운트다운</title>
+  <script src="js/output.js"></script>
+  <script>
+    //브라우저 로딩이 완료되면 자동으로 함수 실행
+    window.onload = function(){
+      // 함수 호출
+      count('countdown');
+    }
+
+    var interval;
+    var min = prompt('시작할 분을 입력하세요', 1);
+    var sec = prompt('시작할 초를 입력하세요', 5);
+
+    function count(cd){
+      interval = setInterval(function(){
+        var el = document. getElementByID(cd);
+
+        if(sec == 0){
+          if(min == 0)    {
+            el.innerHTML = '타임오버';
+            clearInterval(interval);
+            return;
+          } else {
+            min--;
+            sec = 60;
+          }
+        }
+
+        // 1분이라도 남은 경우 그대로 표시,
+        // 그렇지않으면 표시 안함
+        if(min > 0){
+          var min_text = min + '분';
+        } else {
+          var min_text = '';
+        }
+
+        var sec_text = '초';
+
+        // 분과 초를 div#countdown에 html로 삽입
+        el.innerHTML = min_text + sec + sec_text;
+
+        // 1초 감소
+        sec--;
+
+      }, 1000);
+    }
+  </script>
+  <style>
+    * {margin: 0; padding: 0;}
+    html, body { height: 100%; background-color: #111;}
+    .container { height: 100%; width: 100%; display: table;}
+    #countdown {
+      height: 100%; color: #fff; font-size: 20vmax;
+      font-weight: bold; text-align: center;
+      display: table-cell; vertical-align: middle;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div id="countdown"></div>
+  </div>
+</body>
+</html>

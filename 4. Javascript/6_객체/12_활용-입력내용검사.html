@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>12_활용-입력내용검사</title>
+  <script src="js/output.js"></script>
+  <script>
+    var userName = prompt('이름을 입력하세요');
+    reg1 = /^[가-힣]{2,5}$/;
+    while(true){
+      if(reg1.test(userName)){
+        break;
+      }
+
+      alert('이름 입력 형식이 잘못되었습니다!');
+      userName = prompt('이름을 입력하세요');
+    }
+    var userCell = prompt('휴대폰 번호를 입력하세요');
+    reg2 = /^(010|016|011)\d{3,4}\d{4}$/;
+
+    while(true){
+      if(reg2.test(userCell)){
+        break;
+      }
+      alert('휴대폰 입력 형식이 잘못되었습니다!');
+      userCell = prompt('휴대폰 번호를 입력하세요');
+    }
+
+    var userEmail = prompt('이메일 주소를 입력하세요');
+    reg3 = /^\w{5,12}@[a-z]{2,10}[\.][a-z]{2,3}[\.]?[a-z]{0,2}$/;
+
+    while(true){
+      if(reg3.test(userEmail)){
+        break;
+      }
+      alert('이메일 입력 형식이 잘못되었습니다!');
+      userEmail = prompt('이메일 주소를 입력하세요');
+    }
+
+    prn(userName);
+    prn(userCell);
+    prn(userEmail);
+    
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

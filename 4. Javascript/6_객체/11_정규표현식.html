@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>11_정규표현식</title>
+  <script src="js/output.js"></script>
+  <script>
+    var str = "HTML CSS JavaScript jQuery";
+    prn('str에 입력된 데이터 : ' + str);
+    line();
+
+    var reg1 = /Javascript/;
+    // var reg1 = new RegExp('Javascript'); 같은 표현법
+    
+    // 변수 str의 데이터가 reg1에 정의된 정규 표현 형식과
+    // 정확히 일치하는 경우 true 반환
+    // 일치하지 않는 경우   false 반환
+
+    var result_1 = reg1.test(str);
+    prn('정규식 \/Javascript\/ 테스트 결과 : ' + result_1);
+
+    // 옵션에 i를 입력하면 영문 대소문자 구분하지 않음
+    var reg2 = /Javascript/i;
+    // var reg2 = new RegExp('Javascript', 'i';) //같은 표현법
+    var result_2 = reg2.test(str);
+    prn('정규식 \/Javascript\/i 테스트 결과 : ' + result_2);
+    prn('옵션에 "i"를 입력하면 영문 대소문자 구분하지 않음');
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

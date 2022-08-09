@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>09_Date(날짜)객체</title>
+  <script src="js/output.js"></script>
+  <script>
+    // 날짜 객체 생성
+    var date = new Date();
+
+    prn('객체변수 date = ' + date);
+    line();
+
+    prn('연도 : ' + date.getFullYear());
+    prn('월 : ' + date.getMonth());
+    prn('월(실제) : ' + (date.getMonth() + 1));
+    prn('일 : ' + date.getDate());
+    prn('요일(요일번호) : ' + date.getDay());
+
+    prn('실제 요일로 변경하면 --> ');
+
+    switch(date.getDay()){
+      case 0:
+        day = '일';
+        break;
+      case 1:
+        day = '월';
+        break;
+      case 2:
+        day = '화';
+        break;
+      case 3:
+        day = '수';
+        break;
+      case 4:
+        day = '목';
+        break;
+      case 5:
+        day = '금';
+        break;
+      case 6:
+        day = '토'
+        break;
+    }
+
+    prn(day);
+    line();
+
+    prn('시' + date.getHours());
+    prn('분' + date.getMinutes());
+    prn('초' + date.getSeconds());
+    prn('밀리초' + date.getMilliseconds());
+    line();
+
+    prn('지역 날짜 전체 표시 : ' + date.toLocaleString());
+    prn('지역 날짜만 표시 : ' + date.toLocaleDateString());
+    prn('지역 시간만 표시 : ' + date.toLocaleTimeString());
+    line();
+
+    prn('1970년 1월 1일 자정 이후부터 현재까지 경과한 누적시간(ms) : ' + date.getTime());
+  </script>
+</head>
+<body>
+  
+</body>
+</html>
