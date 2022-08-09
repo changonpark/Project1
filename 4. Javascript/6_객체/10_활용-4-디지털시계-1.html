@@ -6,7 +6,7 @@
   <title>10_활용-4-디지털시계-1</title>
   <script src="js/output.js"></script>
   <script>
-    // 시계를 표시하는 함수를 호출
+    // 시계를 표시하는 함수를 호출    브라우저 로딩이 완료되면 클럭이란 함수를 실행하라
     window.onload = function (){
       clock();
     }
@@ -20,9 +20,9 @@
       document.getElementById('watch').innerHTML =
         todayHour + ':' +
         todayMin + ':' +
-        todaySec;
+        todaySec;  //시간:분:초
 
-        // 1초 단위로 clock() 호출
+        // 1초 단위로 clock() 호출    실행문을 간소화하기 위해 함수를 위에 저렇게 해놓은것
         window.setInterval('clock()', 1000);
     }
   </script>

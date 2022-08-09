@@ -7,16 +7,16 @@
   <script src="js/output.js"></script>
   <script>
     // 날짜 객체 생성
-    var date = new Date();
+    var date = new Date();  //객체를 통해 연도 월 일 시 분 초  밀리초 까지 7가지 요소를 확인할 수 있다.
 
     prn('객체변수 date = ' + date);
     line();
 
-    prn('연도 : ' + date.getFullYear());
-    prn('월 : ' + date.getMonth());
+    prn('연도 : ' + date.getFullYear()); // get 가져와라 (getter) 4자리수 연도를
+    prn('월 : ' + date.getMonth()); // 월은 INDEX로 저장하게 된다.
     prn('월(실제) : ' + (date.getMonth() + 1));
     prn('일 : ' + date.getDate());
-    prn('요일(요일번호) : ' + date.getDay());
+    prn('요일(요일번호) : ' + date.getDay()); //일~토 INDEX 번호로 매긴다.
 
     prn('실제 요일로 변경하면 --> ');
 

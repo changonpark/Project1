@@ -65,12 +65,12 @@
       }
     }
 
-    //브라우저 화면에 맞춰서 시간 표시
+    //브라우저 화면에 맞춰서 시간 표시    가변크기
     function fitSize(){
       var minH = window.innerHeight * 0.2;
       var minW = window.innerWidth * 0.2;
 
-      document.getElementById('watch').style.fontSize = Math.min(minH, minW) + 'px';
+      document.getElementById('watch').style.fontSize = Math.min(minH, minW) + 'px';  // 와치에 현재 브라우저 크기 계산후 더 작은수치값을 적용해라
     }
   </script>
   <style>

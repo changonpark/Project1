@@ -18,7 +18,7 @@
     //날짜 계산
     var diffDay = birth.getTime() - today.getTime();
 
-    var dDay = Math.ceil( diff / 1000 / 60 / 60 / 24);
+    var dDay = Math.ceil( diffDay / 1000 / 60 / 60 / 24);
 
     if( dDay > 0 ){
       result = '생일이' + dDay + '일 남았습니다.';

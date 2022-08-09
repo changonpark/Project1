@@ -7,7 +7,7 @@
   <script src="js/output.js"></script>
   <script>
     var userName = prompt('이름을 입력하세요');
-    reg1 = /^[가-힣]{2,5}$/;
+    reg1 = /^[가-힣]{2,5}$/;  //2글자부터 5글자까지 $(끝내다)
     while(true){
       if(reg1.test(userName)){
         break;
@@ -29,7 +29,7 @@
 
     var userEmail = prompt('이메일 주소를 입력하세요');
     reg3 = /^\w{5,12}@[a-z]{2,10}[\.][a-z]{2,3}[\.]?[a-z]{0,2}$/;
-
+           //알파벳 영문 숫자 밑줄   ?=있어도되고 없어도되고 - co.kr 같은거 때문에 씀
     while(true){
       if(reg3.test(userEmail)){
         break;
