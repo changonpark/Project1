@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>02_고전이벤트문제-1</title>
+  <script>
+    function loadEnd1(){ alert('loadEnd1() 실행');}
+    function loadEnd2(){ alert('loadEnd2() 실행');}
+
+    window.onload = loadEnd1; //x
+    window.onload = loadEnd2;
+  </script>
+</head>
+<body>
+  <p>* 함수 loadEnd1 ()은 실행되지 않음!</p>
+</body>
+</html>

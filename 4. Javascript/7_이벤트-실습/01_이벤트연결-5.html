@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>01_이벤트연결-5</title>
+  <link rel="stylesheet" href="css/common.css">
+  <script>
+    window.onload = function(){
+    var bt = document.querySelector('#btn');
+
+    function view(){
+      alert('버튼을 클릭했습니다.');
+    }
+
+    bt.onclick = view;
+  }
+  </script>
+  </head>
+<body>
+  <div id="btn">클릭</div>
+</body>
+</html>

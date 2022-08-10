@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>09_활용-2-배경색변경-2</title>
+  <link rel="stylesheet" href="css/common.css">
+  <script>
+    window.onload = function(){
+      var body = document.querySelector('body');
+      var btn = document.querySelectorAll('div');
+
+      // title 속성값을 btn 컨텐츠로 지정
+      for(var i = 0; i < btn.length; i++){
+        var colorText = btn[i].getAttribute('title');
+        btn[i].textContent = colorText;
+      }
+
+      //btn 객체 반복
+      for(var i in btn){
+        btn[i].onclick = function(){
+        var bg = this.getAttribute('title');
+        body.style.backgroundColor = bg;
+        body.style.textShadow = '1px 0px 1px #eee';
+        body.style.transition = 'all 0.6s';
+      }
+    }
+  }
+  
+  </script>
+</head>
+<body>
+  <h3>배경색 바꾸기 : 컨텐츠 자동 삽입</h3>
+  <div title="red"></div>
+  <div title="green"></div>
+  <div title="blue"></div>
+</body>
+</html>

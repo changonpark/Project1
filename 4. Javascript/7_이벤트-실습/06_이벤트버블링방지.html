@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>06_이벤트버블링방지</title>
+  <script>
+    window.onload = function(){
+      var a = document.querySelector('#a');
+      var b = document.querySelector('#b');
+
+      a.onclick = function(){
+        var a = document.querySelector('#a');
+        var b = document.querySelector('#b');
+
+        a.onclick = function(){
+          alert('부모 요소 DIV를 클릭했습니다.');
+        }
+        b.onclick = function(e){
+          alert('자식 요소 P를 클릭했습니다.');
+
+          e.stopPropagation(); //이벤트 버블링 방지
+
+          // 구 IE 호환
+          // if(window.event){
+          //   window.event.cancelBubble = true;
+          // } else {
+          //   e.stopPropagation();
+          // }
+        }
+      }
+    }
+  </script>
+</head>
+<body>
+  <div id="a">
+    a 클릭
+    <p id="b">b 클릭</p>
+  </div>
+  <style>
+    #a {background-color: crimson; padding: 20px;}
+    #b {background-color: orange; padding: 20px;}
+  </style>
+</body>
+</html>

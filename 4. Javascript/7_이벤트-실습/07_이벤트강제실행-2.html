@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/common.css">
+  <title>07_이벤트강제실행-2</title>
+  <script>
+    window.onload = function(){
+      var bt = document.querySelector('#btn');
+      var con = document.querySelector('#content');
+      var check = false;
+
+      bt.onclick = function(){
+        if(!check){
+          con.style.display = 'none';
+          check = true;
+        } else {
+          con.style.display = 'block';
+          check = false;
+        }
+      }
+      bt.onclick();
+    }
+  </script>
+</head>
+<body>
+  <div id="btn">클릭</div>
+  <p id="content">내용</p>
+
+  <style>
+    p { height: 300px; background-color: gold;}
+  </style>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>09_활용-1-닫기버튼</title>
+  <link rel="stylesheet" href="http://wooreeweb.com/cst/bnr.css">
+  <script>
+    window.onload = function(){
+      var banner = document.querySelector('#bnrWrap');
+      var close = document.querySelector('#close');
+      var check = false;
+
+      close.onclick = function(){
+        if(!check){
+          banner.style.visibility = 'visible';
+          check = true;
+        } else {
+          banner.style.visibility = 'hidden';
+          check = false;
+        }
+      }
+      close.onclick();
+    }
+  </script>
+</head>
+<body>
+  <div id="bnrWrap">
+    <div id="topBnr">
+      <img src="http://wooreeweb.com/img/tb.jpg" alt="">
+      <i id="close" class="fa fa-close fa-3x"></i>
+    </div>
+  </div>
+</body>
+</html>

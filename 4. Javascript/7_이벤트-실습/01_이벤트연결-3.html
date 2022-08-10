@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>01_이벤트연결-3</title>
+  <link rel="stylesheet" href="css/common.css">
+  <script>
+    window.onload = function(){    // window.onload 미리 읽어놓은 다음에 실행하라.
+    var bt = document.getElementById('btn');
+    bt.onclick = function(){
+      alert('버튼을 클릭했습니다.');
+    }
+  }
+  </script>
+  </head>
+<body>
+  <div id="btn">클릭</div>
+</body>
+</html>

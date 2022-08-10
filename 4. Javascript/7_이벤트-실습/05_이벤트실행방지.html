@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>05_이벤트실행방지</title>
+  <script>
+    window.onload = function(){
+      var a = document.querySelector('a');
+      a.onclick = function(e){ //기본적으로 화면이 넘어가기 때문에 
+        alert('하이퍼링크 클릭!');
+
+        //하이퍼링크 경로로 자동 링크되는 것을 방지
+        e.preventDefault();// 모던 브라우저
+
+        // 구 IE 호환
+        // if(window.event){
+        //   window.event.returnValue = false;
+        // } else {
+        //   e.preventDefault();
+        // }
+      }
+    }
+  </script>
+</head>
+<body>
+  <a href="http://naver.com" target="new">하이퍼링크</a>
+</body>
+</html>

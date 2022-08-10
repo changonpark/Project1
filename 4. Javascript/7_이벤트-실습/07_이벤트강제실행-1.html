@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>07_이벤트강제실행-1</title>
+  <script>
+    window.onload = function(){ 
+      var bt = document.querySelector('bt');
+      bt.click = function(){
+        alert('클릭 이벤트가 실행되었습니다.');
+      }
+      bt.click();//객체 이벤트() bt를 강제로 자동으로 클릭하는거
+    }
+    //실행안됨
+  </script>
+</head>
+<body>
+  <div id="bt"></div>
+</body>
+</html>
+
