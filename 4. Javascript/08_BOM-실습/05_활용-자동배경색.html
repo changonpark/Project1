@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>05_활용-자동배경색</title>
+  <script>
+    window.onload = function(){
+      var bg = document.querySelector('body');
+      var r, g, b;
+      var timing = 2000;
+
+      setInterval(function(){
+        r = Math.floor(Math.random() * 256);
+        g = Math.floor(Math.random() * 256);
+        b = Math.floor(Math.random() * 256);
+
+        color = 'rgb(' + r + ',' + g + ',' + b + ')';
+
+        bg.style.backgroundColor = color;
+        bg.style.transition = 'all 0.6s';
+      }, timing);
+    }
+    
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

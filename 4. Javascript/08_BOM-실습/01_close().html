@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>01_close()</title>
+  <script>
+    window.onload = function(){
+      var open = document.getElementById('open');
+      var close = document.getElementById('close');
+      var win; //선언만
+
+      function winOpen(){
+        win = window.open('http://wooreeweb.com', 'wooreeweb', 'width=400,height=300,left=100,top=100');
+      } //         . 타이틀속성이 없을 경우 표현, 수치값으로 
+      function winClose(){
+        win.close();
+      }
+
+      open.onclick = function(){winOpen();}
+      close.onclick = function(){winClose();}
+    }
+  </script>
+</head>
+<body>
+  <button id="open">열기</button>
+  <button id="close">닫기</button>
+</body>
+</html>

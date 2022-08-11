@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>03_clearInterval()</title>
+  <script>
+    window.onload = function(){
+
+      var bg = document.querySelector('body'); 
+      var color = ['red', 'green', 'yellow'];
+      var i = 0;
+      var changeBG = setInterval(function(){
+
+        if(i > color.length - 1){
+          clearInterval(changeBG); //setInterval 배제할때사용
+        }
+
+        bg.style.backgroundColor = color[i];
+      }, 2000);
+    }
+  </script>
+</head>
+<body>
+  
+</body>
+</html>
