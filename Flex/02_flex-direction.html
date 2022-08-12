@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flexible Box : flex-direction</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    #wrap {
+      display: -webkit-flex;
+      display: flex;
+      width: 90%;
+      height: 500px;
+      margin: 0 auto;
+      background-color: coral;
+      border: 2px solid #999;
+    }
+
+    #wrap div {
+      width: 33.33%;
+    }
+
+    #wrap div:first-child {
+      background-color: crimson;
+    }
+
+    #wrap div:nth-child(2){
+      background-color: tan;
+    }
+
+    #wrap div:nth-child(3){
+      background-color: cadetblue;
+    }
+  </style>
+</head>
+<body>
+  <div id="wrap">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+</body>
+</html>

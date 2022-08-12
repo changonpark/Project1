@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flexible Box : flex</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    #wrap {
+      display: flex;
+      width: 90%;
+      align-items: center;
+      height: 500px;
+      margin: 0 auto;
+      border: 2px solid #999;
+    }
+
+    #wrap div {
+      width: 33.33%;
+      height: 200px;
+    }
+
+    #wrap div:nth-child(1){
+      background-color: aqua;
+    }
+    #wrap div:nth-child(2){
+      background-color: blueviolet;
+    }
+    #wrap div:nth-child(3){
+      background-color: darkorange;
+    }
+  </style>
+</head>
+<body>
+  <div id="wrap">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+</body>
+</html>

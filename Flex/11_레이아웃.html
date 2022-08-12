@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flexible Box : Layout</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    #wrap {
+      display: flex;
+      flex-flow: row wrap;
+      width: 90%;
+      margin: 0 auto;
+    }
+
+    .header {
+      display: flex;
+      order: 1;
+      justify-content: flex-end;
+      position: relative;
+      width: 100%;
+    }
+
+    .header #logo {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 12.5%;
+      height: 142px;
+      background-color: #ff6b57;
+    }
+
+    .header nav {
+      width: 87.5%;
+      min-height: 80px;
+      background: #f89385;
+    }
+
+    .slider {
+      order: 2;
+      width: 50%;
+      background: #5397e6;
+    }
+
+    .gallery {
+      order: 3;
+      width: 27.0833%;
+      height: 440px;
+      background-color: #f8de73;
+    }
+
+    .rank {
+      order: 4;
+      width: 22.9166%;
+      background-color: #00c2d2;
+    }
+
+    .latest {
+      order: 5;
+      width: 30%;
+      background: #9cabe4;
+    }
+    
+    .popular {
+      order: 6;
+      width: 30%;
+      background: #d76817;
+    }
+
+    .banner {
+      display: flex;
+      order: 7;
+      flex-flow: column nowrap;
+      width: 22.9166%;
+    }
+
+    .banner div {
+      flex: 1 1 0;
+    }
+
+    .banner div.banner01 {
+      background: #70d88c;
+    }
+
+    .banner div.banner02 {
+      background: #31cc60;
+    }
+
+    .social {
+      order: 8;
+      width: 17.0833%;
+      height: 270px;
+      background: #d993fd;
+    }
+
+    .footer {
+      order: 9;
+      width: 100%;
+      height: 94px;
+      background: #9f9f9f;
+    }
+
+
+  </style>
+</head>
+<body>
+ <div id="wrap">
+   <header class="header">
+    <div id="logo">로고</div>
+    <nav>헤더-네비게이션</nav>
+   </header>
+
+   <section class="slider">슬라이더</section>
+   <section class="gallery">갤러리</section>
+   <section class="rank">검색어순위</section>
+   <section class="latest">최근글</section>
+   <section class="popular">인기글</section>
+   <section class="banner">
+    <div class="banner01">배너1</div>
+    <div class="banner02">배너2</div>
+   </section>
+   <div class="social">SNS</div>
+
+   <fotter class="footer">푸터</fotter>
+  </div>
+</body>
+</html>
