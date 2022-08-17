@@ -45,33 +45,6 @@ header #logo .logob ul li {
   top: calc(50% - 10px );
   left: calc(50% - 138px);
 }
-header #shopping .shoppingbag {
-  width: 50%; height: 100%;
-  float: left;
-  background-color: #eee;
-}
-header #shopping .shoppingbag h2 {
-  display: block;
-  text-align: center;
-  position: relative;
-  top: 150px;
-}
-header #shopping .shoppingbag > p > a  {
-  display: block;
-  text-align: center;
-  position: relative;
-  top: 150px;
-  color: #000;
-  text-decoration: underline;
-  font-weight: bold;
-}
-header #shopping .shoppingbag .shoppingbottom {
-  width: 50%; height: 60px;
-  padding: 10px 15px;
-  position: absolute;
-  bottom: 0;
-  background-color: #222;
-}
 .cnt {
   width: 100%; background-color: #fff;
   position: absolute; z-index: 500;
@@ -120,8 +93,8 @@ header #shopping .shoppingbag .shoppingbottom {
 #nav li a {
   color: #000;
 }
-#nav .aRed {
-  color: #D63716;
+#nav .red {
+  color: red;
 }
 #nav li > p {
   cursor: pointer;
@@ -193,42 +166,7 @@ header #shopping .shoppingbag .shoppingbottom {
   width: 5px; height: 5px;
   opacity: 0.3;
 }
-.is-selected:hover .inner .txt a{
-  background-color: #222;
-  color: #fff;
-  border: 1px solid #222;
-}
-.is-selected .inner .txt h3,
-.is-selected .inner .txt h2,
-.is-selected .inner .txt p,
-.is-selected .inner .txt a{
-  transform: scale(1);
-  transition: all 0.6s;
-  color: #fff;
-}
-.md:nth-child(3) .inner .txt h3,
-.md:nth-child(3) .inner .txt h2,
-.md:nth-child(3) .inner .txt p,
-.md:nth-child(3) .inner .txt a{
-  text-shadow: 0px 0px 3px #000;
-}
-.md:nth-child(5) .inner .txt h3,
-.md:nth-child(5) .inner .txt h2,
-.md:nth-child(5) .inner .txt p{
-  color: #222;
-}
-.md:nth-child(5) .inner .txt a{
-  color: #222; border: 1px solid #222;
-}
-.md:nth-child(5):hover .inner .txt a{
-  color: #fff;
-}
-.is-selected:hover .inner .txt h3,
-.is-selected:hover .inner .txt h2,
-.is-selected:hover .inner .txt p,
-.is-selected:hover .inner .txt a{
-  transform: scale(1.1);
-}
+
 main {
   position: relative;
   margin: 0 auto;
@@ -406,7 +344,7 @@ footer .lower p {
 }
 footer .lower .part {
   float: left;
-  width: calc(100% / 3 * 1);
+  width: calc(100%/3);
 }
 footer .lower .part li {
   font-size: 14px;
@@ -431,4 +369,129 @@ footer .lower .part:nth-child(2) ul li .private{
 }
 footer .lower .part:nth-child(2) ul li a:hover{
   color: #fff;
+}
+
+@media screen and (max-width: 1100px) {
+
+  header {
+    min-width: 700px;
+  }
+  .inner {
+    width: 100%;
+  }
+  
+  header #logo .logoa {
+    position: absolute;
+    top: 20px; left: 20px;
+  }
+  header #logo .logob {
+    position: absolute;
+    top: 20px; right: 20px;
+  }
+
+  #nav .red {
+    display: none;
+  }
+
+  .dot:before {
+    display: none;
+  }
+
+  ul#nav {
+    left: 80px;
+  }
+
+  main .swtext h1, main .swtext2 h1 {
+    font-size: 25px;
+  }
+
+  main .swtext p, main .swtext2 p {
+    font-size: 15px;
+  }
+
+  main .swtext button, main .swtext2 button {
+    font-size: 12px;
+    padding: 5px 35px;
+    cursor: pointer;
+  }
+
+  main .category {
+    width: 800px;
+    margin: 0 auto;
+  }
+
+  main .category .cate {
+    float: left;
+    width: 300px;
+    margin: 0 50px;
+  }
+
+  footer .inner {
+    transform: scale(0.8);
+    left: -50px;
+  }
+
+  footer .lower .part {
+    float: left;
+    width: calc(100% / 4);
+  }
+
+}
+
+@media screen and (max-width: 600px) {
+
+  header {
+    min-width: 550px;
+  }
+
+  header #logo .logoa {
+    display: none;
+  }
+  header #logo .logob {
+    display: none;
+  }
+
+  .pic {
+    display: none;
+  }
+
+  main .category {
+    width: 400px;
+  }
+
+  main .cate {
+    padding-bottom: 50px;
+  }
+
+  main .category .cate {
+    float: left;
+    width: 300px;
+    margin: 0 50px;
+  }
+
+  ul#nav {
+    left: 70px;
+  }
+
+  ul#nav > li > p {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .best, .mem {
+    display: none;
+  }
+
+  footer .lower .part {
+    float: left;
+    width: 100%;
+    padding-bottom: 30px;
+  }
+
+  footer .upper .sns {
+    width: 100%; position: absolute;
+    top: 30px; left: 15%;
+    transform: scale(0.9);
+  }
+
 }

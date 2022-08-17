@@ -221,10 +221,28 @@ footer .lower .lowright span {
   
 }
 
+body { transition: all 0.6s; }
+
+
+@keyframes zoom-in-zoom-out {
+  0% {
+    transform: scale(0.2, 0.2);
+  }
+  50% {
+    transform: scale(1.1, 1.1);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
+body { animation: zoom-in-zoom-out 1.2s 1; }
+
 @media screen and (max-width: 1100px) {
   
   header {
     max-height: 300px;
+    
   }
 
   header .inner h1 {
@@ -264,6 +282,16 @@ footer .lower .lowright span {
 
   main .art {
     display: none;
+  }
+
+  main .search-mode {
+    width: 300px;
+    height: 40px;
+    margin: 10px auto;
+  }
+
+  main .icon {
+    top: 8px;
   }
 
   footer {
