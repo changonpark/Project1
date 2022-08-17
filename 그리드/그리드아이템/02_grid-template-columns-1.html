@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Grid Layout</title>
+  <style>
+    .grid-container {
+      display: grid;
+      grid-template-columns: auto auto auto auto;
+      grid-gap: 10px;
+      background-color: #2196F3;
+      padding: 10px;
+    }
+
+    .grid-container>div {
+      background-color: rgba(255, 255, 255, 0.8);
+      text-align: center;
+      padding: 20px 0;
+      font-size: 30px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>grid-template-columns</h1>
+  <ul>
+    <li>grid-template-columns 속성은 그리드 레이아웃의 열 수를 정의하고 각 열의 너비를 정의 할 수 있
+      다.</li>
+    <li>값은 공백으로 구분 된 목록이며 각 값은 각 열의 길이를 정의한다.</li>
+    <li>그리드 레이아웃에 4 개의 열이 포함되도록 하려면 4 개의 열 너비를 지정하거나 모든 열의 너비가 동
+      일해야 하는 경우 "auto"를 지정한다.</li>
+  </ul>
+  <hr>
+
+  <div class="grid-container">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>
+    <div>7</div>
+    <div>8</div>
+  </div>
+</body>
+
+</html>

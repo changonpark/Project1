@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Grid Layout</title>
+  <style>
+    .grid-container {
+      display: grid;
+      grid-template-columns: auto auto auto auto auto auto;
+      grid-gap: 10px;
+      background-color: #2196F3;
+      padding: 10px;
+    }
+
+    .grid-container>div {
+      background-color: rgba(255, 255, 255, 0.8);
+      text-align: center;
+      padding: 20px 0;
+      font-size: 30px;
+    }
+
+    .item8 {
+      grid-area: 1 / 2 / 5 / 6; /*1행 2열부터 4행 5열까지 다쓰겠다*/
+    }
+  </style>
+</head>
+
+<body>
+  <h1>grid-area</h1>
+  <ul>
+    <li>grid-area 속성을 사용하여 아이템을 배치 할 위치를 지정할 수 있다 .</li>
+    <li>
+      grid-area 속성은 grid-row-start, grid-column-start, grid-row-end 및 grid-column-end 속성에 대한
+      단축 속성으로 사용할 수 있다.
+    </li>
+    <li>문법 : <em>grid-row-start / grid-column-start / grid-row-end / grid-column-end</em></li>
+  </ul>
+  <hr>
+  <p>.item8은 1행 2열에서 시작하여 5행 6열 전에서 끝난다.</p>
+  <div class="grid-container">
+    <div class="item1">1</div>
+    <div class="item2">2</div>
+    <div class="item3">3</div>
+    <div class="item4">4</div>
+    <div class="item5">5</div>
+    <div class="item6">6</div>
+    <div class="item7">7</div>
+    <div class="item8">8</div>
+    <div class="item9">9</div>
+    <div class="item10">10</div>
+    <div class="item11">11</div>
+    <div class="item12">12</div>
+    <div class="item13">13</div>
+    <div class="item14">14</div>
+    <div class="item15">15</div>
+  </div>
+</body>
+
+</html>

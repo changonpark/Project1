@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grid Layout</title>
+  <style>
+    .item1 {
+      grid-area: header; /* grid-area 옆에 있는 것들은 다 이름이다.(사용자가 지정) 변수명과 같다.*/
+    }
+    .item2 {
+      grid-area: menu;
+    }
+    .item3 {
+      grid-area: main;
+    }
+    .item4 {
+      grid-area: right;
+    }
+    .item5 {
+      grid-area: footer;
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-areas:
+      'header header header header header header '
+      'menu main main main right right'
+      'menu footer footer footer footer footer';
+      grid-gap: 10px;
+      background-color: #2196F3;
+      padding: 10px;
+    }
+
+    .grid-container>div {
+      background-color: rgba(255, 255, 255, 0.8);
+      text-align: center;
+      padding: 20px 0;
+      font-size: 30px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Grid Layout</h1>
+
+  <ul>
+    <li>CSS 그리드 레이아웃 모듈은 행과 열이있는 그리드 기반 레이아웃 시스템을 제공하므로 플로트와 위치 지정없이 웹 페이지를 보다 쉽게 디자인 할 수 있다.</li>
+  </ul>
+  <hr>
+
+  <p>6 개의 열과 3 개의 행</p>
+
+  <div class="grid-container">
+    <div class="item1">Header</div>
+    <div class="item2">Menu</div>
+    <div class="item3">Main</div>
+    <div class="item4">Right</div>
+    <div class="item5">Footer</div>
+  </div>
+
+  <hr>
+  <h3>브라우저 지원 현황</h3>
+  <ul>
+    <li>크롬: 57.0+</li>
+    <li>엣지: 16.0+</li>
+    <li>파이어폭스: 52.0+</li>
+    <li>사파리: 10+</li>
+    <li>오페라: 44+</li>
+  </ul>
+</body>
+</html>

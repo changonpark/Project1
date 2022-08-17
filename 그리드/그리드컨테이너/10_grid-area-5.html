@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Grid Layout</title>
+  <style>
+    .item1 {
+      grid-area: my;
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-areas:
+        'my my . . .'
+        'my my . . .';
+      grid-gap: 10px;
+      background-color: #2196F3;
+      padding: 10px;
+    }
+
+    .grid-container>div {
+      background-color: rgba(255, 255, 255, 0.8);
+      text-align: center;
+      padding: 20px 0;
+      font-size: 30px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>grid-area</h1>
+  <ul>
+    <li>grid-area 속성을 사용하여 그리드 아이템에 이름을 지정할 수도 있다.</li>
+    <li>그리드 컨테이너에서 <em>grid-template-areas</em> 속성을 사용하여 그리드 레이아웃을 설정할 때 이
+      름을 참조 할 수 있다.</li>
+    <li>각 행은 작은따옴표('')로 정의된다.</li>
+    <li>각 행의 열은 작은따옴표('') 내부에 공백으로 구분되어 정의된다.</li>
+    <li>마침표(.) 기호는 이름이 없는 그리드 아이템을 나타낸다.</li>
+  </ul>
+  <hr>
+  <p>"my"라는 .item1은 다섯 개 열 중 두 개의 열을 대신하며 두 개의 행을 포함한다.</p>
+  <p>두 번째 행은 <strong>다른 작은따옴표('') 세트 안</strong>에 열을 정의한다.</p>
+  <div class="grid-container">
+    <div class="item1">1</div>
+    <div class="item2">2</div>
+    <div class="item3">3</div>
+    <div class="item4">4</div>
+    <div class="item5">5</div>
+    <div class="item6">6</div>
+    <div class="item7">7</div>
+  </div>
+</body>
+
+</html>

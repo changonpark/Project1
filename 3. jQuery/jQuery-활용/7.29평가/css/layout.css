@@ -78,7 +78,7 @@ header .inner #gnb li a:hover {
   color: #eee;
 }
 
-header #headerWrap #head ul#gnb { width: 100%;}
+#headerWrap #head ul#gnb { width: 100%;}
 
 main {
   position: relative;
@@ -219,4 +219,64 @@ footer .lower .lowright span {
   font-weight: bold;
   opacity: 1;
   
+}
+
+@media screen and (max-width: 1100px) {
+  
+  header {
+    max-height: 300px;
+  }
+
+  header .inner h1 {
+    left: calc(50% - 75px);
+  }
+
+  .inner {
+    max-height: 120px;
+  }
+
+  .inner h1 img {
+    width: 150px;
+  }
+
+  .t3, .t4, .art-1, .art-2 {
+    display: none;
+  }
+
+  .t1 p, .t2 p {
+    display: none;
+  }
+
+  footer {
+    margin-top: 0;
+  }
+}
+
+@media screen and (max-width: 600px) {
+
+  header {
+    display: none;
+  }
+
+  main {
+    background-image: url(../images/lolol2.jpg);
+  }
+
+  main .art {
+    display: none;
+  }
+
+  footer {
+    width: 100%;
+    height: 100%;
+    margin-top: 0;
+    background-image: url(../images/lolmobile.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  footer .inner {
+    display: none;
+  }
 }

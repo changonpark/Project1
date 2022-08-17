@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Grid Layout</title>
+  <style>
+    .grid-container {
+      display: grid;
+      grid-template-columns: auto auto auto;
+      grid-template-rows: 80px 200px;
+      grid-gap: 10px;
+      background-color: #2196F3;
+      padding: 10px;
+    }
+
+    .grid-container>div {
+      background-color: rgba(255, 255, 255, 0.8);
+      text-align: center;
+      padding: 20px 0;
+      font-size: 30px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>grid-template-rows</h1>
+
+  <ul>
+    <li>
+      grid-template-rows 속성은 각 행의 높이를 정의한다.
+    </li>
+    <li>
+      값은 공백으로 구분 된 목록이며 각 값은 각 행의 높이를 정의한다.
+    </li>
+  </ul>
+  <hr>
+  <div class="grid-container">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>
+  </div>
+</body>
+
+</html>
